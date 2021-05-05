@@ -6098,10 +6098,10 @@ html {
 .body__blog-single .single__content .content__item-list .list__item {
   list-style-type: disc;
   font-family: "Raleway", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-left: 30px;
   line-height: 170%;
-  color: #1b1b1b;
+  color: #333333;
 }
 .body__blog-single .single__content h4 {
   font-size: 1.375rem;
@@ -6115,10 +6115,10 @@ html {
 .body__blog-single .single__content .list-2 .list__item {
   list-style-type: disc;
   font-family: "Raleway", sans-serif;
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   margin-left: 30px;
   line-height: 170%;
-  color: #1b1b1b;
+  color: #333333;
 }
 .body__blog-single .single__content span {
   font-size: 1.625rem;
