@@ -6145,8 +6145,11 @@ html {
   background: #068129;
 }
 
+.body__blog-single .container {
+  max-width: 1000px;
+}
 .body__blog-single .single {
-  margin-top: 140px;
+  margin-top: 170px;
   max-width: 100%;
 }
 .body__blog-single .single h2 {
@@ -6156,15 +6159,9 @@ html {
   font-weight: bold;
   margin-bottom: 38px;
 }
-@media screen and (max-width: 1024px) {
-  .body__blog-single .single h2 {
-    font-size: 2.25rem;
-  }
-}
 .body__blog-single .single .single__span {
   display: flex;
   justify-content: space-between;
-  max-width: 1280px;
   margin: 38px 0 30px 0;
   color: #333333;
 }
@@ -6179,31 +6176,62 @@ html {
   margin-bottom: 111px;
   color: #333333;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content h1 {
+    font-size: 2.25rem;
+    margin-bottom: 60px;
+  }
+}
 .body__blog-single .single__content h2 {
   font-family: "Roboto", sans-serif;
   font-size: 1.375rem;
   font-weight: normal;
   color: #666666;
+  margin-bottom: 51px;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content h2 {
+    font-size: 1.375rem;
+  }
 }
 .body__blog-single .single__content h3 {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 36px;
+  margin-bottom: 30px;
   color: #333333;
   display: list-item;
   margin-left: 30px;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content h3 {
+    margin-top: 60px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+    font-size: 1.5rem;
+  }
+}
 .body__blog-single .single__content .final {
   margin: 69px 0 36px 30px;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content .final {
+    margin: 60px 0 15px 20px;
+  }
 }
 .body__blog-single .single__content p {
   font-size: 1.125rem;
   line-height: 150%;
-  margin-top: 26px;
+  margin-top: 24px;
   color: #666666;
   letter-spacing: -3.5%;
   max-width: 1197px;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content p {
+    margin-top: 15px;
+    font-size: 1.125rem;
+  }
 }
 .body__blog-single .single__content .content__item-list {
   margin-top: 21px;
@@ -6218,11 +6246,22 @@ html {
   line-height: 170%;
   color: #333333;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content .content__item-list .list__item {
+    margin-left: -20px;
+    font-size: 1.125rem;
+  }
+}
 .body__blog-single .single__content h4 {
   font-size: 1.375rem;
   color: #666666;
   font-style: italic;
   font-weight: 500;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content h4 {
+    font-size: 1.25rem;
+  }
 }
 .body__blog-single .single__content .list-2 {
   margin: 110px 0px 122px 40px;
@@ -6235,11 +6274,57 @@ html {
   line-height: 170%;
   color: #333333;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content .list-2 .list__item {
+    margin-left: -20px;
+    font-size: 1.125rem;
+  }
+}
 .body__blog-single .single__content span {
   font-size: 1.625rem;
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #333333;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__content span {
+    font-size: 1.125rem;
+  }
+}
+.body__blog-single .single__lastNews {
+  margin-top: 128px;
+}
+.body__blog-single .cards__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(1) li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(1) li:nth-child(2) span {
+  font-size: 0.75rem;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(2) li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(2) li:nth-child(2) span {
+  font-size: 0.75rem;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(3) li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(3) li:nth-child(2) span {
+  font-size: 0.75rem;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(4) li:nth-child(2) {
+  display: flex;
+  justify-content: space-between;
+}
+.body__blog-single .cards__wrapper .card__item:nth-child(4) li:nth-child(2) span {
+  font-size: 0.75rem;
 }
 
 html.aumenta {
