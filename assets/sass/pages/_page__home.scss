@@ -226,6 +226,7 @@
             height: 64px;
             width: 64px;
             margin-bottom: 30px;
+            object-fit: contain;
 
 
 
@@ -262,7 +263,7 @@
 
         p {
             color: $cor-cinza-1;
-            height: 165px;
+            min-height: 165px;
             font-size: rem(16);
 
             @include d(m) {
@@ -282,4 +283,21 @@
 
     }
 
+}
+
+.calc {
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        height: 600px;
+    }
+
+    &__svg {
+        position: absolute;
+        left: -100px;
+        bottom: 0;
+        width: 600px;
+        height: 500px;
+    }
 }

@@ -21,7 +21,7 @@
     --color-links: #{$cor-preto-1};
     --color-links-hover:#{$cor-verde-1};
     --weight-links: 500;
-    --font-links: 16px;
+    --font-links: rem(16);
 
     /* BOTAO */
     --btn-bg: transparent;
@@ -50,7 +50,7 @@
     --menu-m-paddingY: 10px 0;
     --menu-m-open-bg: white;
     --menu-m-open-color: black;
-    --menu-m-open-size: 16px;
+    --menu-m-open-size: rem(16);
 
     /* hamburguer */
     --hamburguer-color: black;
