@@ -1,0 +1,24 @@
+@import "../sass/cores__font"; // VARIAVEIS DE CORES E FONT
+@import "../sass/mixins"; //MIXINS
+@import "bootstrap__imports"; //BOOTSTRAP
+
+// UTILITIES ⛏
+@import "../sass/utilities/utilitarios";
+@import "../sass/utilities/responsivo"; //  RESPONSIVO
+@import "../sass/utilities/reset";
+@import "../sass/utilities/animation";
+
+//COMPONENTS GERAIS ♺ 
+@import "../sass/components/footer";
+@import "../sass/components/menu";
+@import "../sass/components/body"; //alterações no BODY
+
+
+//pages ⛬
+.body__home {
+  @import "../sass/pages/page__home";
+}
+
+html.aumenta {
+  font-size: 120%;
+}

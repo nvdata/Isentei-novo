@@ -1,0 +1,285 @@
+& {
+    height: 10000px;
+}
+
+
+@mixin botaoIsentei($cor:white, $bg:$cor-verde-1) {
+    display: inline-flex;
+
+    .btn {
+        background: $bg;
+        color: $cor;
+        flex-grow: 0;
+        @include center;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border-radius: $border-radius;
+        transition: transform .3s ease, box-shadow .3s ease;
+        font-size: rem(16);
+        display: inline-flex;
+        align-items: center;
+        text-align: center;
+
+        @include d(m) {
+            max-width: 250px;
+            flex-wrap: nowrap;
+            text-align: center;
+            padding: 6px 20px
+        }
+
+        ion-icon {
+            margin-left: 5px;
+            vertical-align: middle;
+
+            @include d(m) {
+                margin-left: 10px;
+                font-size: rem(28);
+            }
+
+        }
+
+        &:hover {
+            transform: translateY(-3px);
+
+            box-shadow: 2px 3px 20px #01b5345b;
+
+            ion-icon {
+                animation: setaButton .5s linear infinite alternate;
+            }
+        }
+    }
+}
+
+
+@mixin textIntro {
+    text-align: center;
+    line-height: 145%;
+    color: $cor-preto-1;
+    letter-spacing: -0.03em;
+    font-size: rem(48);
+    font-weight: bold;
+
+    @include d(m) {
+        font-size: rem(28);
+    }
+
+    @include d(s) {
+        font-size: rem(26);
+    }
+}
+
+.intro {
+
+    height: 100vh;
+    min-height: 620px;
+    max-height: 1080px;
+    background: $cor-verde-claro-1;
+    padding-top: 80px;
+    overflow: hidden;
+    position: relative;
+
+    >.container {
+        height: 100%;
+    }
+
+    .intro__text {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -100px;
+        font-family: $font-raleway;
+
+
+
+        h1 {
+
+            @include textIntro;
+
+            span {
+                letter-spacing: -0.03em;
+                font-weight: 900;
+                display: inline-block;
+
+                font-size: rem(48);
+
+                @include d(m) {
+                    font-size: rem(42);
+                }
+
+                @include d(s) {
+                    font-size: rem(36);
+                }
+            }
+        }
+
+        p {
+            font-size: rem(14);
+            text-align: center;
+            max-width: 320px;
+            display: inline-block;
+            @include center;
+            margin-top: 20px;
+            font-family: $font-roboto;
+
+            @include d(s) {
+                max-width: 250px;
+            }
+
+        }
+    }
+
+    @keyframes setaButton {
+        100% {
+            transform: translateY(3px);
+        }
+
+        0% {
+            transform: translateY(0px);
+        }
+    }
+
+    .btn__container {
+        @include botaoIsentei;
+    }
+
+    //svg e ornas
+    .icon-intro-complete {
+        height: clamp(200px, 50vh, 400px);
+        width: clamp(200px, 35vw, 500px);
+        bottom: -100px;
+        position: absolute;
+        left: -50px;
+        right: 0;
+        margin: auto;
+        z-index: 1;
+
+        @include d(m) {
+            bottom: -100px;
+            width: 300px;
+            height: 260px;
+        }
+    }
+
+    .orna__intro {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        margin: auto;
+        left: -20px;
+    }
+
+    .circulos__intro {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        margin: auto;
+        left: 0px;
+        height: 120%;
+    }
+}
+
+.info {
+
+    height: 90vh;
+
+    @include d(m) {
+        height: 100%;
+        padding: 60px 0 120px;
+    }
+
+    .container {
+        height: 100%;
+
+    }
+
+    &__content {
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: flex-start !important;
+        flex-wrap: wrap;
+        justify-content: center;
+
+
+    }
+
+    &__item {
+        min-width: 230px;
+        max-width: 350px;
+        margin: 20px 0;
+
+        @include d(m) {
+            margin: 40px 0;
+            text-align: center;
+            align-items: center;
+        }
+
+        img {
+            height: 64px;
+            width: 64px;
+            margin-bottom: 30px;
+
+
+
+        }
+
+        .img__container {
+            position: relative;
+            width: max-content;
+            height: max-content;
+
+            @include d(m) {
+                margin: 0 auto;
+            }
+
+            &:after {
+                @include pseudo(absolute);
+                @include size(100%);
+                background: $cor-verde-pseudo-1;
+                bottom: -20px;
+                z-index: -1;
+                border-radius: 50%;
+                left: -20px;
+                opacity: .1;
+            }
+        }
+
+        h2 {
+
+            font-size: rem(24);
+            margin-bottom: 10px;
+            color: $cor-preto-1;
+
+        }
+
+        p {
+            color: $cor-cinza-1;
+            height: 165px;
+            font-size: rem(16);
+
+            @include d(m) {
+                height: 125px;
+            }
+        }
+
+        .btn__container {
+            @include botaoIsentei($cor-preto-1, $cor-verde-2);
+
+            .btn {
+                font-weight: 500;
+                padding-right: 50px;
+                padding-left: 50px;
+            }
+        }
+
+    }
+
+}
