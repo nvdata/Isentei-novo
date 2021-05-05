@@ -42,7 +42,7 @@
     font-family: $font-raleway;
     font-size: rem(32);
     font-weight: bold;
-    margin-bottom: 51px;
+    margin-bottom: 36px;
     color: $cor-preto-1;
     display: list-item;
     margin-left: 30px;
@@ -68,10 +68,10 @@
     .list__item {
       list-style-type: disc;
       font-family: $font-raleway;
-      font-size: rem(28);
+      font-size: rem(24);
       margin-left: 30px;
       line-height: 170%;
-      color: $cor-preto-2;
+      color: $cor-preto-1;
     }
   }
 
@@ -87,10 +87,10 @@
     .list__item {
       list-style-type: disc;
       font-family: $font-raleway;
-      font-size: rem(28);
+      font-size: rem(24);
       margin-left: 30px;
       line-height: 170%;
-      color: $cor-preto-2;
+      color: $cor-preto-1;
     }
   }
   span {
