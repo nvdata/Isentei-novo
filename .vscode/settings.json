@@ -36,6 +36,7 @@
     "editor.wordWrap": "on",
     "scss.showErrors": true,
     "html-css-class-completion.enableScssFindUsage": true,
+    "git.ignoreLimitWarning": true,
 
 }
 
