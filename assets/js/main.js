@@ -10,8 +10,11 @@ menu();
 
 // ★ PAGES ★ 
 const pageHome = new Dom().el("#page__home")
+const pageBlogSingle = document.querySelector('#page__blog-single');
 
 if (pageHome) { // ★ HOME 
     new Dom().bodyClass("body__home")
 
+} else if (pageBlogSingle) {
+    new Dom().bodyClass("body__blog-single");
 }
