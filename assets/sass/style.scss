@@ -8,15 +8,18 @@
 @import "../sass/utilities/reset";
 @import "../sass/utilities/animation";
 
-//COMPONENTS GERAIS ♺ 
+//COMPONENTS GERAIS ♺
 @import "../sass/components/footer";
 @import "../sass/components/menu";
 @import "../sass/components/body"; //alterações no BODY
 
-
 //pages ⛬
 .body__home {
   @import "../sass/pages/page__home";
+}
+
+.body__blog-single {
+  @import "../sass/pages/page__blog-single";
 }
 
 html.aumenta {
