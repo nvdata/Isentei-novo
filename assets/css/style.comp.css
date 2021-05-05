@@ -6031,7 +6031,7 @@ html {
 }
 
 .body__blog-single .single {
-  margin-top: 140px;
+  margin-top: 160px;
   max-width: 100%;
 }
 .body__blog-single .single h2 {
@@ -6074,7 +6074,7 @@ html {
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   font-weight: bold;
-  margin-bottom: 51px;
+  margin-bottom: 36px;
   color: #333333;
   display: list-item;
   margin-left: 30px;
