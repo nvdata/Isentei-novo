@@ -1,0 +1,104 @@
+.fontChange {
+    // display: block;
+    top: 45vh;
+    right: 30px;
+    background: $cor-verde-1;
+    // padding-left: 20px;
+    // padding-right: 15px;
+    // padding-top: 15px;
+    // padding-bottom: 10px;
+    // border-radius: 10px 0 0 10px;
+    // transition: all .3s ease;
+    z-index: 90;
+    position: fixed;
+    padding: 16px;
+    border-radius: 10px;
+    width: 220px;
+    clip-path: circle(20% at 79% 30%);
+    transition: all .6s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 5%);
+
+    &:hover {
+        clip-path: circle(75%) !important;
+        background: #11b840;
+
+        span {
+            opacity: 0 !important;
+        }
+
+        hr {
+            opacity: 1;
+        }
+    }
+
+    button {
+        font-size: 28px;
+        cursor: pointer;
+        color: white;
+        font-weight: 700;
+        padding: 10px;
+        transition: all .3s ease-out;
+        transition-delay: .2s;
+
+        &:hover {
+            &.increment {
+                transform: scale(1.2);
+
+            }
+
+            &.decrement {
+                transform: scale(.8);
+
+            }
+
+        }
+
+    }
+
+    hr {
+        background: white;
+        opacity: 0;
+        margin: 16px 0;
+        transition: opacity .3s ease;
+    }
+
+    span {
+        position: absolute;
+        transition: opacity .3s ease;
+
+        display: block;
+        @include size(35px);
+        top: 35px;
+        right: 26px;
+
+        img {
+            object-fit: contain;
+            transition: transform .5s ease;
+        }
+    }
+
+
+
+}
+
+.ativo__scroll {
+    .fontChange {
+        top: 86vh;
+        clip-path: circle(12% at 79% 30%);
+
+        span {
+            top: 34px;
+            right: 27px;
+
+        }
+
+        img {
+            transform: scale(.7);
+        }
+
+        &:hover {
+            top: 72vh !important;
+        }
+    }
+}

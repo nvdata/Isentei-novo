@@ -1,0 +1,59 @@
+export default
+
+function zoomFont() {
+
+
+    const elhtml = document.querySelector("html")
+    const buttonIncrement = document.querySelector("button.increment")
+    const buttonDecrement = document.querySelector("button.decrement")
+
+    function pegaValorVarCss() {
+        let cssStyles = getComputedStyle(elhtml);
+        let cssVal = String(cssStyles.getPropertyValue('--font-base')).trim();
+        let ValorLimpo = cssVal.replace("%", "")
+        return parseInt(ValorLimpo)
+    }
+
+
+
+    let item;
+
+    function increment() {
+        let valorVariavel = pegaValorVarCss()
+
+        if (valorVariavel < 150) {
+            let valorMod = (valorVariavel + 10) + "%"
+            elhtml.style.setProperty('--font-base', valorMod);
+            item = localStorage.setItem('base', valorMod);
+        }
+    }
+
+    function decrement() {
+
+        let valorVariavel = pegaValorVarCss()
+        if (valorVariavel > 80) {
+            let valorMod = (valorVariavel - 10) + "%"
+            elhtml.style.setProperty('--font-base', valorMod);
+            item = localStorage.setItem('base', valorMod);
+        }
+    }
+
+
+
+
+    if (typeof (Storage) !== "undefined") {
+        let valorStorage = localStorage.base
+        console.log(valorStorage);
+        elhtml.style.setProperty('--font-base', valorStorage);
+    } else {
+        console.log("Desculpe!web storage não suportado.");
+    }
+
+
+    let localBase = localStorage.base
+
+    buttonIncrement.addEventListener("click", increment)
+    buttonDecrement.addEventListener("click", decrement)
+
+    return localBase
+}

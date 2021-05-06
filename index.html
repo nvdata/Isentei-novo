@@ -1277,7 +1277,7 @@
                                     <input type="text" id="sua__doenca" placeholder="Sua Doença">
                                 </div>
                                 <div class="btn__container">
-                                    <button class="btn">Continuar</button>
+                                    <button title="Clique para calcular" class="btn">Continuar</button>
                                 </div>
 
 
@@ -1436,11 +1436,8 @@
 
         <section class="single__lastNews">
             <div class="container">
-                <!-- <div class="botoes__carousel">
-                    <div class="swiper-button-prev anterior"></div>
-                    <div class="swiper-button-next proximo"></div>
-                </div> -->
-                <h2>Últimas notícias</h2>
+                <h2>Mantenha-se informado</h2>
+
                 <img class="ornamento__esquerdo" src="assets/img/pageBlog/verde.svg">
                 <img class="ornamento__direito" src="assets/img/pageBlog/ornamento blog 2.svg">
                 <div class="swiper__container">
@@ -1464,7 +1461,7 @@
                         </ul>
 
                         <ul class="card__item col-lg-3 swiper-slide">
-                        <a href="#">
+                            <a href="#">
                                 <li class="card__img">
                                     <img src="assets/img/pageBlog/Rectangle 11.jpg" alt="idosa e idoso">
                                 </li>
@@ -1510,6 +1507,14 @@
                             </a></ul>
 
                     </div>
+                    <div class="swiper__buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="btn__container">
+                    <div class="btn">Ver Mais <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
                 </div>
             </div>
 
@@ -1530,6 +1535,7 @@
             <div class="container">
                 <div class="footer__wrapper">
                     <ul class="footer__contato">
+
                         <li><a href="#">isentei@gmail.com</a></li>
                         <li><a href="#">+271 386-647-3637</a></li>
                         <li><a href="#">+271 386-647-3637</a></li>
@@ -1571,7 +1577,7 @@
                                     <input type="email" id="email" placeholder="Digite o seu email">
                                 </div>
                                 <div class="btn__container">
-                                    <button>Cadastrar</button>
+                                    <button class="btn" title="Cadastre para receber novidades">Cadastrar</button>
                                 </div>
 
 
@@ -1580,6 +1586,10 @@
                         </li>
                     </ul>
 
+                </div>
+                <div class="data__logo-container">
+                    <a target="_blank" href="https://novadata.com.br/">
+                        <img src="assets/img/data.png" alt="nova data "></a>
                 </div>
             </div>
 
@@ -1653,40 +1663,24 @@
 
     </main>
 
+    <div class="fontChange">
+        <button title="Aumentar Fonte | Zoom +" class="increment">Zoom +</button>
+        <hr>
+        <button title="Diminuir Fonte | Zoom -" class="decrement">Zoom -</button>
+        <span>
+            <img src="assets/img/icon/zoom.svg" title="Aumente o tamanho do texto" alt="zoom">
+        </span>
+    </div>
+
 
     <!--  ⚐ JS Front   -->
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- script aumentar fonte -->
-    <!--   <script>
-            const html = document.querySelector("html")
-            var cont = 100
-            const button = document.querySelector("button").addEventListener("click",
-                function () {
-                    if (cont < 150)
-                        cont = cont + 10
+    <script>
 
-                    console.log(cont + "%");
-                    html.style.fontSize = cont + "%"
-
-
-                })
-
-                // Store
-                localStorage.setItem("lastname", "Smith");
-                // Retrieve
-
-                document.getElementById("result").innerHTML =
-                localStorage.getItem("lastname");
-
-                if (typeof(Storage) !== "undefined") {
-                // Código localStorage/sessionStorage.
-                } else {
-                // Desculpe! web storage não suportado.
-                }
-
-        </script> -->
+    </script>
 
 </body>
 

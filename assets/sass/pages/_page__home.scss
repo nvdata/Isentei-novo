@@ -1,57 +1,6 @@
-& {
-    height: 10000px;
-}
-
 $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 @import "../components/last__News";
-
-@mixin botaoIsentei($cor:white, $bg:$cor-verde-1) {
-    display: inline-flex;
-
-    .btn {
-        background: $bg;
-        color: $cor;
-        flex-grow: 0;
-        @include center;
-        margin-top: 20px;
-        padding: 10px 30px;
-        border-radius: $border-radius;
-        transition: transform .3s ease, box-shadow .3s ease;
-        font-size: rem(16);
-        display: inline-flex;
-        align-items: center;
-        text-align: center;
-
-        @include d(m) {
-            max-width: 250px;
-            flex-wrap: nowrap;
-            text-align: center;
-            padding: 6px 20px
-        }
-
-        ion-icon {
-            margin-left: 5px;
-            vertical-align: middle;
-
-            @include d(m) {
-                margin-left: 10px;
-                font-size: rem(28);
-            }
-
-        }
-
-        &:hover {
-            transform: translateY(-3px);
-
-            box-shadow: 2px 3px 20px #01b5345b;
-
-            ion-icon {
-                animation: setaButton .5s linear infinite alternate;
-            }
-        }
-    }
-}
 
 
 @mixin textIntro {
@@ -142,8 +91,16 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         }
     }
 
+
+
     .btn__container {
         @include botaoIsentei;
+
+        .btn {
+            padding: 12px 40px;
+            @include setaBotao;
+
+        }
     }
 
     //svg e ornas
@@ -584,6 +541,11 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
             color: $cor-preto-1;
             font-family: $font-raleway;
             font-weight: 700;
+
+            @include d(m) {
+                font-size: rem(40);
+
+            }
         }
 
         p {
@@ -652,7 +614,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     //swiper buttons
     .swiper__buttons {
         position: absolute;
-        top: 0;
+        top: 50px;
         width: 200px;
         height: 100px;
         right: 0;
@@ -686,6 +648,58 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 }
 
+.single__lastNews {
+    position: relative;
+
+    h2 {
+        color: $cor-preto-1;
+        @include d(m) {
+            margin-bottom: 60px !important;
+            display: inline-block;
+        }
+    }
+
+    .swiper__buttons {
+        display: none;
+
+        @include d(m) {
+            display: block;
+        }
+
+        position: absolute;
+        top: 25px;
+        width: 200px;
+        height: 100px;
+        right: 0;
+
+
+
+        .swiper-button-prev,
+        .swiper-button-next {
+
+            &.swiper-button-disabled {
+                opacity: .2 !important;
+            }
+
+            &:after {
+                font-size: 2rem;
+                color: $cor-cinza-1;
+            }
+
+        }
+
+        .swiper-button-prev {
+            left: 50px;
+
+            @include d(m) {
+                left: 100px;
+            }
+        }
+    }
+
+
+}
+
 .midia {
     padding: 120px 0 0;
     overflow: hidden;
@@ -700,17 +714,22 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
         h1 {
             text-align: center;
-            counter-reset: $cor-preto-1;
+            color: $cor-preto-1;
             margin-bottom: 40px;
             display: inline-block;
             font-size: rem(45);
             font-family: $font-raleway;
             font-weight: 700;
+
+            @include d(m) {
+                font-size: rem(40);
+
+            }
         }
     }
 
     &__quebra {
-        padding: 80px 0;
+        padding: 80px 0 90px;
         background: $cor-verde-claro-2;
 
     }
@@ -750,8 +769,51 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 }
 
 
-$component-name: "single__lastNews";
 
-.#{$component-name} {
+
+.single__lastNews {
     @include last__News;
+
+    .btn__container {
+
+        @include botaoIsentei;
+        justify-content: center;
+        margin-bottom: 90px;
+        width: 100%;
+        margin-top: 80px;
+
+        @include d(m) {
+            display: none;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 12px 60px;
+            margin-top: 0;
+            @include setaBotao;
+            // position: relative;
+
+            // &:hover {
+            //     ion-icon {
+            //         opacity: 1;
+            //         transform: translateY(10px);
+
+            //     }
+            // }
+
+            // ion-icon {
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     margin: auto 0;
+            //     right: 30px;
+            //     opacity: 0;
+            //     transition: all .4s ease;
+            //     color: white;
+            //     font-size: rem(18);
+
+            // }
+        }
+
+    }
 }

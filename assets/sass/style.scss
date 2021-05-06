@@ -12,6 +12,7 @@
 @import "../sass/components/footer";
 @import "../sass/components/menu";
 @import "../sass/components/body"; //alterações no BODY
+@import "../sass/components/font__change"; 
 
 //pages ⛬
 .body__home {
@@ -24,43 +25,4 @@
 
 .body__blog {
   @import "../sass/pages/page__blog";
-}
-
-html.aumenta {
-  font-size: 120%;
-}
-
-.card-form .radio-select label {
-  background: red !important;
-  display: block;
-  position: relative;
-  cursor: pointer;
-  max-width: 400px;
-
-  &:after {
-    content: "";
-    display: block;
-    width: 20px;
-    height: 20px;
-
-    position: absolute;
-    left: 30px;
-    border-radius: 50%;
-    border: 2px solid black;
-    top: 0;
-    bottom: 0;
-    margin: auto 0;
-  }
-
-  input[type="radio"] {
-    display: none;
-    position: relative;
-  }
-
-  input[type="radio"]:cheked ~ span {
-    display: block;
-    background: blue;
-    width: 100px;
-    height: 100px;
-  }
 }
