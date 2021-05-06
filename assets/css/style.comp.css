@@ -6145,6 +6145,11 @@ html {
   background: #068129;
 }
 
+.body__blog-single {
+  /* INTRO DO BLOG */
+  /* SEÇÃO DOS TEXTOS */
+  /* SEÇÃO NOTICIAS */
+}
 .body__blog-single .container {
   max-width: 1000px;
 }
@@ -6294,37 +6299,58 @@ html {
 .body__blog-single .single__lastNews {
   margin-top: 128px;
 }
+.body__blog-single .single__lastNews h2 {
+  margin-bottom: 36px;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2.625rem;
+  margin-left: 30px;
+  color: #333333;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog-single .single__lastNews h2 {
+    font-size: 2.25rem;
+  }
+}
 .body__blog-single .cards__wrapper {
   display: flex;
   flex-wrap: wrap;
 }
-.body__blog-single .cards__wrapper .card__item:nth-child(1) li:nth-child(2) {
+.body__blog-single .cards__wrapper .card__item .card__img {
+  width: 100%;
+}
+.body__blog-single .cards__wrapper .card__item .card__img img {
+  object-fit: cover;
+  width: 100%;
+}
+.body__blog-single .cards__wrapper .card__item li:nth-child(2) {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-}
-.body__blog-single .cards__wrapper .card__item:nth-child(1) li:nth-child(2) span {
   font-size: 0.75rem;
+  margin-top: 16px;
+  color: #333333;
 }
-.body__blog-single .cards__wrapper .card__item:nth-child(2) li:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
+.body__blog-single .cards__wrapper .card__item li:nth-child(3) h3 {
+  margin: 16px 0;
+  font-size: 1.375rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
 }
-.body__blog-single .cards__wrapper .card__item:nth-child(2) li:nth-child(2) span {
-  font-size: 0.75rem;
+@media screen and (max-width: 1024px) {
+  .body__blog-single .cards__wrapper .card__item li:nth-child(3) h3 {
+    margin-bottom: 8px;
+  }
 }
-.body__blog-single .cards__wrapper .card__item:nth-child(3) li:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
+.body__blog-single .cards__wrapper .card__item li:nth-child(3) p {
+  font-size: 1rem;
+  width: 100%;
+  color: #999999;
 }
-.body__blog-single .cards__wrapper .card__item:nth-child(3) li:nth-child(2) span {
-  font-size: 0.75rem;
-}
-.body__blog-single .cards__wrapper .card__item:nth-child(4) li:nth-child(2) {
-  display: flex;
-  justify-content: space-between;
-}
-.body__blog-single .cards__wrapper .card__item:nth-child(4) li:nth-child(2) span {
-  font-size: 0.75rem;
+@media screen and (max-width: 1024px) {
+  .body__blog-single .cards__wrapper .card__item + .card__item {
+    margin-top: 60px;
+  }
 }
 
 html.aumenta {
