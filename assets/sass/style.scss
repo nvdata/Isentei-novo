@@ -22,6 +22,10 @@
   @import "../sass/pages/page__blog-single";
 }
 
+.body__blog {
+  @import "../sass/pages/page__blog";
+}
+
 html.aumenta {
   font-size: 120%;
 }
