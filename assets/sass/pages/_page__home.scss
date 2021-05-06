@@ -688,6 +688,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 .midia {
     padding: 120px 0 0;
     overflow: hidden;
+    margin-bottom: 100px;
 
     &__text {
         display: flex;
@@ -742,5 +743,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
             }
         }
     }
+
+    
 
 }

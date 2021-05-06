@@ -5291,6 +5291,47 @@ figure {
 .data__logo-container img {
     width: 75px;
 } */
+.footer .faixa {
+  background: #f0feec;
+  padding: 40px 0;
+}
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 35px;
+  flex-wrap: wrap;
+}
+.footer__wrapper ul {
+  max-width: 30%;
+  min-width: 220px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__wrapper ul {
+    margin-bottom: 30px;
+  }
+}
+.footer__wrapper ul h3 {
+  margin: 0;
+  padding: 0;
+}
+.footer__contato {
+  display: flex;
+  flex-direction: column;
+}
+.footer__contato li + li {
+  margin-top: 20px;
+}
+@media screen and (max-width: 1024px) {
+  .footer__novidades {
+    order: -1;
+  }
+}
+.footer a:hover {
+  text-decoration: underline;
+}
+
 /* VARIAVEIS */
 :root {
   /* CONTAINER MENU */
@@ -6355,6 +6396,7 @@ html {
 .body__home .midia {
   padding: 120px 0 0;
   overflow: hidden;
+  margin-bottom: 100px;
 }
 .body__home .midia__text {
   display: flex;
