@@ -6609,7 +6609,7 @@ html {
   }
 }
 .body__blog-single .single__lastNews h2 {
-  z-index: 999999;
+  z-index: 1;
   margin-bottom: 36px;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
@@ -6630,7 +6630,7 @@ html {
 .body__blog-single .single__lastNews .cards__wrapper {
   display: flex;
   flex-wrap: wrap;
-  z-index: 999999;
+  z-index: -20;
 }
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__lastNews .cards__wrapper {

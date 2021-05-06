@@ -3,18 +3,22 @@
 @mixin last__News {
   margin: 128px 0 64px 0;
   padding: 64px 0;
+  overflow: hidden;
+  position: relative;
+
   @include d(m) {
     padding-top: 80px;
     margin-top: 64px;
   }
+
   @include d(s) {
     padding-top: 40px;
   }
-  overflow: hidden;
-  position: relative;
+
   .container {
     position: relative;
   }
+
   .ornamento__esquerdo {
     position: absolute;
     width: 200px;
@@ -26,12 +30,14 @@
       bottom: 68%;
       left: 1%;
     }
+
     @include d(s) {
       width: 150px;
       bottom: 72%;
       left: 3%;
     }
   }
+
   .ornamento__direito {
     position: absolute;
     width: 180px;
@@ -41,29 +47,35 @@
     @include d(m) {
       display: none;
     }
+
     @include d(s) {
       display: none;
     }
   }
+
   h2 {
-    z-index: 999999;
+    z-index: 1;
     margin-bottom: 36px;
     font-family: $font-raleway;
     font-weight: bold;
     font-size: rem(42);
     padding-left: 15px;
     color: $cor-preto-1;
+
     @include d(m) {
       font-size: rem(42);
     }
+
     @include d(s) {
       font-size: rem(36);
     }
   }
+
   .cards__wrapper {
     display: flex;
     flex-wrap: wrap;
-    z-index: 999999;
+    z-index: -20;
+
     @include d(m) {
       flex-wrap: nowrap;
       align-items: flex-start;
@@ -74,9 +86,11 @@
         width: 280px;
         flex-shrink: 0;
       }
+
       & a {
         cursor: pointer;
       }
+
       .card__img {
         width: 100%;
 
@@ -85,6 +99,7 @@
           width: 100%;
         }
       }
+
       li:nth-child(2) {
         display: flex;
         flex-wrap: wrap;
@@ -93,16 +108,19 @@
         margin-top: 16px;
         color: $cor-preto-1;
       }
+
       li:nth-child(3) {
         h3 {
           margin: 16px 0;
           font-size: rem(22) !important;
           font-family: $font-raleway;
           font-weight: bold;
+
           @include d(m) {
             margin-bottom: 8px;
           }
         }
+
         p {
           font-size: rem(16);
           width: 100%;
