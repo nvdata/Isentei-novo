@@ -22,12 +22,13 @@
   @import "../sass/pages/page__blog-single";
 }
 
+.body__blog {
+  @import "../sass/pages/page__blog";
+}
+
 html.aumenta {
   font-size: 120%;
 }
-
-
-
 
 .card-form .radio-select label {
   background: red !important;
@@ -54,14 +55,12 @@ html.aumenta {
   input[type="radio"] {
     display: none;
     position: relative;
-
   }
 
-  input[type="radio"]:cheked~span {
+  input[type="radio"]:cheked ~ span {
     display: block;
     background: blue;
     width: 100px;
     height: 100px;
-
   }
 }

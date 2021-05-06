@@ -13,6 +13,7 @@ const mediaQuebra = window.matchMedia('(max-width: 1024px)').matches
 // ★ PAGES ★ 
 const pageHome = new Dom().el("#page__home")
 const pageBlogSingle = document.querySelector('#page__blog-single');
+const pageBlog = document.querySelector('#page__blog');
 
 if (pageHome) { // ★ HOME 
     new Dom().bodyClass("body__home")
@@ -24,4 +25,12 @@ if (pageHome) { // ★ HOME
 
 } else if (pageBlogSingle) {// ★ Page BLOG SINGLE
     new Dom().bodyClass("body__blog-single");
+    
+
+    if (mediaQuebra)
+    new Swiper(".swiper__container", config.props)
+
+
+} else if (pageBlog) {
+    new Dom().bodyClass("body__blog");
 }
