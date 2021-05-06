@@ -6195,8 +6195,210 @@ html {
   background: #068129;
 }
 .body__home .number {
-  height: 100vh;
+  height: 600px;
   padding: 120px 0;
+  display: flex;
+  align-items: center;
+}
+.body__home .number__wrapper {
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(3, 360px);
+  column-gap: 30px;
+  justify-content: center;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__wrapper {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
+}
+.body__home .number__item {
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item:nth-child(2) {
+    position: relative;
+    left: 15px;
+  }
+}
+.body__home .number__item:nth-child(2) p {
+  left: -10px;
+  position: relative;
+}
+.body__home .number__item .img__container {
+  position: relative;
+  width: 300px;
+  height: 90px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item .img__container {
+    width: 260px;
+  }
+}
+.body__home .number__item .img__container img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+.body__home .number__item p {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item p {
+    position: initial;
+  }
+}
+.body__home .depo .swiper__container-depo {
+  max-width: 1004px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  padding-top: 180px;
+  margin-top: -150px;
+}
+.body__home .depo__text {
+  text-align: center;
+}
+.body__home .depo__text h1 {
+  font-size: 2.8125rem;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.body__home .depo__text p {
+  color: #666666;
+  max-width: 460px;
+  margin: 20px auto 40px;
+  font-weight: 500;
+}
+.body__home .depo__cards {
+  max-width: 1000px;
+  padding-bottom: 40px;
+}
+.body__home .depo__card {
+  width: 320px;
+  padding: 20px 30px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.04);
+  border-radius: 7px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  min-height: 340px;
+}
+.body__home .depo__card .stars {
+  display: block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 35px;
+  width: 170px;
+  background-image: url("../img/icon/5-star.svg");
+  margin-bottom: 40px;
+}
+.body__home .depo__card p {
+  color: #6d7d8b;
+}
+.body__home .depo__card p,
+.body__home .depo__card h3,
+.body__home .depo__card h4 {
+  color: #6d7d8b;
+  margin: 0;
+  padding: 0;
+}
+.body__home .depo__card h3 {
+  font-size: 1rem;
+  margin-top: 25px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+.body__home .depo__card h4 {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.body__home .depo .swiper__buttons {
+  position: absolute;
+  top: 0;
+  width: 200px;
+  height: 100px;
+  right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .depo .swiper__buttons {
+    top: 100px;
+  }
+}
+.body__home .depo .swiper-button-prev.swiper-button-disabled,
+.body__home .depo .swiper-button-next.swiper-button-disabled {
+  opacity: 0.2 !important;
+}
+.body__home .depo .swiper-button-prev:after,
+.body__home .depo .swiper-button-next:after {
+  font-size: 2rem;
+  color: #666666;
+}
+.body__home .depo .swiper-button-prev {
+  left: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .depo .swiper-button-prev {
+    left: 100px;
+  }
+}
+.body__home .midia {
+  padding: 120px 0 0;
+  overflow: hidden;
+}
+.body__home .midia__text {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+.body__home .midia__text h1 {
+  text-align: center;
+  counter-reset: #333333;
+  margin-bottom: 40px;
+  display: inline-block;
+  font-size: 2.8125rem;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+.body__home .midia__quebra {
+  padding: 80px 0;
+  background: #eefeec;
+}
+.body__home .midia .quebra__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .midia .quebra__wrapper {
+    justify-content: initial;
+  }
+}
+.body__home .midia .quebra__item {
+  margin: 10px auto;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .midia .quebra__item {
+    width: 330px;
+  }
+}
+.body__home .midia .quebra__item img {
+  margin: 0 auto;
+}
+.body__home .midia .quebra__item p {
+  text-align: center;
+  font-weight: 500;
+  color: #000000;
 }
 
 .body__blog-single {
@@ -6534,4 +6736,35 @@ html {
 
 html.aumenta {
   font-size: 120%;
+}
+
+.card-form .radio-select label {
+  background: red !important;
+  display: block;
+  position: relative;
+  cursor: pointer;
+  max-width: 400px;
+}
+.card-form .radio-select label:after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  left: 30px;
+  border-radius: 50%;
+  border: 2px solid black;
+  top: 0;
+  bottom: 0;
+  margin: auto 0;
+}
+.card-form .radio-select label input[type=radio] {
+  display: none;
+  position: relative;
+}
+.card-form .radio-select label input[type=radio]:cheked ~ span {
+  display: block;
+  background: blue;
+  width: 100px;
+  height: 100px;
 }/*# sourceMappingURL=style.comp.css.map */

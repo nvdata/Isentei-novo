@@ -3,16 +3,51 @@ const props2 = {
     // loop: true,
     // effect: 'fade',
     slidesPerView: "auto",
-    centeredSlides: false,
+    centeredSlides: true,
     speed: 600,
     autoplay: {
         delay: 2000,
-        disableOnInteraction: true,
+        disableOnInteraction: false,
     },
+
+}
+
+export
+const propsComent = {
+
+    slidesPerView: 'auto',
+    spaceBetween: 30,
+    centeredSlides: false,
+
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
+    breakpoints: {
+        320: {
+            slidesPerView: "auto",
+            centeredSlides: true,
+            spaceBetween: 25,
+        },
+        720: {
+            slidesPerView: "auto",
+            centeredSlides: false,
+            spaceBetween: 25,
+        },
+        1024: {
+            slidesPerView: "auto",
+            spaceBetween: 50,
+            centeredSlides: false,
+
+        },
+
+        1240: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+            centeredSlides: false,
+
+        },
+    }
 }
 
 // Swiper do dica
@@ -59,7 +94,7 @@ const propstrans = {
     slidesPerView: 'auto',
     spaceBetween: 30,
     centeredSlides: false,
-    
+
     speed: 600,
     autoplay: {
         delay: 500,
