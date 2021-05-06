@@ -1,14 +1,40 @@
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}
+
+.dcl .fontChange {
+    animation: shake 0.82s cubic-bezier(.36, .07, .19, .97);
+    animation-iteration-count: 2;
+}
+
 .fontChange {
-    // display: block;
+
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px; // display: block;
     top: 45vh;
     right: 30px;
     background: $cor-verde-1;
-    // padding-left: 20px;
-    // padding-right: 15px;
-    // padding-top: 15px;
-    // padding-bottom: 10px;
-    // border-radius: 10px 0 0 10px;
-    // transition: all .3s ease;
     z-index: 90;
     position: fixed;
     padding: 16px;
@@ -18,6 +44,14 @@
     transition: all .6s ease-in-out;
     cursor: pointer;
     box-shadow: 0 3px 4px rgb(0 0 0 / 5%);
+
+    @include d(m) {
+        top: 64vh;
+    }
+
+    @include d(ss) {
+        top: 72vh;
+    }
 
     &:hover {
         clip-path: circle(75%) !important;
@@ -87,6 +121,10 @@
         top: 86vh;
         clip-path: circle(12% at 79% 30%);
 
+        @include d(m) {
+            right: 0px;
+        }
+
         span {
             top: 34px;
             right: 27px;
@@ -100,5 +138,11 @@
         &:hover {
             top: 72vh !important;
         }
+    }
+}
+
+@media (max-width:540px) and(max-height:680px) {
+    .fontChange {
+        top: 76vh;
     }
 }
