@@ -25,6 +25,12 @@ if (pageHome) { // ★ HOME
 
 } else if (pageBlogSingle) {// ★ Page BLOG SINGLE
     new Dom().bodyClass("body__blog-single");
+    
+
+    if (mediaQuebra)
+    new Swiper(".swiper__container", config.props)
+
+
 } else if (pageBlog) {
     new Dom().bodyClass("body__blog");
 }
