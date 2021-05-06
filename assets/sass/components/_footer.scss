@@ -60,3 +60,56 @@
 .data__logo-container img {
     width: 75px;
 } */
+
+
+.footer {
+    .faixa {
+        background: $cor-verde-claro-1;
+        padding: 40px 0;
+    }
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-top: 35px;
+        flex-wrap: wrap;
+
+        ul {
+            max-width: 30%;
+            min-width: 220px;
+            margin-bottom: 20px;
+
+            @include d(m) {
+                margin-bottom: 30px;
+            }
+
+            h3 {
+                margin: 0;
+                padding: 0;
+            }
+        }
+    }
+
+    &__contato {
+        display: flex;
+        flex-direction: column;
+
+        li+li {
+            margin-top: 20px;
+        }
+    }
+
+    &__novidades {
+        @include d(m) {
+            order: -1;
+        }
+    }
+
+    a {
+        &:hover {
+            text-decoration: underline;
+        }
+
+    }
+}
