@@ -4,6 +4,7 @@
 
 $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
+@import "../components/last__News";
 
 @mixin botaoIsentei($cor:white, $bg:$cor-verde-1) {
     display: inline-flex;
@@ -744,6 +745,13 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         }
     }
 
-    
 
+
+}
+
+
+$component-name: "single__lastNews";
+
+.#{$component-name} {
+  @include last__News;
 }
