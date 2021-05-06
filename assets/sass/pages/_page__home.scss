@@ -92,8 +92,6 @@
         margin-top: -100px;
         font-family: $font-raleway;
 
-
-
         h1 {
 
             @include textIntro;
@@ -188,7 +186,8 @@
 
     @include d(m) {
         height: 100%;
-        padding: 60px 0 120px;
+        padding: 60px 0 80px;
+
     }
 
     .container {
@@ -217,7 +216,7 @@
         margin: 20px 0;
 
         @include d(m) {
-            margin: 40px 0;
+            margin: 40px 0 60px;
             text-align: center;
             align-items: center;
         }
@@ -267,7 +266,7 @@
             font-size: rem(16);
 
             @include d(m) {
-                height: 125px;
+                min-height: initial;
             }
         }
 
@@ -314,12 +313,19 @@
         bottom: -100px;
         width: 600px;
         height: 500px;
+
+        @include d(m) {
+            display: none;
+        }
     }
 
     &__text {
+        padding-right: 60px !important;
+
         @include d(m) {
             max-width: 660px;
             margin: 0 auto 40px;
+            padding-right: 15px !important;
         }
 
 
@@ -343,6 +349,11 @@
         }
     }
 
+    &__calculadora {
+        @include d(s) {
+            padding: 0;
+        }
+    }
 
     .calculadora__container {
         background: $cor-verde-1;
@@ -354,7 +365,11 @@
         flex-direction: column;
 
         @include d(m) {
-            padding: 30px 40px 40px
+            padding: 30px 60px 40px
+        }
+
+        @include d(s) {
+            padding: 30px 20px 40px
         }
 
 
@@ -365,6 +380,10 @@
             max-width: 550px;
             font-weight: 700;
             margin-bottom: 20px;
+
+            @include d(m) {
+                font-size: rem(28);
+            }
         }
 
         //inputs e selects
@@ -399,18 +418,42 @@
             width: 100%;
         }
 
-        select {
+        .select__wrap {
+            width: max-content;
             width: 48%;
+            position: relative;
+            &:after{
+                @include pseudo(absolute);
+                background-image: url(../img/icon/down.svg);
+                @include size(10px);
+                right: 15px;
+                top: 0;
+                bottom: 0;
+                margin: auto 0;
+
+            }
+        }
+
+        .select__wrap +.select__wrap  {
+            margin-left: auto
+        }
+
+        select {
+            position: absolute;
+            width: 100%;
             padding: 15px 10px;
             border-radius: $border-radius;
             cursor: pointer;
             color: $cor-cinza-1;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            position: relative;
 
+            &:after {}
         }
 
-        select+select {
-            margin-left: auto
-        }
+
     }
 
 
@@ -441,4 +484,9 @@
             background: #068129;
         }
     }
+}
+
+.number{
+    height: 100vh;
+    padding: 120px 0;
 }

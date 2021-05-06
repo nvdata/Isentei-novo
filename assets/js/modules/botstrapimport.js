@@ -2,7 +2,6 @@ export default
 
 function vemBootstrap() {
     var cssId = 'bootstrapao';
-
     var head = document.getElementsByTagName('head')[0];
     var link = document.createElement('link');
     link.id = cssId;
