@@ -20,13 +20,19 @@
       display: flex;
       flex-wrap: wrap;
 
+
       .intro__img {
-        & img {
-          min-height: 100%;
+        img {
+          width: 100%;
+          min-height: 400px;
+          object-fit: cover;
+
         }
       }
 
       .intro__text {
+        height: min-content;
+
         .span {
           display: flex;
           flex-wrap: wrap;
@@ -35,7 +41,7 @@
           span {
             color: $cor-preto-1;
             font-size: rem(14);
-            padding-bottom: 8px;
+            padding-bottom: 16px;
 
             &:nth-child(2) {
               color: $cor-cinza-3;
@@ -46,9 +52,10 @@
         }
 
         h2 {
-          font-size: rem(32);
+          font-size: rem(36);
           color: $cor-preto-1;
           padding-bottom: 16px;
+          line-height: 140%;
         }
 
         p {
@@ -59,12 +66,63 @@
 
         a {
           display: block;
+          width: max-content;
           margin-top: 16px;
           font-size: rem(14);
           color: $cor-verde-4;
           font-weight: bold;
+          padding: 5px 10px 5px 0;
         }
       }
     }
   }
+}
+
+.destaques__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 40px 0;
+
+  .card__img {
+    width: 100%;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+    }
+  }
+
+  li:nth-child(2) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font-size: rem(12);
+    margin-top: 16px;
+    color: $cor-preto-1;
+  }
+
+  li:nth-child(3) {
+    h3 {
+      margin: 16px 0;
+      font-size: rem(24) !important;
+      font-family: $font-raleway;
+      font-weight: bold;
+
+      @include d(m) {
+        margin-bottom: 8px;
+      }
+    }
+
+    p {
+      font-size: rem(16);
+      width: 100%;
+      color: $cor-cinza-3;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      -webkit-box-orient: vertical;
+    }
+  }
+
 }

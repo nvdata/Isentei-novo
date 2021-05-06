@@ -6883,7 +6883,13 @@ html {
   flex-wrap: wrap;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__img img {
-  min-height: 100%;
+  width: 100%;
+  min-height: 400px;
+  object-fit: cover;
+}
+.body__blog .blog .blog__grid .intro__grid .intro__text {
+  height: -webkit-min-content;
+  height: min-content;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text .span {
   display: flex;
@@ -6893,7 +6899,7 @@ html {
 .body__blog .blog .blog__grid .intro__grid .intro__text .span span {
   color: #333333;
   font-size: 0.875rem;
-  padding-bottom: 8px;
+  padding-bottom: 16px;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text .span span:nth-child(2) {
   color: #999999;
@@ -6901,9 +6907,10 @@ html {
   align-self: flex-end;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text h2 {
-  font-size: 2rem;
+  font-size: 2.25rem;
   color: #333333;
   padding-bottom: 16px;
+  line-height: 140%;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text p {
   font-size: 1rem;
@@ -6912,10 +6919,54 @@ html {
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text a {
   display: block;
+  width: -webkit-max-content;
+  width: max-content;
   margin-top: 16px;
   font-size: 0.875rem;
   color: #33f246;
   font-weight: bold;
+  padding: 5px 10px 5px 0;
+}
+.body__blog .destaques__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 40px 0;
+}
+.body__blog .destaques__wrapper .card__img {
+  width: 100%;
+}
+.body__blog .destaques__wrapper .card__img img {
+  object-fit: cover;
+  width: 100%;
+}
+.body__blog .destaques__wrapper li:nth-child(2) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  margin-top: 16px;
+  color: #333333;
+}
+.body__blog .destaques__wrapper li:nth-child(3) h3 {
+  margin: 16px 0;
+  font-size: 1.5rem !important;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .destaques__wrapper li:nth-child(3) h3 {
+    margin-bottom: 8px;
+  }
+}
+.body__blog .destaques__wrapper li:nth-child(3) p {
+  font-size: 1rem;
+  width: 100%;
+  color: #999999;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 html.aumenta {
