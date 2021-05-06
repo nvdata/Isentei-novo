@@ -1,3 +1,5 @@
+@import "../components/last__News";
+
 .container {
   max-width: 1000px;
 }
@@ -158,9 +160,9 @@
 }
 
 /* SEÇÃO NOTICIAS */
-$component-name: "single__lastNews";
 
-.#{$component-name} {
+
+.single__lastNews {
   @include last__News;
 }
 
