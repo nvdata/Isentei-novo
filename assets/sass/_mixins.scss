@@ -112,6 +112,14 @@
 
 }
 
+@mixin inset{
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+
 @mixin clamp($property, $min-size, $scaler, $max-size, $min-size-left:false, $scaler-left:false, $max-size-left:false){
     @if $min-size-left == false {
       #{$property}:$max-size; 

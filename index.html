@@ -11,6 +11,7 @@
         @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap");
     </style>
     <link rel="stylesheet" href="assets/css/style.comp.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 
     <title>Isentei</title>
 </head>
@@ -1293,50 +1294,155 @@
         <section class="number" id="number">
             <div class="container">
                 <div class="number__wrapper">
+
                     <div class="number__item">
-                      <img src="assets/img/icon/2000.svg" alt="2000">
+                        <div class="img__container">
+                            <img src="assets/img/icon/2000.svg" alt="2000">
+                        </div>
+                        <p>Pessoas Isentas</p>
                     </div>
+
+                    <div class="number__item">
+                        <div class="img__container">
+                            <img src="assets/img/icon/37-milhoes.svg" alt="37 milhoes"></div>
+                        <p>economizados em Imposto de Renda</p>
+                    </div>
+
+                    <div class="number__item">
+
+                        <div class="img__container">
+                            <img src="assets/img/icon/13-milhoes.svg" alt="13 Milhoes">
+                        </div>
+
+                        <p>em valor de Retroativo.</p>
+                    </div>
+
+
                 </div>
             </div>
         </section>
 
+        <section class="depo">
+            <div class="container ">
+                <div class="depo__text">
+                    <h1>
+                        Depoimento
+                    </h1>
+                    <p>Que problema conseguimos resolver para os nossos clientes?</p>
+                </div>
 
-        <!-- script aumentar fonte -->
-        <!--   <script>
-            const html = document.querySelector("html")
-            var cont = 100
-            const button = document.querySelector("button").addEventListener("click",
-                function () {
-                    if (cont < 150)
-                        cont = cont + 10
+                <div class="swiper__container-depo">
+                    <div class="depo__cards swiper-wrapper">
 
-                    console.log(cont + "%");
-                    html.style.fontSize = cont + "%"
+                        <div class="swiper-slide depo__card">
+                            <span class="stars"> </span>
+                            <p>Agilidade, competência e profissionalismo, Dessa forma qualifico a ISENTEI,
+                                parabenizo pelo trabalho executado de forma tão brilhante, vocês realmente são
+                                incríveis nesse árduo serviço de isenção de imposto de renda</p>
+                            <h3>Dário</h3>
+                            <h4>Rio de Janeiro</h4>
+                        </div>
+
+                        <div class="swiper-slide depo__card">
+                            <span class="stars"> </span>
+                            <p>Agilidade, competência e profissionalismo, Dessa forma qualifico a ISENTEI,
+                                parabenizo pelo trabalho executado de forma tão brilhante, vocês realmente são
+                                incríveis nesse árduo serviço de isenção de imposto de renda</p>
+                            <h3>Dário</h3>
+                            <h4>Rio de Janeiro</h4>
+
+                        </div>
+
+                        <div class="swiper-slide depo__card">
+                            <span class="stars"> </span>
+                            <p>Agradeço a atenção que recebi desde o momento do primeiro contato até a conquista da
+                                isenção do meu imposto de renda. Quando saiu minha decisão favorável, fiquei muito
+                                feliz. Parabéns à ISENTEI por toda dedicação</p>
+                            <h3>Ana</h3>
+                            <h4>Brasilia</h4>
+
+                        </div>
+
+                        <div class="swiper-slide depo__card">
+                            <span class="stars"> </span>
+                            <p>A competência de vocês me surpreendeu! Eu preenchi o formulário no site no dia 13/07, às
+                                19 horas, e fiquei surpreso quando recebi um contato da ISENTEI em 17/10 sobre o
+                                resultado positivo do meu pedido de isenção de IR.
+
+                                Vocês foram incríveis.</p>
+                            <h3>Ronaldo</h3>
+                            <h4>Rio de Janeiro</h4>
+                        </div>
 
 
-                })
+                    </div>
 
-                // Store
-                localStorage.setItem("lastname", "Smith");
-                // Retrieve
+                    <div class="swiper__buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
 
-                document.getElementById("result").innerHTML =
-                localStorage.getItem("lastname");
+                </div>
 
-                if (typeof(Storage) !== "undefined") {
-                // Código localStorage/sessionStorage.
-                } else {
-                // Desculpe! web storage não suportado.
-                }
+            </div>
 
-        </script> -->
+        </section>
+
+
+        <section class="midia" id="midia">
+            <div class="container">
+                <div class="midia__text">
+                    <h1>O que a mídia fala sobre nós</h1>
+                </div>
+            </div>
+
+            <div class="midia__quebra">
+                <div class="container swiper__container-quebra">
+                    <div class="quebra__wrapper swiper-wrapper">
+
+                        <div class="quebra__item swiper-slide col-lg-3">
+                            <div class="img__container">
+                                <img src="assets/img/terra.png" alt="terra">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, nisl, sem condimentum
+                                    sociis. Vel dignissim vivamus egestas amet. Morbi massa est est risus. Congue
+                                    ullamcorper a.</p>
+                            </div>
+                        </div>
+
+                        <div class="quebra__item swiper-slide col-lg-3">
+                            <div class="img__container">
+                                <img src="assets/img/mundo.png" alt="terra">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, nisl, sem condimentum
+                                    sociis. Vel dignissim vivamus egestas amet. Morbi massa est est risus. Congue
+                                    ullamcorper a.</p>
+                            </div>
+                        </div>
+
+                        <div class="quebra__item swiper-slide col-lg-3">
+                            <div class="img__container">
+                                <img src="assets/img/terra.png" alt="terra">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet, nisl, sem condimentum
+                                    sociis. Vel dignissim vivamus egestas amet. Morbi massa est est risus. Congue
+                                    ullamcorper a.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+
+
 
 
         <!-- ☰ MENUS -->
         <nav class="menu__desktop menu">
             <div class="container">
                 <div class="menu__wrapper">
-                    <a class="menu__logo" href="#">
+                    <a class="menu__logo" href="#" title="Voltar Para o Inicio">
                         <img src="assets/img/logo.png" alt="logo"></a>
 
                     <ul class="menu__links">
@@ -1400,6 +1506,36 @@
     <!--  ⚐ JS Front   -->
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
+
+    <!-- script aumentar fonte -->
+    <!--   <script>
+            const html = document.querySelector("html")
+            var cont = 100
+            const button = document.querySelector("button").addEventListener("click",
+                function () {
+                    if (cont < 150)
+                        cont = cont + 10
+
+                    console.log(cont + "%");
+                    html.style.fontSize = cont + "%"
+
+
+                })
+
+                // Store
+                localStorage.setItem("lastname", "Smith");
+                // Retrieve
+
+                document.getElementById("result").innerHTML =
+                localStorage.getItem("lastname");
+
+                if (typeof(Storage) !== "undefined") {
+                // Código localStorage/sessionStorage.
+                } else {
+                // Desculpe! web storage não suportado.
+                }
+
+        </script> -->
 
 </body>
 
