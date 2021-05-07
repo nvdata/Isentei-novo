@@ -6,9 +6,11 @@ import * as config from './modules/swiper__props.js'; //Configs do Swiper
 import Dom from './modules/constructors.js'; //selecionar elementos
 import menu from './modules/menu.js'; //js do menu
 import zoomFont from './modules/zoomFont.js'; //js do menu
+import linkDentroLink from './modules/a-dentro-a.js'; //js do menu
 
 menu();
 zoomFont()
+linkDentroLink()
 
 const mediaQuebra = window.matchMedia('(max-width: 1024px)').matches
 

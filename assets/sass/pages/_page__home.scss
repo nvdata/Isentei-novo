@@ -647,6 +647,9 @@
     overflow: hidden;
     @include last__News;
 
+    .cards__wrapper {
+        z-index: 2;
+    }
 
     .btn__container {
         @include botaoIsentei($cor-preto-1, $cor-verde-2);

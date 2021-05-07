@@ -85,6 +85,7 @@
       @include d(m) {
         width: 280px;
         flex-shrink: 0;
+        
       }
 
       & a {
@@ -123,7 +124,7 @@
         }
 
         p {
-          font-size: rem(16);
+          font-size: calc(12px + 0.3rem);
           width: 100%;
           color: $cor-cinza-3;
           overflow: hidden;

@@ -6969,7 +6969,7 @@ html {
   }
 }
 .body__home .single__lastNews .cards__wrapper .card__item li:nth-child(3) p {
-  font-size: 1rem;
+  font-size: calc(12px + 0.3rem);
   width: 100%;
   color: #999999;
   overflow: hidden;
@@ -7410,7 +7410,7 @@ html {
   }
 }
 .body__blog-single .single__lastNews .cards__wrapper .card__item li:nth-child(3) p {
-  font-size: 1rem;
+  font-size: calc(12px + 0.3rem);
   width: 100%;
   color: #999999;
   overflow: hidden;
