@@ -1,24 +1,7 @@
 $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 @import "../components/last__News";
-
-
-@mixin textIntro {
-    text-align: center;
-    line-height: 145%;
-    color: $cor-preto-1;
-    letter-spacing: -0.03em;
-    font-size: rem(48);
-    font-weight: bold;
-
-    @include d(m) {
-        font-size: rem(28);
-    }
-
-    @include d(s) {
-        font-size: calc(22px + 0.2rem);
-    }
-}
+@import "../components/number";
 
 .intro {
 
@@ -622,78 +605,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 }
 
 .number {
-    height: 600px;
-    padding: 120px 0;
-    display: flex;
-    align-items: center;
-
-    &__wrapper {
-        display: grid;
-        align-items: center;
-        grid-template-columns: repeat(3, 360px);
-        column-gap: 30px;
-        justify-content: center;
-        max-width: 1000px;
-        margin: 0 auto;
-
-        @include d(m) {
-            grid-template-columns: 1fr;
-            row-gap: 30px;
-
-        }
-
-    }
-
-    &__item {
-        display: flex;
-        flex-direction: column;
-
-        &:nth-child(2) {
-            @include d(m) {
-                position: relative;
-                left: 15px;
-            }
-
-            p {
-                left: -10px;
-                position: relative;
-            }
-        }
-
-
-        .img__container {
-            position: relative;
-            width: 300px;
-            height: 90px;
-            margin: 0 auto;
-
-
-            @include d(m) {
-                width: 260px;
-            }
-
-            img {
-                position: absolute;
-                @include inset;
-                margin: auto;
-            }
-
-        }
-
-        p {
-            text-align: center;
-            display: block;
-            margin: 0 auto;
-
-
-
-
-
-            @include d(m) {
-                position: initial;
-            }
-        }
-    }
+    @include secao__number;
 }
 
 .depo {

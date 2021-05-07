@@ -2,6 +2,28 @@
 @import "./utilities/clamp"; //  CLAMP
 
 
+
+
+//text intro
+
+@mixin textIntro {
+  text-align: center;
+  line-height: 145%;
+  color: $cor-preto-1;
+  letter-spacing: -0.03em;
+  font-size: rem(48);
+  font-weight: bold;
+
+  @include d(m) {
+      font-size: rem(28);
+  }
+
+  @include d(s) {
+      font-size: calc(22px + 0.2rem);
+  }
+}
+
+
 @mixin botaoIsentei($cor:white, $bg:$cor-verde-1) {
   display: inline-flex;
 
