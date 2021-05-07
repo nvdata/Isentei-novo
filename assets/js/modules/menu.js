@@ -16,7 +16,7 @@ export default function menu() {
     /* abre & fecha menu  */
     const menuItem = document.querySelectorAll(".menu__icon-click")
     const linksMenu = document.querySelectorAll(".atalhos")
-    const mediaQuery = window.matchMedia('(min-width: 992px)')
+    const mediaQuery = window.matchMedia('(min-width: 1024px)')
 
     function menuMobile() {
 

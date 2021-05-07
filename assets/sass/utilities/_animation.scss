@@ -135,3 +135,37 @@ $ease-in-out-back: cubic-bezier(0.680, -0.550, 0.265, 1.550);
 
     }
 }
+
+@keyframes setaButton {
+    100% {
+        transform: translateY(3px);
+    }
+
+    0% {
+        transform: translateY(0px);
+    }
+}
+
+@keyframes shake {
+
+    10%,
+    90% {
+        transform: translate3d(-1px, 0, 0);
+    }
+
+    20%,
+    80% {
+        transform: translate3d(2px, 0, 0);
+    }
+
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-4px, 0, 0);
+    }
+
+    40%,
+    60% {
+        transform: translate3d(4px, 0, 0);
+    }
+}

@@ -15,11 +15,11 @@
   font-weight: bold;
 
   @include d(m) {
-      font-size: rem(28);
+    font-size: rem(28);
   }
 
   @include d(s) {
-      font-size: calc(22px + 0.2rem);
+    font-size: calc(22px + 0.2rem);
   }
 }
 
@@ -40,6 +40,7 @@
     display: inline-flex;
     align-items: center;
     text-align: center;
+    cursor: pointer;
 
     @include d(m) {
       max-width: 250px;

@@ -1,0 +1,85 @@
+@mixin intro__isentei {
+
+    height: 100vh;
+    min-height: 620px;
+    max-height: 1080px;
+    background: $cor-verde-claro-1;
+    padding-top: 80px;
+    overflow: hidden;
+    position: relative;
+
+    @include d(s) {
+        min-height: 720px;
+    }
+
+    >.container {
+        height: 100%;
+    }
+
+    &__text {
+        position: relative;
+        z-index: 3;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: -100px;
+        font-family: $font-raleway;
+
+        h1 {
+
+            @include textIntro;
+            font-size: calc(32px + .9rem);
+
+            span {
+                letter-spacing: -0.03em;
+                font-weight: 900;
+                display: inline-block;
+
+                font-size: rem(48);
+
+                @include d(m) {
+                    font-size: rem(42);
+                }
+
+                @include d(s) {
+                    font-size: rem(36);
+                }
+            }
+        }
+
+        p {
+            font-size: rem(14);
+            text-align: center;
+            max-width: rem(320);
+            display: inline-block;
+            @include center;
+            margin-top: 20px;
+            font-family: $font-roboto;
+
+            @include d(s) {
+                max-width: 250px;
+            }
+
+        }
+    }
+
+    .btn__container {
+        @include botaoIsentei;
+
+        .btn {
+            padding: 12px 40px;
+            @include setaBotao;
+
+
+            @include d(s) {
+                padding: 12px 30px;
+                flex-grow: 0;
+                max-width: calc(130px + 5rem);
+            }
+
+        }
+    }
+
+
+}

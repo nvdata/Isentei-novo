@@ -1,0 +1,226 @@
+@import "../components/number";
+@import "../components/intro__isentei";
+
+
+
+
+.intro {
+    @include intro__isentei;
+
+    &#intro {
+        .intro__text {
+            margin-top: -50px !important;
+
+            h1 {
+                font-size: calc(42px + .9rem);
+                font-weight: 900 !important;
+                max-width: rem(690);
+                margin: 0 auto;
+
+                @include d(s) {
+                    font-size: calc(16px + 1rem);
+                }
+            }
+        }
+
+        .btn__container {
+            .btn {
+                padding: 12px 70px !important;
+                margin-top: 40px;
+
+                @include d(m) {
+                    padding: 12px 30px !important;
+                    margin-top: 40px;
+                    width: 180px;
+                    text-align: center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+}
+
+//ornamentos
+
+.intro {
+
+    //ornamentos
+    .orna__1 {
+        top: 0;
+        position: absolute;
+        right: -7vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 20vw, 240px);
+
+        @include d(s) {
+            width: 100px;
+            right: -30px;
+        }
+    }
+
+    .orna__2 {
+        position: absolute;
+        top: 56vh;
+        right: 26vw;
+        // width: clamp(30px, 3.5vw, 60px);
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .orna__3 {
+        position: absolute;
+        bottom: 4vw;
+        left: 9vw;
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(s) {
+            bottom: 20vh;
+        }
+    }
+
+    .orna__4 {
+
+        top: 15vh;
+        position: absolute;
+        right: 55%;
+        left: 45%;
+        margin: auto 0;
+        width: 20px;
+        opacity: .1;
+
+        @include d(s) {
+            width: 15px;
+        }
+    }
+
+    .orna__5 {
+
+        top: calc(27vh - 3rem);
+        position: absolute;
+        right: calc(61% + 1rem);
+
+        margin: auto 0;
+        width: 20px;
+
+        @include d(s) {
+            width: 15px;
+            right: calc(64% + 1rem);
+            top: 18vh;
+        }
+
+
+    }
+
+    .orna__6 {
+        bottom: 0;
+        position: absolute;
+        left: -2vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 19vw, 220px);
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__7 {
+        bottom: 30vh;
+        position: absolute;
+        right: 15vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__8 {
+        bottom: 20vh;
+        position: absolute;
+        left: 25vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__9 {
+        top: calc(36vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: 30%;
+        margin: auto 0;
+        width: 12px;
+
+        @include d(m) {
+            display: none;
+        }
+
+
+    }
+
+    .orna__10 {
+        top: 27vh;
+        position: absolute;
+        left: 15vw;
+        margin: auto 0;
+        width: 30px;
+    }
+}
+
+.number {
+    @include secao__number;
+
+    &#number {
+        padding: 0px 0 120px;
+    }
+}
+
+.lei {
+    padding: 0 0 120px;
+
+    &__text {
+        min-height: 600px;
+        padding: 80px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h1 {
+            font-family: $font-raleway;
+            font-weight: 700;
+            font-size: calc(32px + .5rem);
+            text-align: center;
+            max-width: 1000px;
+        }
+    }
+}
+
+//ornas lei 
+.lei {
+    position: relative;
+
+    .wave__1 {
+        position: absolute;
+        left: -5vw;
+        top: 0;
+        z-index: -1;
+        width: 30vw;
+        max-width: 450px;
+    }
+
+    .wave__2 {
+        position: absolute;
+        right: -1vw;
+        top: 0;
+        z-index: -1;
+        width: 30vw;
+        max-width: 350px;
+    }
+}
