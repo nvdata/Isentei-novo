@@ -6847,6 +6847,8 @@ html {
 .body__home .single__lastNews {
   position: relative;
   overflow: hidden;
+<<<<<<< HEAD
+=======
   margin: 128px 0 64px 0;
   padding: 64px 0;
   overflow: hidden;
@@ -7083,6 +7085,7 @@ html {
 .body__home .midia {
   padding: 120px 0 0;
   overflow: hidden;
+>>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   margin-bottom: 100px;
 }
 .body__home .midia__text {
@@ -7167,7 +7170,7 @@ html {
 .body__blog-single .single__content h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: 2.625rem;
+  font-size: calc(32px + .9rem);
   margin-bottom: 111px;
   color: #333333;
 }
@@ -7430,10 +7433,16 @@ html {
 .body__blog .blog h1 {
   color: #333333;
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
+  font-size: calc(32px + .9rem);
   font-weight: bold;
   margin-bottom: 38px;
   padding: 0 15px;
+}
+.body__blog .blog .blog__wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
 }
 .body__blog .blog .blog__grid {
   display: flex;
@@ -7446,7 +7455,7 @@ html {
 }
 .body__blog .blog .blog__grid .intro__grid .intro__img img {
   width: 100%;
-  min-height: 400px;
+  height: 100%;
   object-fit: cover;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text {
@@ -7466,19 +7475,29 @@ html {
 .body__blog .blog .blog__grid .intro__grid .intro__text .span span:nth-child(2) {
   color: #999999;
   font-size: 0.75rem;
-  align-self: flex-end;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text h2 {
-  font-size: 2.25rem;
+  font-size: 2rem;
   color: #333333;
   padding-bottom: 16px;
   line-height: 140%;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text p {
   font-size: 1rem;
   color: #666666;
   line-height: 150%;
 }
+<<<<<<< HEAD
+.body__blog .blog .blog__grid .intro__grid .intro__text .btn__intro {
+  display: block;
+  width: -webkit-max-content;
+  width: max-content;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #01b533;
+=======
 .body__blog .blog .blog__grid .intro__grid .intro__text .btn__vermais {
   display: block;
   width: -webkit-max-content;
@@ -7486,6 +7505,7 @@ html {
   margin-top: 160px;
   font-size: 12.5rem;
   color: #33f246;
+>>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   font-weight: bold;
   padding: 5px 10px 5px 0;
 }
@@ -7493,7 +7513,7 @@ html {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 40px 0;
+  margin: 30px 0;
 }
 .body__blog .destaques__wrapper .card__img {
   width: 100%;
@@ -7501,20 +7521,28 @@ html {
 .body__blog .destaques__wrapper .card__img img {
   object-fit: cover;
   width: 100%;
+  height: 100%;
 }
 .body__blog .destaques__wrapper li:nth-child(2) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  font-size: 0.75rem;
+}
+.body__blog .destaques__wrapper li:nth-child(2) span {
+  font-size: 0.875rem;
   margin-top: 16px;
   color: #333333;
+}
+.body__blog .destaques__wrapper li:nth-child(2) span:nth-child(2) {
+  color: #999999;
+  font-size: 0.75rem;
 }
 .body__blog .destaques__wrapper li:nth-child(3) h3 {
   margin: 16px 0;
   font-size: 1.5rem !important;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
+  color: #333333;
 }
 @media screen and (max-width: 1024px) {
   .body__blog .destaques__wrapper li:nth-child(3) h3 {
@@ -7524,12 +7552,36 @@ html {
 .body__blog .destaques__wrapper li:nth-child(3) p {
   font-size: 1rem;
   width: 100%;
-  color: #999999;
+  color: #666666;
   overflow: hidden;
   display: -webkit-box;
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+<<<<<<< HEAD
+.body__blog .destaques__wrapper .btn__destaques {
+  display: block;
+  width: -webkit-max-content;
+  width: max-content;
+  margin-top: 16px;
+  font-size: 0.875rem;
+  color: #01b533;
+  font-weight: bold;
+  padding: 5px 10px 5px 0;
+}
+.body__blog .btn__central {
+  display: block;
+  align-self: center;
+  margin: 64px 0 128px 0;
+  padding: 16px 64px;
+  font-size: 1.125rem;
+  text-align: center;
+  background: #01b533;
+  color: #1b1b1b;
+  font-family: "Roboto", sans-serif;
+  font-weight: normal;
+  border-radius: 8px;
+=======
 
 .body__isento .intro {
   height: 100vh;
@@ -7928,4 +7980,5 @@ html {
   z-index: -1;
   width: 30vw;
   max-width: 350px;
+>>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
 }/*# sourceMappingURL=style.comp.css.map */

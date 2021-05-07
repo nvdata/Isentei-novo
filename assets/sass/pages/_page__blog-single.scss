@@ -1,7 +1,7 @@
 @import "../components/last__News";
 
 
-  //resolvendo container do menu
+//resolvendo container do menu
 .container:not(.menu .container) {
   max-width: 1000px;
 }
@@ -39,7 +39,7 @@
   h1 {
     font-family: $font-raleway;
     font-weight: bold;
-    font-size: rem(42);
+    font-size: calc(32px + .9rem);
     margin-bottom: 111px;
     color: $cor-preto-1;
 
