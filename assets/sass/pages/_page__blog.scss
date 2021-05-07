@@ -1,6 +1,19 @@
+.container:not(.menu .container, .footer .container) {
+  max-width: 1200px;
+
+  @include d(m) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .blog {
-  margin-top: 170px;
+  margin-top: 140px;
   max-width: 100%;
+
+  @include d(m) {
+    margin-top: 100px;
+  }
 
   h1 {
     color: $cor-preto-1;
@@ -26,14 +39,13 @@
     .intro__grid {
       display: flex;
       flex-wrap: wrap;
-
+      align-items: flex-start;
 
       .intro__img {
         img {
           width: 100%;
-          height: 100%;
           object-fit: cover;
-
+          height: 100%;
         }
       }
 
@@ -48,38 +60,53 @@
           span {
             color: $cor-preto-1;
             font-size: rem(14);
+            padding-top: 10px;
             padding-bottom: 16px;
 
             &:nth-child(2) {
               color: $cor-cinza-3;
               font-size: rem(12);
             }
+
+            @include d(m) {
+              font-size: calc(10px + .4rem);
+            }
           }
         }
 
         h2 {
-          font-size: rem(32);
+          font-size: calc(24px + .4rem);
           color: $cor-preto-1;
           padding-bottom: 16px;
           line-height: 140%;
           font-family: $font-raleway;
           font-weight: 700;
+
+          @include d(m) {
+            font-size: calc(20px + .5rem);
+          }
         }
 
         p {
           font-size: rem(16);
           color: $cor-cinza-1;
           line-height: 150%;
+
+          @include d(m) {
+            font-size: calc(12px + .4rem);
+          }
+
         }
 
         .btn__intro {
           display: block;
           width: max-content;
           margin-top: 16px;
-          font-size: rem(14);
+          font-size: calc(10px + .4rem);
           color: $cor-verde-1;
           font-weight: bold;
           padding: 5px 10px 5px 0;
+
         }
       }
     }
@@ -91,6 +118,28 @@
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 30px 0;
+
+  @include d(m) {
+    margin-top: 64px;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .col-lg-3 {
+    max-width: 30%;
+    flex: 1 1 30%
+  }
+
+  .card__item {
+    min-width: 280px;
+    max-width: 400px;
+
+    @include d(s) {
+      max-width: 280px;
+      margin: 0 auto 35px;
+
+    }
+  }
 
   .card__img {
     width: 100%;
@@ -109,7 +158,7 @@
 
     span {
       font-size: rem(14);
-      margin-top: 16px;
+      margin-top: 10px;
       color: $cor-preto-1;
 
       &:nth-child(2) {
@@ -123,12 +172,13 @@
   li:nth-child(3) {
     h3 {
       margin: 16px 0;
-      font-size: rem(24) !important;
+      font-size: rem(24);
       font-family: $font-raleway;
       font-weight: bold;
       color: $cor-preto-1;
 
       @include d(m) {
+        font-size: calc(14px + .4rem);
         margin-bottom: 8px;
       }
     }
@@ -141,6 +191,10 @@
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
+
+      @include d(m) {
+        font-size: calc(10px + .4rem);
+      }
     }
   }
 
@@ -152,13 +206,17 @@
     color: $cor-verde-1;
     font-weight: bold;
     padding: 5px 10px 5px 0;
+
+    @include d(m) {
+      font-size: calc(6px + .4rem);
+    }
   }
 
 }
 
 .btn__container {
   @include botaoIsentei($cor:white, $bg:$cor-verde-1);
-
+  align-self: center;
 
   .btn {
     font-weight: 500;
@@ -167,7 +225,7 @@
     margin: 64px auto 128px auto;
 
     @include d(m) {
-      margin: 32px auto 64px auto;
+      margin: 0 auto 64px auto;
       padding: 12px 50px;
       font-size: rem(16);
     }

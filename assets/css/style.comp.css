@@ -7145,7 +7145,7 @@ html {
   max-width: 1000px;
 }
 .body__blog-single .single {
-  margin-top: 170px;
+  margin-top: 140px;
   max-width: 100%;
 }
 .body__blog-single .single h2 {
@@ -7425,9 +7425,23 @@ html {
   }
 }
 
+.body__blog .container:not(.menu .container, .footer .container) {
+  max-width: 1200px;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .container:not(.menu .container, .footer .container) {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
 .body__blog .blog {
-  margin-top: 170px;
+  margin-top: 140px;
   max-width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .blog {
+    margin-top: 100px;
+  }
 }
 .body__blog .blog h1 {
   color: #333333;
@@ -7451,11 +7465,12 @@ html {
 .body__blog .blog .blog__grid .intro__grid {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__img img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
+  height: 100%;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text {
   height: -webkit-min-content;
@@ -7469,31 +7484,47 @@ html {
 .body__blog .blog .blog__grid .intro__grid .intro__text .span span {
   color: #333333;
   font-size: 0.875rem;
+  padding-top: 10px;
   padding-bottom: 16px;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text .span span:nth-child(2) {
   color: #999999;
   font-size: 0.75rem;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog .blog .blog__grid .intro__grid .intro__text .span span {
+    font-size: calc(10px + .4rem);
+  }
+}
 .body__blog .blog .blog__grid .intro__grid .intro__text h2 {
-  font-size: 2rem;
+  font-size: calc(24px + .4rem);
   color: #333333;
   padding-bottom: 16px;
   line-height: 140%;
   font-family: "Raleway", sans-serif;
   font-weight: 700;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog .blog .blog__grid .intro__grid .intro__text h2 {
+    font-size: calc(20px + .5rem);
+  }
+}
 .body__blog .blog .blog__grid .intro__grid .intro__text p {
   font-size: 1rem;
   color: #666666;
   line-height: 150%;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .blog .blog__grid .intro__grid .intro__text p {
+    font-size: calc(12px + .4rem);
+  }
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text .btn__intro {
   display: block;
   width: -webkit-max-content;
   width: max-content;
   margin-top: 16px;
-  font-size: 0.875rem;
+  font-size: calc(10px + .4rem);
   color: #01b533;
   font-weight: bold;
   padding: 5px 10px 5px 0;
@@ -7503,6 +7534,27 @@ html {
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 30px 0;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .destaques__wrapper {
+    margin-top: 64px;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+.body__blog .destaques__wrapper .col-lg-3 {
+  max-width: 30%;
+  flex: 1 1 30%;
+}
+.body__blog .destaques__wrapper .card__item {
+  min-width: 280px;
+  max-width: 400px;
+}
+@media screen and (max-width: 539px) {
+  .body__blog .destaques__wrapper .card__item {
+    max-width: 280px;
+    margin: 0 auto 35px;
+  }
 }
 .body__blog .destaques__wrapper .card__img {
   width: 100%;
@@ -7519,7 +7571,7 @@ html {
 }
 .body__blog .destaques__wrapper li:nth-child(2) span {
   font-size: 0.875rem;
-  margin-top: 16px;
+  margin-top: 10px;
   color: #333333;
 }
 .body__blog .destaques__wrapper li:nth-child(2) span:nth-child(2) {
@@ -7528,13 +7580,14 @@ html {
 }
 .body__blog .destaques__wrapper li:nth-child(3) h3 {
   margin: 16px 0;
-  font-size: 1.5rem !important;
+  font-size: 1.5rem;
   font-family: "Raleway", sans-serif;
   font-weight: bold;
   color: #333333;
 }
 @media screen and (max-width: 1024px) {
   .body__blog .destaques__wrapper li:nth-child(3) h3 {
+    font-size: calc(14px + .4rem);
     margin-bottom: 8px;
   }
 }
@@ -7547,6 +7600,11 @@ html {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog .destaques__wrapper li:nth-child(3) p {
+    font-size: calc(10px + .4rem);
+  }
+}
 .body__blog .destaques__wrapper .btn__destaques {
   display: block;
   width: -webkit-max-content;
@@ -7557,8 +7615,14 @@ html {
   font-weight: bold;
   padding: 5px 10px 5px 0;
 }
+@media screen and (max-width: 1024px) {
+  .body__blog .destaques__wrapper .btn__destaques {
+    font-size: calc(6px + .4rem);
+  }
+}
 .body__blog .btn__container {
   display: inline-flex;
+  align-self: center;
 }
 .body__blog .btn__container .btn {
   background: #01b533;
@@ -7607,7 +7671,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .body__blog .btn__container .btn {
-    margin: 32px auto 64px auto;
+    margin: 0 auto 64px auto;
     padding: 12px 50px;
     font-size: 1rem;
   }
