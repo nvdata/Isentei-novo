@@ -43,14 +43,15 @@ function zoomFont() {
         if (typeof (Storage) !== "undefined") {
             let valorStorage = localStorage.base
             console.log(valorStorage);
-            elhtml.style.setProperty('--font-base', valorStorage);
+            if (valorStorage)
+                elhtml.style.setProperty('--font-base', valorStorage);
+
         } else {
             console.log("Desculpe! web storage não suportado.");
         }
 
 
         let localBase = localStorage.base
-
         buttonIncrement.addEventListener("click", increment)
         buttonDecrement.addEventListener("click", decrement)
 
