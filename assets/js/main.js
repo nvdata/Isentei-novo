@@ -10,6 +10,7 @@ import linkDentroLink from './modules/a-dentro-a.js'; //js do menu
 import initAccordion from "./modules/accordion.js"
 
 
+linkDentroLink()
 menu();
 zoomFont()
 linkDentroLink()
@@ -23,6 +24,7 @@ const pageQuemSomos = new Dom().el("#page__quem-somos")
 
 const pageBlogSingle = document.querySelector('#page__blog-single');
 const pageBlog = document.querySelector('#page__blog');
+const pageContato = document.querySelector('#page__contato');
 
 if (pageHome) { // ★ HOME 
     new Dom().bodyClass("body__home")
@@ -50,4 +52,6 @@ if (pageHome) { // ★ HOME
 } else if (pageQuemSomos) { // ★ Page Quem Somos
     new Dom().bodyClass("body__quem-somos");
     initAccordion()
+} else if (pageContato) {
+    new Dom().bodyClass("body__contato");
 }

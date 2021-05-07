@@ -74,14 +74,23 @@
   .cards__wrapper {
     display: flex;
     flex-wrap: wrap;
-    z-index: -20;
+
 
     @include d(m) {
       flex-wrap: nowrap;
       align-items: flex-start;
     }
 
-    & .card__item {
+    .card__item {
+      cursor: pointer;
+      transition: transform .3s ease;
+
+      &:hover {
+        transform: translateY(-8px);
+      }
+
+
+
       @include d(m) {
         width: 280px;
         flex-shrink: 0;

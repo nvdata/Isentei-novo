@@ -1,0 +1,62 @@
+.contato {
+  margin-top: 140px;
+}
+
+
+.contatos__intro {
+  h2 {
+    margin-top: 32px;
+    font-size: rem(42);
+    font-family: $font-raleway;
+    font-weight: bold;
+    color: $cor-preto-1;
+  }
+
+  p {
+    font-size: rem(16);
+    margin: 16px 0;
+    color: $cor-cinza-1;
+    max-width: rem(330);
+  }
+
+
+}
+
+.contatos__redes {
+  margin: 64px 0 140px 0;
+
+  .redes__item {
+    margin-bottom: 64px;
+  }
+
+  .item__container {
+    display: grid;
+    grid-template-columns: rem(50) 1fr;
+    grid-column-gap: 16px;
+    align-items: center;
+
+    .item__info {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      span {
+        font-size: rem(16);
+        color: $cor-cinza-1;
+      }
+
+      & span:nth-child(2) {
+        margin-top: 8px;
+        font-size: rem(20);
+        font-family: $font-roboto;
+        font-weight: bold;
+        color: $cor-preto-1;
+      }
+    }
+  }
+
+  .raleway {
+    font-family: $font-raleway !important;
+  }
+
+}
