@@ -6847,8 +6847,6 @@ html {
 .body__home .single__lastNews {
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
-=======
   margin: 128px 0 64px 0;
   padding: 64px 0;
   overflow: hidden;
@@ -7085,7 +7083,6 @@ html {
 .body__home .midia {
   padding: 120px 0 0;
   overflow: hidden;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   margin-bottom: 100px;
 }
 .body__home .midia__text {
@@ -7489,7 +7486,6 @@ html {
   color: #666666;
   line-height: 150%;
 }
-<<<<<<< HEAD
 .body__blog .blog .blog__grid .intro__grid .intro__text .btn__intro {
   display: block;
   width: -webkit-max-content;
@@ -7497,15 +7493,6 @@ html {
   margin-top: 16px;
   font-size: 0.875rem;
   color: #01b533;
-=======
-.body__blog .blog .blog__grid .intro__grid .intro__text .btn__vermais {
-  display: block;
-  width: -webkit-max-content;
-  width: max-content;
-  margin-top: 160px;
-  font-size: 12.5rem;
-  color: #33f246;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   font-weight: bold;
   padding: 5px 10px 5px 0;
 }
@@ -7558,7 +7545,6 @@ html {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-<<<<<<< HEAD
 .body__blog .destaques__wrapper .btn__destaques {
   display: block;
   width: -webkit-max-content;
@@ -7581,7 +7567,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   border-radius: 8px;
-=======
+}
 
 .body__isento .intro {
   height: 100vh;
@@ -7732,7 +7718,7 @@ html {
 .body__isento .intro#intro .intro__text h1 {
   font-size: calc(42px + .9rem);
   font-weight: 900 !important;
-  max-width: 43.125rem;
+  max-width: 46.875rem;
   margin: 0 auto;
 }
 @media screen and (max-width: 539px) {
@@ -7947,6 +7933,7 @@ html {
 }
 .body__isento .lei {
   padding: 0 0 120px;
+  overflow: hidden;
 }
 .body__isento .lei__text {
   min-height: 600px;
@@ -7955,30 +7942,224 @@ html {
   align-items: center;
   justify-content: center;
 }
+@media screen and (max-width: 539px) {
+  .body__isento .lei__text {
+    padding: 0 15px;
+    min-height: 420px;
+  }
+}
 .body__isento .lei__text h1 {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: calc(32px + .5rem);
+  font-size: calc(22px + .6rem);
   text-align: center;
-  max-width: 1000px;
+  max-width: 1050px;
+  color: #333333;
+}
+@media screen and (max-width: 539px) {
+  .body__isento .lei__text h1 {
+    font-size: calc(14px + .5rem);
+  }
+}
+.body__isento .lei__wrapper {
+  justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+  justify-items: center;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+.body__isento .lei__wrapper .lei__card {
+  box-shadow: 10px -1px 30px rgba(0, 0, 0, 0.05);
+  max-width: 600px !important;
+  padding: 90px 60px;
+  background: white;
+  border-radius: 7px;
+  min-height: 510px;
+  transition: all 0.4s ease-in-out;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei__wrapper .lei__card {
+    padding: 50px 30px;
+  }
+}
+.body__isento .lei__wrapper .lei__card:hover {
+  background: #eefeec;
+}
+.body__isento .lei__wrapper .lei__card h2 {
+  margin-bottom: 40px;
+  color: #333333;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: calc(42px + .5rem);
+}
+@media screen and (max-width: 539px) {
+  .body__isento .lei__wrapper .lei__card h2 {
+    font-size: calc(14px + .5rem);
+  }
+}
+.body__isento .lei__wrapper .lei__card p {
+  color: #2E2C2C;
+  font-weight: 500;
+  font-size: 1.125rem;
+  font-family: "Roboto";
+  font-weight: 500;
+  line-height: 155%;
+  max-width: 440px;
+  min-height: 125px;
+}
+.body__isento .lei__wrapper .lei__card .btn__container {
+  display: inline-flex;
+  justify-content: center;
+  width: 100%;
+}
+.body__isento .lei__wrapper .lei__card .btn__container .btn {
+  background: transparent;
+  color: #01b533;
+  flex-grow: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei__wrapper .lei__card .btn__container .btn {
+    max-width: 250px;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 6px 20px;
+  }
+}
+.body__isento .lei__wrapper .lei__card .btn__container .btn ion-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei__wrapper .lei__card .btn__container .btn ion-icon {
+    margin-left: 10px;
+    font-size: 1.75rem;
+  }
+}
+.body__isento .lei__wrapper .lei__card .btn__container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #01b5345b;
+}
+.body__isento .lei__wrapper .lei__card .btn__container .btn {
+  transition: all 0.3s ease;
+  border: 2px solid #01b533;
+  padding: 16px 40px;
+  width: 320px;
+  text-align: center;
+  margin-top: 45px;
+  justify-content: center;
+}
+.body__isento .lei__wrapper .lei__card .btn__container .btn:hover {
+  background: #01b533;
+  color: white;
 }
 .body__isento .lei {
   position: relative;
 }
 .body__isento .lei .wave__1 {
   position: absolute;
-  left: -5vw;
-  top: 0;
+  left: -1vw;
+  top: -54px;
   z-index: -1;
   width: 30vw;
-  max-width: 450px;
+  max-width: 331px;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei .wave__1 {
+    max-width: initial;
+    width: 186px;
+  }
 }
 .body__isento .lei .wave__2 {
   position: absolute;
   right: -1vw;
-  top: 0;
+  top: -106px;
   z-index: -1;
   width: 30vw;
-  max-width: 350px;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
+  max-width: 490px;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei .wave__2 {
+    width: 32vw;
+    max-width: 350px;
+    top: 200px;
+    right: -31px;
+  }
+}
+.body__isento .lei .orna__1 {
+  position: absolute;
+  left: 11vw;
+  top: 13vw;
+  z-index: 1;
+  width: 30vw;
+  max-width: 32px;
+}
+@media screen and (max-width: 539px) {
+  .body__isento .lei .orna__1 {
+    max-width: 20px;
+  }
+}
+.body__isento .lei .orna__2 {
+  position: absolute;
+  left: 30vw;
+  top: 7vw;
+  z-index: 1;
+  width: 30vw;
+  max-width: 25px;
+}
+.body__isento .lei .orna__3 {
+  position: absolute;
+  left: 40vw;
+  top: 450px;
+  z-index: 1;
+  width: 400px;
+  max-width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei .orna__3 {
+    display: none;
+  }
+}
+.body__isento .lei .orna__5 {
+  top: 100px;
+  z-index: 1;
+  width: 206px;
+  /* max-width: 100%; */
+  right: 20px;
+  position: absolute;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei .orna__5 {
+    display: none;
+  }
+}
+.body__isento .lei .orna__6 {
+  top: 127px;
+  z-index: 1;
+  width: 20px;
+  left: 60vw;
+  position: absolute;
+  opacity: 0.1;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .lei .orna__6 {
+    display: none;
+  }
 }/*# sourceMappingURL=style.comp.css.map */
