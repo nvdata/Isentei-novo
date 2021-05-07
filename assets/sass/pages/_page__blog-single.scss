@@ -15,7 +15,7 @@
   h2 {
     color: $cor-preto-1;
     font-family: $font-raleway;
-    font-size: rem(48);
+    font-size: calc(46px + .9em);
     font-weight: bold;
     margin-bottom: 38px;
   }
@@ -39,12 +39,12 @@
   h1 {
     font-family: $font-raleway;
     font-weight: bold;
-    font-size: calc(32px + .9rem);
+    font-size: calc(38px + .9em);
     margin-bottom: 111px;
     color: $cor-preto-1;
 
     @include d(m) {
-      font-size: rem(36);
+      font-size: calc(24px + .5em);
       margin-bottom: 60px;
     }
   }
@@ -57,7 +57,7 @@
     margin-bottom: 51px;
 
     @include d(m) {
-      font-size: rem(22);
+      font-size: calc(16px + .4em);
     }
   }
 
@@ -74,7 +74,7 @@
       margin-top: 60px;
       margin-bottom: 15px;
       margin-left: 20px;
-      font-size: rem(24);
+      font-size: calc(20px + .4rem);
     }
   }
 
@@ -96,7 +96,7 @@
 
     @include d(m) {
       margin-top: 15px;
-      font-size: rem(18);
+      font-size: calc(14px + .4rem);
     }
   }
 
@@ -127,7 +127,7 @@
     font-weight: 500;
 
     @include d(m) {
-      font-size: rem(20);
+      font-size: calc(16px + .4rem);
     }
   }
 
