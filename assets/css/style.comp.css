@@ -7557,18 +7557,60 @@ html {
   font-weight: bold;
   padding: 5px 10px 5px 0;
 }
-.body__blog .btn__central {
-  display: block;
-  align-self: center;
-  margin: 64px 0 128px 0;
-  padding: 16px 64px;
-  font-size: 1.125rem;
-  text-align: center;
+.body__blog .btn__container {
+  display: inline-flex;
+}
+.body__blog .btn__container .btn {
   background: #01b533;
-  color: #1b1b1b;
-  font-family: "Roboto", sans-serif;
-  font-weight: normal;
-  border-radius: 8px;
+  color: white;
+  flex-grow: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .btn__container .btn {
+    max-width: 250px;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 6px 20px;
+  }
+}
+.body__blog .btn__container .btn ion-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .btn__container .btn ion-icon {
+    margin-left: 10px;
+    font-size: 1.75rem;
+  }
+}
+.body__blog .btn__container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #01b5345b;
+}
+.body__blog .btn__container .btn {
+  font-weight: 500;
+  padding-right: 50px;
+  padding-left: 50px;
+  margin: 64px auto 128px auto;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .btn__container .btn {
+    margin: 32px auto 64px auto;
+    padding: 12px 50px;
+    font-size: 1rem;
+  }
 }
 
 .body__isento .intro {
