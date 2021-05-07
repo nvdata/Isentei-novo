@@ -1,5 +1,9 @@
 .contato {
-  margin-top: 140px;
+  padding-top: 140px;
+}
+
+section {
+  overflow: hidden;
 }
 
 
@@ -24,6 +28,10 @@
 
 .contatos__redes {
   margin: 64px 0 140px 0;
+
+  @include d(m) {
+    margin: 0;
+  }
 
   .redes__item {
     margin-bottom: 64px;
@@ -57,6 +65,37 @@
 
   .raleway {
     font-family: $font-raleway !important;
+  }
+
+}
+
+.contato {
+  background: $cor-verde-claro-1;
+
+  &__wrapper {
+    display: flex;
+
+    @include d(m) {
+      flex-wrap: wrap
+    }
+  }
+}
+
+.form__contato {
+  @include d(m) {
+    padding: 0
+  }
+}
+
+
+.formulario {
+  @import "../components/form-contato";
+
+  form {
+    @include d(m) {
+      margin-top: 40px;
+      padding: 20px;
+    }
   }
 
 }

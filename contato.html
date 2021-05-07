@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/css/style.comp.css">
 
@@ -21,54 +21,117 @@
         <section class="contato">
             <div class="container">
                 <div class="contato__wrapper">
+
                     <div class="contatos__intro col-lg-5">
                         <div class="contatos__intro-img">
                             <img src="./assets/img/pageContato/contatomenina.svg" alt="menina no notebook">
-                        </div>   
+                        </div>
                         <h2>Entrar em contato</h2>
                         <p>Se preferir fale com um de nossos consultores
-                        em nossa central de atendimento.</p>
+                            em nossa central de atendimento.</p>
                         <div class="contatos__redes">
                             <div class="redes__item">
                                 <div class="item__container">
                                     <img src="./assets/img/pageContato/whatsapp.svg" alt="whatsapp">
                                     <div class="item__info">
-                                    <span class="raleway">Whatsapp</span>
-                                    <span>(21) 97264-2478</span>
+                                        <span class="raleway">Whatsapp</span>
+                                        <span>(21) 97264-2478</span>
+                                    </div>
                                 </div>
+
                             </div>
-                            
-                        </div>
-                        <div class="redes__item">
-                            <div class="item__container">
-                                <img src="./assets/img/pageContato/sac.svg" alt="whatsapp">
-                                <div class="item__info">
-                                <span class="raleway">Sac</span>
-                                <span>0800 252 25 25</span>
+                            <div class="redes__item">
+                                <div class="item__container">
+                                    <img src="./assets/img/pageContato/sac.svg" alt="whatsapp">
+                                    <div class="item__info">
+                                        <span class="raleway">Sac</span>
+                                        <span>0800 252 25 25</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="redes__item">
+                                <div class="item__container">
+                                    <img src="./assets/img/pageContato/e-mail.svg" alt="whatsapp">
+                                    <div class="item__info">
+                                        <span class="raleway">E-mail</span>
+                                        <span class="raleway">alexandre@isentei.com.br</span>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="redes__item">
+                                <div class="item__container">
+                                    <img src="./assets/img/pageContato/local.svg" alt="whatsapp">
+                                    <div class="item__info">
+                                        <span class="raleway">Área de atuação</span>
+                                        <span class="raleway">Todo Brasil</span>
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
-                        
                     </div>
-                    <div class="redes__item">
-                        <div class="item__container">
-                            <img src="./assets/img/pageContato/e-mail.svg" alt="whatsapp">
-                            <div class="item__info">
-                            <span class="raleway">E-mail</span>
-                            <span class="raleway">alexandre@isentei.com.br</span>
+                    <div class="col-lg-7 form__contato">
+                        <div class="formulario">
+                            <form action="">
+                                <h1>Entre em contato Conosco</h1>
+
+                                <div class="input__box">
+                                    <input id="name" type="text" value="" required="required">
+                                    <ion-icon name="person-outline"></ion-icon>
+                                    <span>Nome</span>
+                                </div>
+
+                                <div class="input__box">
+                                    <input id="email" type="text" value="" required="required">
+                                    <ion-icon name="mail-outline"></ion-icon>
+
+                                    <span>E-mail</span>
+
+                                </div>
+
+                                <div class="input__box ultimo">
+                                    <input id="phone" type="text" value="" required="required">
+                                    <ion-icon name="call-outline"></ion-icon>
+
+                                    <span>Telefone</span>
+                                </div>
+
+                                <div class="select__container">
+                                    <p>Seu tipo de benefício ?</p>
+                                    <select name="ano" id="ano">
+                                        <option disabled value="#">Ano</option>
+                                        <option value="#" disabled>Mês</option>
+                                    </select>
+                                </div>
+                                <div class="select__container">
+                                    <p>Qual e a sua doença ?</p>
+                                    <select name="ano" id="ano">
+                                        <option disabled value="#">Ano</option>
+                                        <option value="#" disabled>Mês</option>
+                                    </select>
+                                </div>
+
+
+
+
+
+                                <div class="textarea__container">
+                                    <p>Observação</p>
+                                    <textarea name="" id="" cols="30" rows="10"
+                                        placeholder="Escreva sua mensagem..."></textarea>
+                                </div>
+
+                                <div class="btn__container">
+                                    <button class="btn" id="submit" type="submit">Enviar</button>
+                                </div>
+
+
+
+
+                            </form>
                         </div>
-                    </div>
-                    
-                </div>
-                <div class="redes__item">
-                    <div class="item__container">
-                        <img src="./assets/img/pageContato/local.svg" alt="whatsapp">
-                        <div class="item__info">
-                        <span class="raleway">Área de atuação</span>
-                        <span class="raleway">Todo Brasil</span>
-                    </div>
-                </div>
-                
-            </div>
                     </div>
                 </div>
             </div>
@@ -211,15 +274,15 @@
         </nav>
         <div class="fundo__black"></div>
 
-        
-    <div class="fontChange">
-        <button title="Aumentar Fonte | Zoom +" class="increment">Zoom +</button>
-        <hr>
-        <button title="Diminuir Fonte | Zoom -" class="decrement">Zoom -</button>
-        <span>
-            <img src="assets/img/icon/zoom.svg" title="Aumente o tamanho do texto" alt="zoom">
-        </span>
-    </div>
+
+        <div class="fontChange">
+            <button title="Aumentar Fonte | Zoom +" class="increment">Zoom +</button>
+            <hr>
+            <button title="Diminuir Fonte | Zoom -" class="decrement">Zoom -</button>
+            <span>
+                <img src="assets/img/icon/zoom.svg" title="Aumente o tamanho do texto" alt="zoom">
+            </span>
+        </div>
 
 
     </main>

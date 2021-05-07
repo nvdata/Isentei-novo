@@ -20,8 +20,8 @@ function initAccordion() {
             })
 
             timeline
-                .to((filho), .2, {
-                    ease: "expo.out",
+                .to((filho), .1, {
+                    ease: "linear",
                     maxHeight: height,
                     "clip-path": "inset(0 0 0 0)"
                 })
@@ -29,8 +29,8 @@ function initAccordion() {
             if (this.classList.contains(activeClass)) {
                 timeline.play()
             } else {
-                gsap.to((filho), .2, {
-                    ease: "expo.out",
+                gsap.to((filho), .1, {
+                    ease: "linear",
                     maxHeight: 0,
                     "clip-path": "inset(0 0 100% 0)"
 

@@ -344,7 +344,9 @@
         margin-bottom: 80px;
 
         .voce__video {
+            @include center;
             margin-top: 60px;
+
 
             .orna {
                 &__1 {
@@ -396,13 +398,16 @@
 
 .perguntas {
 
+    margin-bottom: 80px;
+
     &__text {
         h1 {
             font-family: $font-raleway;
             font-weight: 700;
             margin-bottom: 15px;
         }
-        p{
+
+        p {
             margin-bottom: 30px
         }
     }

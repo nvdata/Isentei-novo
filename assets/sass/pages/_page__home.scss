@@ -476,7 +476,6 @@
             appearance: none;
             position: relative;
 
-            &:after {}
         }
 
 
@@ -781,6 +780,99 @@
         }
     }
 
+
+
+}
+
+//ornamentos
+.calc {
+    h1 {
+        position: relative;
+    }
+
+    .orna {
+        &__1 {
+            bottom: -150px;
+            position: absolute;
+            left: -3vw;
+            width: clamp(100px, 15vw, 220px);
+            height: clamp(200px, 50vw, 780px);
+            z-index: -2;
+
+            @include d(m) {
+                display: none;
+            }
+        }
+
+        &__2 {
+            bottom: 17vw;
+            position: absolute;
+            left: 0;
+            width: 100px;
+            z-index: -2;
+
+            @include d(m) {
+                display: none;
+            }
+        }
+
+        &__3 {
+            bottom: 7vw;
+            position: absolute;
+            left: 31vw;
+            width: 61px;
+            z-index: -2;
+
+            @include d(m) {
+                display: none;
+            }
+        }
+
+        &__5 {
+            top: -15px;
+            position: absolute;
+            left: 4px;
+            width: 61px;
+            z-index: -2;
+
+         
+        }
+
+        &__4 {
+            top: -16px;
+            position: absolute;
+            left: 47vw;
+            width: 18px;
+            z-index: -2;
+            opacity: .4;
+
+            @include d(m) {
+                display: none;
+            }
+        }
+    }
+
+    .fundo {
+        position: absolute;
+        left: -6vw;
+        bottom: -100px;
+        height: clamp(200px, 30vw, 500px);
+        width: clamp(200px, 30vw, 500px);
+        z-index: -4;
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .calc__svg {
+        position: absolute;
+        left: -6vw;
+        bottom: -100px;
+        height: clamp(200px, 30vw, 500px);
+        width: clamp(200px, 30vw, 500px);
+        z-index: -1;
+    }
 
 
 }

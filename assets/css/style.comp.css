@@ -5792,7 +5792,14 @@ figure {
 .menu__open .menu__mobile a {
   text-transform: uppercase;
   color: var(--menu-m-open-color);
-  font-size: var(--menu-m-open-size);
+  font-size: calc(12px + 0.4rem);
+}
+.menu__open .menu__mobile .menu__btn {
+  padding: 12px 0 !important;
+  width: 200px !important;
+}
+.menu__open .menu__mobile .menu__btn:hover {
+  background: transparent !important;
 }
 
 /* div escura */
@@ -5800,6 +5807,7 @@ figure {
   transition: opacity 0.3s ease-in-out;
   background: black;
   opacity: 0;
+  top: 0;
 }
 
 .menu__open .fundo__black {
@@ -7144,6 +7152,87 @@ html {
   font-weight: 500;
   color: #000000;
 }
+.body__home .calc h1 {
+  position: relative;
+}
+.body__home .calc .orna__1 {
+  bottom: -150px;
+  position: absolute;
+  left: -3vw;
+  width: clamp(100px, 15vw, 220px);
+  height: clamp(200px, 50vw, 780px);
+  z-index: -2;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .calc .orna__1 {
+    display: none;
+  }
+}
+.body__home .calc .orna__2 {
+  bottom: 17vw;
+  position: absolute;
+  left: 0;
+  width: 100px;
+  z-index: -2;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .calc .orna__2 {
+    display: none;
+  }
+}
+.body__home .calc .orna__3 {
+  bottom: 7vw;
+  position: absolute;
+  left: 31vw;
+  width: 61px;
+  z-index: -2;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .calc .orna__3 {
+    display: none;
+  }
+}
+.body__home .calc .orna__5 {
+  top: -15px;
+  position: absolute;
+  left: 4px;
+  width: 61px;
+  z-index: -2;
+}
+.body__home .calc .orna__4 {
+  top: -16px;
+  position: absolute;
+  left: 47vw;
+  width: 18px;
+  z-index: -2;
+  opacity: 0.4;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .calc .orna__4 {
+    display: none;
+  }
+}
+.body__home .calc .fundo {
+  position: absolute;
+  left: -6vw;
+  bottom: -100px;
+  height: clamp(200px, 30vw, 500px);
+  width: clamp(200px, 30vw, 500px);
+  z-index: -4;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .calc .fundo {
+    display: none;
+  }
+}
+.body__home .calc .calc__svg {
+  position: absolute;
+  left: -6vw;
+  bottom: -100px;
+  height: clamp(200px, 30vw, 500px);
+  width: clamp(200px, 30vw, 500px);
+  z-index: -1;
+}
 
 .body__blog-single {
   /* INTRO DO BLOG */
@@ -7536,7 +7625,7 @@ html {
   font-size: calc(10px + .4rem);
   color: #01b533;
   font-weight: bold;
-  padding: 5px 10px 5px 0;
+  padding: 10px 5px;
 }
 .body__blog .blog .blog__grid .intro__grid .intro__text .btn__intro:hover {
   background-color: #f0feec;
@@ -7637,30 +7726,58 @@ html {
     font-size: calc(6px + .4rem);
   }
 }
-.body__blog .btn__blog {
-  position: relative;
-  display: block;
-  max-width: 220px;
-  margin: 64px auto 128px auto;
+.body__blog .btn__container {
+  display: inline-flex;
+  margin-bottom: 60px;
+}
+.body__blog .btn__container .btn {
   background: #01b533;
-  text-align: center;
-  font-weight: 500;
-  cursor: pointer;
-  padding: 12px 20px;
   color: white;
-  font-family: "Raleway", sans-serif;
-  letter-spacing: 0.02rem;
-  font-size: 1rem;
-  transition: 0.3s ease;
+  flex-grow: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 30px;
   border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 1024px) {
-  .body__blog .btn__blog {
-    margin: 64px auto;
+  .body__blog .btn__container .btn {
+    max-width: 250px;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 6px 20px;
   }
 }
-.body__blog .btn__blog:hover {
-  background: #068129;
+.body__blog .btn__container .btn ion-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .body__blog .btn__container .btn ion-icon {
+    margin-left: 10px;
+    font-size: 1.75rem;
+  }
+}
+.body__blog .btn__container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #01b5345b;
+}
+.body__blog .btn__container .btn {
+  width: 180px;
+  justify-content: center;
+}
+.body__blog .link__nao-link {
+  cursor: pointer;
+}
+.body__blog .fontChange {
+  top: 75vh;
 }
 
 .body__isento section {
@@ -8962,7 +9079,6 @@ html {
   color: #666666;
   margin-bottom: 20px;
   display: inline-block;
-<<<<<<< HEAD
   letter-spacing: -0.3px;
 }
 .body__quem-somos .voce .orna__1 {
@@ -9000,6 +9116,8 @@ html {
     margin-bottom: 80px;
   }
   .body__quem-somos .voce .voce__video {
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 60px;
   }
   .body__quem-somos .voce .voce__video .orna__1 {
@@ -9037,6 +9155,7 @@ html {
   }
 }
 .body__quem-somos .perguntas {
+  margin-bottom: 80px;
   /* container ==== */
   /* titulo =====*/
   /* pseudo */
@@ -9114,7 +9233,7 @@ html {
   display: block;
 }
 .body__quem-somos .perguntas [data-accordion] * {
-  transition: all 0.4s ease;
+  transition: all 0.2s linear;
 }
 .body__quem-somos .perguntas [data-accordion] dt ion-icon {
   margin-left: 10px;
@@ -9173,11 +9292,13 @@ html {
   font-size: 0.875rem;
   line-height: 145%;
   padding-bottom: 20px;
-=======
 }
 
 .body__contato .contato {
-  margin-top: 140px;
+  padding-top: 140px;
+}
+.body__contato section {
+  overflow: hidden;
 }
 .body__contato .contatos__intro h2 {
   margin-top: 32px;
@@ -9194,6 +9315,11 @@ html {
 }
 .body__contato .contatos__redes {
   margin: 64px 0 140px 0;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .contatos__redes {
+    margin: 0;
+  }
 }
 .body__contato .contatos__redes .redes__item {
   margin-bottom: 64px;
@@ -9222,5 +9348,229 @@ html {
 }
 .body__contato .contatos__redes .raleway {
   font-family: "Raleway", sans-serif !important;
->>>>>>> 773cf1ffa15576c562aace6bed172a4fcd70b6de
+}
+.body__contato .contato {
+  background: #f0feec;
+}
+.body__contato .contato__wrapper {
+  display: flex;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .contato__wrapper {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .form__contato {
+    padding: 0;
+  }
+}
+.body__contato .formulario form {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 3px;
+  padding: 20px 80px;
+  margin-top: 100px;
+  max-width: 560px;
+  margin: 100px auto;
+  background: white;
+}
+.body__contato .formulario h1 {
+  padding-bottom: 40px;
+  font-size: calc(20px + .5rem);
+  text-align: start;
+  width: 100%;
+  padding-top: 20px;
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario h1 {
+    padding-left: 20px;
+    font-size: calc(16px + .5rem);
+  }
+}
+.body__contato .formulario .input__box {
+  position: relative;
+  width: 400px;
+  height: 46px;
+  margin-bottom: 45px;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .input__box {
+    width: 270px;
+  }
+}
+.body__contato .formulario .input__box input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 1px solid #01b533;
+  border-radius: 3px;
+  background: transparent;
+  padding: 13px;
+  outline: none;
+  color: #333333;
+  font-weight: 400;
+  font-size: 16px;
+  transition: 0.5s ease;
+  padding-left: 35px;
+}
+.body__contato .formulario .input__box input::placeholder {
+  color: #999999;
+}
+.body__contato .formulario .input__box span {
+  position: absolute;
+  top: -1.5625rem;
+  left: 0;
+  padding: 0;
+  display: inline-block;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #151617;
+}
+.body__contato .formulario .input__box input:focus,
+.body__contato .formulario .input__box input:valid,
+.body__contato .formulario .input__box textarea:focus,
+.body__contato .formulario .input__box textarea:valid {
+  border: 1px solid #01b533 !important;
+}
+.body__contato .formulario .input__box ion-icon {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  margin: auto 0;
+  left: 10px;
+  font-size: 20px;
+  color: #01b533;
+}
+.body__contato .formulario .ultimo {
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .textarea__container {
+    width: 270px;
+  }
+}
+.body__contato .formulario .textarea__container textarea {
+  margin: 0px;
+  width: 400px;
+  height: 217px;
+  height: 80px;
+  border-width: 1px;
+  border-style: solid;
+  border-image: initial;
+  border-color: #01b533 !important;
+  resize: none;
+  padding: 15px 15px;
+  transition: 0.3s;
+  border-radius: 4px;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .textarea__container textarea {
+    width: 270px;
+  }
+}
+.body__contato .formulario .textarea__container p {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #151617;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .select__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+}
+.body__contato .formulario .select__container select {
+  width: 400px;
+  height: 46px;
+  padding: 0 10px;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  border: 1px solid #01b533 !important;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .select__container select {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.body__contato .formulario .select__container p {
+  display: inline-block;
+  font-weight: 300;
+  font-size: 0.875rem;
+  color: #151617;
+}
+.body__contato .formulario .btn__container {
+  display: inline-flex;
+  width: 100%;
+  justify-content: flex-start;
+}
+.body__contato .formulario .btn__container .btn {
+  background: #01b533;
+  color: white;
+  flex-grow: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .btn__container .btn {
+    max-width: 250px;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 6px 20px;
+  }
+}
+.body__contato .formulario .btn__container .btn ion-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .btn__container .btn ion-icon {
+    margin-left: 10px;
+    font-size: 1.75rem;
+  }
+}
+.body__contato .formulario .btn__container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #01b5345b;
+}
+.body__contato .formulario .btn__container .btn {
+  margin-right: 0;
+  margin-left: 0;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario .btn__container .btn {
+    width: 130px;
+    height: 40px;
+    justify-content: center;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .formulario form {
+    margin-top: 40px;
+    padding: 20px;
+  }
 }/*# sourceMappingURL=style.comp.css.map */

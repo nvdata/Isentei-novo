@@ -375,7 +375,15 @@
         a {
             text-transform: uppercase;
             color: var(--menu-m-open-color);
-            font-size: var(--menu-m-open-size);
+            font-size: calc(12px + 0.4rem);
+        }
+
+        .menu__btn {
+            padding: 12px 0 !important;
+            width: 200px !important;
+            &:hover{
+                background: transparent !important;
+            }
         }
     }
 }
@@ -385,6 +393,7 @@
     transition: opacity .3s ease-in-out;
     background: black;
     opacity: 0;
+    top: 0;
 
 }
 

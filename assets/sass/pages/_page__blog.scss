@@ -103,7 +103,7 @@
           font-size: calc(10px + .4rem);
           color: $cor-verde-1;
           font-weight: bold;
-          padding: 5px 10px 5px 0;
+          padding: 10px 5px;
 
           &:hover {
             background-color: $cor-verde-claro-1;
@@ -201,6 +201,7 @@
     }
   }
 
+
   .btn__destaques {
     display: block;
     width: max-content;
@@ -222,31 +223,47 @@
 
 }
 
+.btn__container {
+  @include botaoIsentei;
+  margin-bottom: 60px;
 
-.btn__blog {
-  position: relative;
-  display: block;
-  max-width: 220px;
-  margin: 64px auto 128px auto;
-  background: $cor-verde-1;
-  text-align: center;
-  font-weight: 500;
+  .btn {
+    width: 180px;
+    justify-content: center;
+  }
+}
+
+.link__nao-link {
   cursor: pointer;
-  padding: 12px 20px;
-  color: white;
-  font-family: $font-raleway;
-  letter-spacing: .02rem;
-  font-size: rem(16);
-  transition: .3s ease;
-  border-radius: 7px;
+}
 
-  @include d(m) {
-    margin: 64px auto;
-  }
+// .btn__blog {
+//   position: relative;
+//   display: block;
+//   max-width: 220px;
+//   margin: 64px auto 128px auto;
+//   background: $cor-verde-1;
+//   text-align: center;
+//   font-weight: 500;
+//   cursor: pointer;
+//   padding: 12px 20px;
+//   color: white;
+//   font-family: $font-raleway;
+//   letter-spacing: .02rem;
+//   font-size: rem(16);
+//   transition: .3s ease;
+//   border-radius: 7px;
 
-  &:hover {
-    background: #068129;
-  }
+//   @include d(m) {
+//     margin: 64px auto;
+//   }
+
+//   &:hover {
+//     background: #068129;
+//   }
 
 
+// }
+.fontChange {
+  top: 75vh;
 }
