@@ -1,0 +1,200 @@
+@import "../components/intro__isentei";
+
+
+
+
+.intro {
+    @include intro__isentei;
+    margin-bottom: 40px;
+
+    &#intro {
+        h1 {
+            span {
+                font-size: calc(42px + .9rem) !important;
+                @include d(s){
+                    font-size: calc(28px + .9rem) !important;
+                }
+            }
+        }
+
+        .intro__text {
+            p {
+                max-width: rem(705);
+                color: $cor-cinza-1;
+            }
+
+
+        }
+
+        .btn__container {
+            .btn {
+
+                margin-top: 60px;
+                width: 240px;
+                justify-content: center;
+
+
+            }
+        }
+
+
+        .icon-intro-complete {
+            bottom: 0px;
+            position: absolute;
+            left: 0px;
+            right: 0;
+            margin: auto;
+            z-index: 1;
+            object-fit: contain;
+            @include clamp("height", 100px, 29vh, 230px);
+
+            @include d(m) {
+                bottom: 00px;
+                width: 300px;
+                height: 220px;
+            }
+        }
+    }
+}
+
+//ornamentos 
+.intro {
+
+    //ornamentos
+    .orna__1 {
+        top: 0;
+        position: absolute;
+        right: -7vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 20vw, 240px);
+
+        @include d(s) {
+            width: 100px;
+            right: -30px;
+        }
+    }
+
+    .orna__2 {
+        position: absolute;
+        top: 47vh;
+        right: 30vw;
+        // width: clamp(30px, 3.5vw, 60px);
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .orna__3 {
+        position: absolute;
+        bottom: 4vw;
+        left: 9vw;
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(s) {
+            bottom: 36vh;
+        }
+    }
+
+    .orna__4 {
+
+        top: 15vh;
+        position: absolute;
+        right: 55%;
+        left: 45%;
+        margin: auto 0;
+        width: 20px;
+        opacity: .1;
+
+        @include d(s) {
+            width: 15px;
+        }
+    }
+
+    .orna__5 {
+
+        top: calc(27vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: calc(61% + 1rem);
+
+        margin: auto 0;
+        width: 20px;
+
+        @include d(s) {
+            width: 15px;
+            right: calc(64% + 1rem);
+            top: 18vh;
+        }
+
+
+    }
+
+    .orna__6 {
+        bottom: 0;
+        position: absolute;
+        left: -2vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 19vw, 220px);
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__7 {
+        bottom: 30vh;
+        position: absolute;
+        right: 15vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__8 {
+        bottom: 20vh;
+        position: absolute;
+        left: 25vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__9 {
+        top: calc(36vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: 30%;
+        margin: auto 0;
+        width: 12px;
+
+        @include d(m) {
+            display: none;
+        }
+
+
+    }
+
+    .orna__10 {
+        top: calc(36vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        margin: auto 0;
+        width: 35px;
+
+        left:25vw;
+
+        @include d(m) {
+            display: none;
+        }
+
+
+    }
+}

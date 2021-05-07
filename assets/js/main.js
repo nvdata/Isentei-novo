@@ -15,6 +15,7 @@ const mediaQuebra = window.matchMedia('(max-width: 1024px)').matches
 // ★ PAGES ★ 
 const pageHome = new Dom().el("#page__home")
 const pageIsento = new Dom().el("#page__isento")
+const pageQuemSomos = new Dom().el("#page__quem-somos")
 
 const pageBlogSingle = document.querySelector('#page__blog-single');
 const pageBlog = document.querySelector('#page__blog');
@@ -40,7 +41,8 @@ if (pageHome) { // ★ HOME
 
 } else if (pageBlog) { // ★ BLOG
     new Dom().bodyClass("body__blog");
-}
-else if (pageIsento) { // ★ Page Isento
+} else if (pageIsento) { // ★ Page Isento
     new Dom().bodyClass("body__isento");
+} else if (pageQuemSomos) { // ★ Page Quem Somos
+    new Dom().bodyClass("body__quem-somos");
 }

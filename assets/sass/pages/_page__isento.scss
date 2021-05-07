@@ -1,7 +1,9 @@
 @import "../components/number";
 @import "../components/intro__isentei";
 
-
+section {
+    overflow: hidden
+}
 
 
 .intro {
@@ -65,8 +67,14 @@
         // width: clamp(30px, 3.5vw, 60px);
         @include clamp("width", 30px, 3.5vw, 60px);
 
-        @include d(m) {
-            display: none;
+
+        @include d(s) {
+            display: block;
+            position: absolute;
+            top: 90vh;
+            right: initial;
+            width: 30px;
+            left: 40px;
         }
     }
 
@@ -93,6 +101,13 @@
 
         @include d(s) {
             width: 15px;
+            top: 200px;
+            position: absolute;
+            left: initial;
+            right: 40px;
+            margin: auto 0;
+            width: 20px;
+            opacity: 0.1;
         }
     }
 
@@ -171,14 +186,29 @@
         left: 15vw;
         margin: auto 0;
         width: 30px;
+
+        @include d(s) {
+            top: 30vh;
+            position: absolute;
+            left: 5vw;
+            margin: auto 0;
+            width: 20px;
+        }
     }
 }
 
 .number {
     @include secao__number;
+    transform: translateX(-10px);
 
     &#number {
-        padding: 0px 0 120px;
+        padding: 0;
+        padding-top: 100px;
+        height: 300px;
+
+        @include d(m) {
+            height: 100%;
+        }
     }
 }
 
@@ -193,7 +223,7 @@
         align-items: center;
         justify-content: center;
 
-        
+
         @include d(s) {
             padding: 0 15px;
             min-height: 420px;
@@ -206,6 +236,7 @@
             text-align: center;
             max-width: 1050px;
             color: $cor-preto-1;
+            letter-spacing: -0.045em;
 
             @include d(s) {
                 font-size: calc(14px + .5rem);
@@ -221,8 +252,9 @@
         gap: 30px;
         align-items: start;
         justify-items: center;
-        @include d(m){
-        grid-template-columns: 1fr ;
+
+        @include d(m) {
+            grid-template-columns: 1fr;
 
         }
 
@@ -232,10 +264,17 @@
             padding: 90px 60px;
             background: white;
             border-radius: 7px;
-            min-height: 510px;  
+            min-height: 510px;
             transition: all .4s ease-in-out;
-            @include d(m){
+
+            @include d(m) {
                 padding: 50px 30px;
+            }
+
+            @include d(s) {
+                padding: 30px 20px;
+                min-height: 420px;
+                box-shadow: 2px 2px 30px rgb(0 0 0 / 6%);
             }
 
             &:hover {
@@ -248,9 +287,10 @@
                 font-family: $font-raleway;
                 font-weight: 700;
                 font-size: calc(42px + .5rem);
+                text-align: center;
 
                 @include d(s) {
-                    font-size: calc(14px + .5rem);
+                    font-size: calc(20px + .5rem);
 
                 }
             }
@@ -264,6 +304,7 @@
                 line-height: 155%;
                 max-width: 440px;
                 min-height: 125px;
+                text-align: center
             }
 
             .btn__container {
@@ -279,6 +320,10 @@
                     text-align: center;
                     margin-top: 45px;
                     justify-content: center;
+
+                    @include d(s) {
+                        padding: 16px 20px;
+                    }
 
 
                     &:hover {
@@ -384,6 +429,213 @@
 
         @include d(m) {
             display: none;
+        }
+    }
+}
+
+.doenca {
+    background: #f9f9f9;
+    height: 90vh;
+    min-height: 500px;
+    max-height: 920px;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .container {
+        height: 100%;
+    }
+
+    .doenca__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        position: relative;
+
+        h1 {
+            font-family: $font-raleway;
+            font-weight: 900;
+            font-size: calc(42px + .2rem);
+            max-width: 1000px;
+            margin: 0 auto 20px;
+            color: $cor-preto-1 !important;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 3;
+
+            @include d(s) {
+                font-size: calc(12px + 1rem);
+            }
+        }
+
+        h2 {
+            font-family: $font-raleway;
+            font-weight: 700;
+            font-size: calc(22px + .3rem);
+            color: $cor-preto-1 !important;
+            letter-spacing: -0.03em;
+            position: relative;
+            z-index: 3;
+
+            @include d(s) {
+                font-size: calc(4px + 1rem);
+            }
+
+        }
+
+
+    }
+
+    .btn__container {
+        @include botaoIsentei;
+
+        .btn {
+            width: 320px;
+            justify-content: center;
+            padding: 15px 30px;
+            margin-top: 60px;
+            font-weight: 500;
+            max-width: initial;
+
+            @include d(s) {
+                width: 280px;
+                padding: 15px 10px;
+
+            }
+
+            &:hover {
+                ion-icon {
+                    transform: translateY(5px);
+                }
+            }
+        }
+    }
+
+
+
+}
+
+//ornamentos doença
+
+.doenca {
+    .orna__1 {
+        position: absolute;
+        z-index: -1;
+        width: 108px;
+        top: -29px;
+        left: 30px;
+
+        @include d(s) {
+            width: 70px;
+            top: -29px;
+            left: 5px;
+        }
+    }
+
+    .orna__2 {
+        position: absolute;
+        z-index: 1;
+        width: 30px;
+        top: -80px;
+        left: -4%;
+
+        @include d(s) {
+            width: 20px;
+            top: -80px;
+            left: 0;
+        }
+    }
+
+    .orna__3 {
+        position: absolute;
+        z-index: 1;
+        top: -80px;
+        right: -4%;
+        width: 15px;
+
+        @include d(s) {
+            position: absolute;
+            z-index: 1;
+            top: -25px;
+            right: 4%;
+            width: 10px;
+        }
+    }
+
+    .orna__5 {
+        position: absolute;
+        z-index: 1;
+        bottom: 13vh;
+        right: 21vw;
+        width: 40px;
+
+        @include d(s) {
+            bottom: 50px;
+            right: 21vw;
+            width: 30px;
+        }
+    }
+}
+
+.fale {
+    height: 90vh;
+
+    @include d(m) {
+        height: 100%;
+    }
+
+    >.container {
+        height: 100%;
+        max-width: 1200px;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        height: 100%;
+
+        @include d(m) {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            max-width: 500px;
+            flex-direction: column-reverse;
+            margin: 40px auto 50px;
+        }
+    }
+
+    &__text {
+        h1 {
+            font-family: $font-raleway;
+            font-weight: 700;
+            font-size: calc(28px + .7rem);
+            color: $cor-preto-1;
+
+            @include d(s) {
+                font-size: calc(10px + 1rem);
+                text-align: center;
+            }
+        }
+    }
+
+    .btn__container {
+        @include botaoIsentei;
+
+        @include d(m) {
+            margin-bottom: 60px;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 14px 30px;
+            width: 330px;
+            justify-content: center;
+            margin-top: 80px;
+            @include d(m){
+                margin-top: 40px;
+            }
         }
     }
 }
