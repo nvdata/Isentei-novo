@@ -7,6 +7,8 @@ import Dom from './modules/constructors.js'; //selecionar elementos
 import menu from './modules/menu.js'; //js do menu
 import zoomFont from './modules/zoomFont.js'; //js do menu
 import linkDentroLink from './modules/a-dentro-a.js'; //js do menu
+import initAccordion from "./modules/accordion.js"
+
 
 menu();
 zoomFont()
@@ -47,4 +49,5 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__isento");
 } else if (pageQuemSomos) { // ★ Page Quem Somos
     new Dom().bodyClass("body__quem-somos");
+    initAccordion()
 }

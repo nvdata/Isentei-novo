@@ -1,19 +1,28 @@
 @import "../components/intro__isentei";
 
 
+@include d(m) {
+    .fontChange {
+        top: 85vh;
+
+    }
+}
 
 
 .intro {
     @include intro__isentei;
     margin-bottom: 40px;
 
+
     &#intro {
+        min-height: 715px;
+
         h1 {
             span {
                 font-size: calc(42px + .9rem) !important;
 
                 @include d(s) {
-                    font-size: calc(28px + .9rem) !important;
+                    font-size: 32px !important;
                 }
             }
         }
@@ -27,12 +36,40 @@
 
         }
 
+        .intro__text {
+            @include d(m) {
+                margin-top: -50px;
+            }
+
+            p {
+
+                @include d(m) {
+                    font-size: calc(12px + 0.2rem);
+                    line-height: 130%;
+
+                }
+            }
+
+            p.seconds {
+                margin-top: 5px;
+            }
+
+            .btn__container .btn {
+                width: 320px;
+            }
+        }
+
         .btn__container {
             .btn {
 
                 margin-top: 60px;
                 width: 240px;
                 justify-content: center;
+
+                @include d(s) {
+                    padding: 12px 20px;
+                    margin-top: 30px;
+                }
 
                 strong {
                     font-family: $font-roboto;
@@ -55,8 +92,8 @@
 
             @include d(m) {
                 bottom: 00px;
-                width: 300px;
-                height: 220px;
+                width: 220px;
+                height: 160px;
             }
         }
     }
@@ -209,12 +246,35 @@
     display: flex;
     align-items: center;
 
+
+    >.container {
+        max-width: 1280px;
+    }
+
+    @include d(m) {
+        height: 100%;
+    }
+
     &__wrapper {
         display: flex;
         justify-content: space-between;
+
+        @include d(m) {
+            flex-wrap: wrap;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+    }
+
+    &__video {
+        @include d(m) {
+            width: 300px;
+        }
     }
 
     &__item {
+        position: relative;
+
         h1 {
             font-size: calc(18px + 0.8rem);
             margin-bottom: 45px;
@@ -227,8 +287,177 @@
         }
 
         p {
+            color: $cor-cinza-1;
             margin-bottom: 20px;
             display: inline-block;
+            letter-spacing: -0.3px;
         }
     }
+
+    .orna {
+        &__1 {
+            position: absolute;
+            top: 300px;
+            left: 50px;
+            width: 50px;
+
+        }
+
+        &__2 {
+            position: absolute;
+            top: 20px;
+            right: 60px;
+            width: 50px;
+
+        }
+
+        &__3 {
+            position: absolute;
+            top: 10px;
+            left: 70px;
+            width: 80px;
+
+        }
+
+        &__4 {
+            position: absolute;
+            bottom: 10px;
+            left: 190px;
+            width: 20px;
+
+        }
+
+        &__5 {
+            position: absolute;
+            bottom: -20px;
+            right: 100px;
+            width: 60px;
+
+        }
+    }
+
+
+}
+
+@include d(m) {
+    .voce {
+        margin-bottom: 80px;
+
+        .voce__video {
+            margin-top: 60px;
+
+            .orna {
+                &__1 {
+                    position: absolute;
+                    top: 10px !important;
+                    left: 50px;
+                    width: 20px;
+
+                }
+
+                &__2 {
+                    position: absolute;
+                    top: 0px;
+                    right: 10px;
+                    width: 20px;
+
+                }
+
+                &__3 {
+                    position: absolute;
+                    bottom: 10px;
+                    top: initial;
+                    right: 50px;
+                    left: initial;
+                    width: 30px;
+
+                }
+
+                &__4 {
+                    position: absolute;
+                    bottom: 50px;
+                    left: 0px;
+                    width: 15px;
+
+                }
+
+                &__5 {
+                    position: absolute;
+                    bottom: -20px;
+                    right: initial;
+                    left: 50px;
+                    width: 40px;
+
+                }
+            }
+        }
+    }
+}
+
+.perguntas {
+
+    &__text {
+        h1 {
+            font-family: $font-raleway;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        p{
+            margin-bottom: 30px
+        }
+    }
+
+    @import "../components/accordion";
+
+    dl[data-accordion] {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+        gap: 30px;
+        align-items: start;
+
+        @include d(s) {
+            gap: 15px;
+        }
+
+        .perguntas__item {
+            background: #ecf2fe;
+            border-radius: 8px;
+
+            dt {
+                margin-top: 10px;
+                margin-bottom: 10px;
+                padding: 12px;
+                border-radius: 5px;
+                border: 1px solid var(--color-border);
+                font-size: rem(16);
+                font-family: $font-roboto;
+                font-weight: 500;
+                color: $cor-preto-1;
+
+                max-width: 900px;
+                display: inline-flex;
+                align-items: center;
+                justify-content: space-between;
+                position: relative;
+                width: 100%;
+                color: var(--color-titulo);
+                cursor: pointer;
+
+            }
+
+
+            dd {
+                margin-bottom: 0;
+                margin-right: 10px;
+                margin-left: 10px;
+            }
+
+            .content {
+                font-size: rem(14);
+                line-height: 145%;
+                padding-bottom: 20px;
+            }
+        }
+    }
+
 }

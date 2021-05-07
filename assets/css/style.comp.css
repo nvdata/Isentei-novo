@@ -8587,6 +8587,11 @@ html {
   }
 }
 
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .fontChange {
+    top: 85vh;
+  }
+}
 .body__quem-somos .intro {
   height: 100vh;
   min-height: 620px;
@@ -8731,22 +8736,48 @@ html {
     max-width: calc(130px + 5rem);
   }
 }
+.body__quem-somos .intro#intro {
+  min-height: 715px;
+}
 .body__quem-somos .intro#intro h1 span {
   font-size: calc(42px + .9rem) !important;
 }
 @media screen and (max-width: 539px) {
   .body__quem-somos .intro#intro h1 span {
-    font-size: calc(28px + .9rem) !important;
+    font-size: 32px !important;
   }
 }
 .body__quem-somos .intro#intro .intro__text p {
   max-width: 44.0625rem;
   color: #666666;
 }
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .intro#intro .intro__text {
+    margin-top: -50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .intro#intro .intro__text p {
+    font-size: calc(12px + 0.2rem);
+    line-height: 130%;
+  }
+}
+.body__quem-somos .intro#intro .intro__text p.seconds {
+  margin-top: 5px;
+}
+.body__quem-somos .intro#intro .intro__text .btn__container .btn {
+  width: 320px;
+}
 .body__quem-somos .intro#intro .btn__container .btn {
   margin-top: 60px;
   width: 240px;
   justify-content: center;
+}
+@media screen and (max-width: 539px) {
+  .body__quem-somos .intro#intro .btn__container .btn {
+    padding: 12px 20px;
+    margin-top: 30px;
+  }
 }
 .body__quem-somos .intro#intro .btn__container .btn strong {
   font-family: "Roboto", sans-serif;
@@ -8767,8 +8798,8 @@ html {
 @media screen and (max-width: 1024px) {
   .body__quem-somos .intro#intro .icon-intro-complete {
     bottom: 0px;
-    width: 300px;
-    height: 220px;
+    width: 220px;
+    height: 160px;
   }
 }
 .body__quem-somos .intro .orna__1 {
@@ -8908,9 +8939,32 @@ html {
   display: flex;
   align-items: center;
 }
+.body__quem-somos .voce > .container {
+  max-width: 1280px;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce {
+    height: 100%;
+  }
+}
 .body__quem-somos .voce__wrapper {
   display: flex;
   justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce__wrapper {
+    flex-wrap: wrap;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce__video {
+    width: 300px;
+  }
+}
+.body__quem-somos .voce__item {
+  position: relative;
 }
 .body__quem-somos .voce__item h1 {
   font-size: calc(18px + 0.8rem);
@@ -8922,6 +8976,217 @@ html {
   margin: auto;
 }
 .body__quem-somos .voce__item p {
+  color: #666666;
   margin-bottom: 20px;
   display: inline-block;
+  letter-spacing: -0.3px;
+}
+.body__quem-somos .voce .orna__1 {
+  position: absolute;
+  top: 300px;
+  left: 50px;
+  width: 50px;
+}
+.body__quem-somos .voce .orna__2 {
+  position: absolute;
+  top: 20px;
+  right: 60px;
+  width: 50px;
+}
+.body__quem-somos .voce .orna__3 {
+  position: absolute;
+  top: 10px;
+  left: 70px;
+  width: 80px;
+}
+.body__quem-somos .voce .orna__4 {
+  position: absolute;
+  bottom: 10px;
+  left: 190px;
+  width: 20px;
+}
+.body__quem-somos .voce .orna__5 {
+  position: absolute;
+  bottom: -20px;
+  right: 100px;
+  width: 60px;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce {
+    margin-bottom: 80px;
+  }
+  .body__quem-somos .voce .voce__video {
+    margin-top: 60px;
+  }
+  .body__quem-somos .voce .voce__video .orna__1 {
+    position: absolute;
+    top: 10px !important;
+    left: 50px;
+    width: 20px;
+  }
+  .body__quem-somos .voce .voce__video .orna__2 {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    width: 20px;
+  }
+  .body__quem-somos .voce .voce__video .orna__3 {
+    position: absolute;
+    bottom: 10px;
+    top: initial;
+    right: 50px;
+    left: initial;
+    width: 30px;
+  }
+  .body__quem-somos .voce .voce__video .orna__4 {
+    position: absolute;
+    bottom: 50px;
+    left: 0px;
+    width: 15px;
+  }
+  .body__quem-somos .voce .voce__video .orna__5 {
+    position: absolute;
+    bottom: -20px;
+    right: initial;
+    left: 50px;
+    width: 40px;
+  }
+}
+.body__quem-somos .perguntas {
+  /* container ==== */
+  /* titulo =====*/
+  /* pseudo */
+  /* conteudo container ===== */
+  /* icone */
+  /* icone ativo */
+  /* exemplo borda completa */
+}
+.body__quem-somos .perguntas__text h1 {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.body__quem-somos .perguntas__text p {
+  margin-bottom: 30px;
+}
+.body__quem-somos .perguntas :root {
+  --color-titulo: black;
+  --color-pseudo: rgb(150, 255, 194);
+  --color-border: rgb(219, 219, 219);
+}
+.body__quem-somos .perguntas [data-accordion] {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.body__quem-somos .perguntas [data-accordion] dt {
+  margin-top: 32px;
+  margin-bottom: 10px;
+  padding: 12px 0;
+  padding-left: 30px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  font-size: 28px;
+  max-width: 900px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  color: var(--color-titulo);
+  cursor: pointer;
+}
+.body__quem-somos .perguntas [data-accordion] dt::before {
+  content: "";
+  display: inline-flex;
+  align-items: center;
+  width: 20px;
+  height: 10px;
+  margin: auto 0;
+  margin-right: 10px;
+  background: var(--color-pseudo);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 5px;
+}
+.body__quem-somos .perguntas [data-accordion] dd {
+  margin-bottom: 0.5rem;
+  margin-left: 30px;
+  font-size: 18px;
+  line-height: 145%;
+  max-width: 800px;
+  /*  */
+  max-height: 0;
+  overflow: hidden;
+  clip-path: inset(0 0 100% 0);
+  -webkit-clip-path: inset(0 0 100% 0);
+}
+.body__quem-somos .perguntas [data-accordion] dd .content {
+  border: 1px solid var(--color-border);
+}
+.body__quem-somos .perguntas [data-accordion] dd.ativo {
+  display: block;
+}
+.body__quem-somos .perguntas [data-accordion] * {
+  transition: all 0.4s ease;
+}
+.body__quem-somos .perguntas [data-accordion] dt ion-icon {
+  margin-left: 10px;
+}
+.body__quem-somos .perguntas [data-accordion] dt.ativo ion-icon {
+  transform: rotate(-180deg);
+}
+.body__quem-somos .perguntas .border-full * {
+  border: none !important;
+}
+.body__quem-somos .perguntas .border-full {
+  width: 900px;
+  border: 1px solid var(--color-border);
+  border-radius: 5px;
+}
+.body__quem-somos .perguntas dl[data-accordion] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, auto));
+  gap: 30px;
+  align-items: start;
+}
+@media screen and (max-width: 539px) {
+  .body__quem-somos .perguntas dl[data-accordion] {
+    gap: 15px;
+  }
+}
+.body__quem-somos .perguntas dl[data-accordion] .perguntas__item {
+  background: #ecf2fe;
+  border-radius: 8px;
+}
+.body__quem-somos .perguntas dl[data-accordion] .perguntas__item dt {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid var(--color-border);
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 500;
+  color: #333333;
+  max-width: 900px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  color: var(--color-titulo);
+  cursor: pointer;
+}
+.body__quem-somos .perguntas dl[data-accordion] .perguntas__item dd {
+  margin-bottom: 0;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+.body__quem-somos .perguntas dl[data-accordion] .perguntas__item .content {
+  font-size: 0.875rem;
+  line-height: 145%;
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.comp.css.map */
