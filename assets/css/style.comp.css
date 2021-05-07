@@ -6847,8 +6847,6 @@ html {
 .body__home .single__lastNews {
   position: relative;
   overflow: hidden;
-<<<<<<< HEAD
-=======
   margin: 128px 0 64px 0;
   padding: 64px 0;
   overflow: hidden;
@@ -7085,7 +7083,6 @@ html {
 .body__home .midia {
   padding: 120px 0 0;
   overflow: hidden;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   margin-bottom: 100px;
 }
 .body__home .midia__text {
@@ -7489,7 +7486,6 @@ html {
   color: #666666;
   line-height: 150%;
 }
-<<<<<<< HEAD
 .body__blog .blog .blog__grid .intro__grid .intro__text .btn__intro {
   display: block;
   width: -webkit-max-content;
@@ -7497,15 +7493,6 @@ html {
   margin-top: 16px;
   font-size: 0.875rem;
   color: #01b533;
-=======
-.body__blog .blog .blog__grid .intro__grid .intro__text .btn__vermais {
-  display: block;
-  width: -webkit-max-content;
-  width: max-content;
-  margin-top: 160px;
-  font-size: 12.5rem;
-  color: #33f246;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
   font-weight: bold;
   padding: 5px 10px 5px 0;
 }
@@ -7558,7 +7545,6 @@ html {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
-<<<<<<< HEAD
 .body__blog .destaques__wrapper .btn__destaques {
   display: block;
   width: -webkit-max-content;
@@ -7581,7 +7567,7 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: normal;
   border-radius: 8px;
-=======
+}
 
 .body__isento .intro {
   height: 100vh;
@@ -7980,5 +7966,4 @@ html {
   z-index: -1;
   width: 30vw;
   max-width: 350px;
->>>>>>> 95b213a4ded43fb8adc5e78397c04834a01f53ec
 }/*# sourceMappingURL=style.comp.css.map */
