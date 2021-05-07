@@ -37,6 +37,7 @@
     "scss.showErrors": true,
     "html-css-class-completion.enableScssFindUsage": true,
     "git.ignoreLimitWarning": true,
+    "liveServer.settings.port": 5501,
 
 }
 
