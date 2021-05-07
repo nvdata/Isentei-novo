@@ -778,4 +778,66 @@
 
 
 
+<<<<<<< HEAD
 }
+=======
+}
+
+
+
+<<<<<<< HEAD .#{$component-name} {
+    <<<<<<< HEAD @include last__News;
+}
+
+=======@include last__News;
+}
+
+>>>>>>>4741136f7fca20da7ebc34da42047948604ae708=======.single__lastNews {
+    @include last__News;
+
+    .btn__container {
+
+        @include botaoIsentei;
+        justify-content: center;
+        margin-bottom: 90px;
+        width: 100%;
+        margin-top: 80px;
+
+        @include d(m) {
+            display: none;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 12px 60px;
+            margin-top: 0;
+            @include setaBotao;
+            // position: relative;
+
+            // &:hover {
+            //     ion-icon {
+            //         opacity: 1;
+            //         transform: translateY(10px);
+
+            //     }
+            // }
+
+            // ion-icon {
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     margin: auto 0;
+            //     right: 30px;
+            //     opacity: 0;
+            //     transition: all .4s ease;
+            //     color: white;
+            //     font-size: rem(18);
+
+            // }
+        }
+
+    }
+}
+
+>>>>>>>f0528c66a83ef2bca46468407a40902b1bc05513
+>>>>>>> 909a54f2f48958226152d67f2c1cb097c2b5cf02
