@@ -6958,13 +6958,14 @@ html {
 }
 .body__home .single__lastNews .cards__wrapper .card__item li:nth-child(3) h3 {
   margin: 16px 0;
-  font-size: 1.375rem !important;
+  font-size: calc(12px + .5rem);
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
 @media screen and (max-width: 1024px) {
   .body__home .single__lastNews .cards__wrapper .card__item li:nth-child(3) h3 {
     margin-bottom: 8px;
+    font-size: calc(16px + .5rem);
   }
 }
 .body__home .single__lastNews .cards__wrapper .card__item li:nth-child(3) p {
@@ -7150,7 +7151,7 @@ html {
 .body__blog-single .single h2 {
   color: #333333;
   font-family: "Raleway", sans-serif;
-  font-size: 3rem;
+  font-size: calc(46px + .9em);
   font-weight: bold;
   margin-bottom: 38px;
 }
@@ -7167,13 +7168,13 @@ html {
 .body__blog-single .single__content h1 {
   font-family: "Raleway", sans-serif;
   font-weight: bold;
-  font-size: calc(32px + .9rem);
+  font-size: calc(38px + .9em);
   margin-bottom: 111px;
   color: #333333;
 }
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__content h1 {
-    font-size: 2.25rem;
+    font-size: calc(24px + .5em);
     margin-bottom: 60px;
   }
 }
@@ -7186,7 +7187,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__content h2 {
-    font-size: 1.375rem;
+    font-size: calc(16px + .4em);
   }
 }
 .body__blog-single .single__content h3 {
@@ -7203,7 +7204,7 @@ html {
     margin-top: 60px;
     margin-bottom: 15px;
     margin-left: 20px;
-    font-size: 1.5rem;
+    font-size: calc(20px + .4rem);
   }
 }
 .body__blog-single .single__content .final {
@@ -7225,7 +7226,7 @@ html {
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__content p {
     margin-top: 15px;
-    font-size: 1.125rem;
+    font-size: calc(14px + .4rem);
   }
 }
 .body__blog-single .single__content .content__item-list {
@@ -7255,7 +7256,7 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__content h4 {
-    font-size: 1.25rem;
+    font-size: calc(16px + .4rem);
   }
 }
 .body__blog-single .single__content .list-2 {
@@ -7398,13 +7399,14 @@ html {
 }
 .body__blog-single .single__lastNews .cards__wrapper .card__item li:nth-child(3) h3 {
   margin: 16px 0;
-  font-size: 1.375rem !important;
+  font-size: calc(12px + .5rem);
   font-family: "Raleway", sans-serif;
   font-weight: bold;
 }
 @media screen and (max-width: 1024px) {
   .body__blog-single .single__lastNews .cards__wrapper .card__item li:nth-child(3) h3 {
     margin-bottom: 8px;
+    font-size: calc(16px + .5rem);
   }
 }
 .body__blog-single .single__lastNews .cards__wrapper .card__item li:nth-child(3) p {
