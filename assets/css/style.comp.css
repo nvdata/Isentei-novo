@@ -6977,6 +6977,9 @@ html {
   -webkit-line-clamp: 4;
   -webkit-box-orient: vertical;
 }
+.body__home .single__lastNews .cards__wrapper {
+  z-index: 2;
+}
 .body__home .single__lastNews .btn__container {
   display: inline-flex;
   justify-content: center;
@@ -8745,6 +8748,10 @@ html {
   width: 240px;
   justify-content: center;
 }
+.body__quem-somos .intro#intro .btn__container .btn strong {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+}
 .body__quem-somos .intro#intro .icon-intro-complete {
   bottom: 0px;
   position: absolute;
@@ -8895,4 +8902,26 @@ html {
   .body__quem-somos .intro .orna__10 {
     display: none;
   }
+}
+.body__quem-somos .voce {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+.body__quem-somos .voce__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.body__quem-somos .voce__item h1 {
+  font-size: calc(18px + 0.8rem);
+  margin-bottom: 45px;
+  font-family: raleway;
+  font-weight: 700;
+}
+.body__quem-somos .voce__item img {
+  margin: auto;
+}
+.body__quem-somos .voce__item p {
+  margin-bottom: 20px;
+  display: inline-block;
 }/*# sourceMappingURL=style.comp.css.map */

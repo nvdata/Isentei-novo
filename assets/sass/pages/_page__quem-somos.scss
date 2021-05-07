@@ -11,7 +11,8 @@
         h1 {
             span {
                 font-size: calc(42px + .9rem) !important;
-                @include d(s){
+
+                @include d(s) {
                     font-size: calc(28px + .9rem) !important;
                 }
             }
@@ -33,6 +34,10 @@
                 width: 240px;
                 justify-content: center;
 
+                strong {
+                    font-family: $font-roboto;
+                    font-weight: 400;
+                }
 
             }
         }
@@ -189,12 +194,41 @@
         margin: auto 0;
         width: 35px;
 
-        left:25vw;
+        left: 25vw;
 
         @include d(m) {
             display: none;
         }
 
 
+    }
+}
+
+.voce {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__item {
+        h1 {
+            font-size: calc(18px + 0.8rem);
+            margin-bottom: 45px;
+            font-family: raleway;
+            font-weight: 700;
+        }
+
+        img {
+            margin: auto;
+        }
+
+        p {
+            margin-bottom: 20px;
+            display: inline-block;
+        }
     }
 }
