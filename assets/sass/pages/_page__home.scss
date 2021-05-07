@@ -16,7 +16,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     }
 
     @include d(s) {
-        font-size: rem(26);
+        font-size: calc(22px + 0.2rem);
     }
 }
 
@@ -29,7 +29,8 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     padding-top: 80px;
     overflow: hidden;
     position: relative;
-    @include d(s){
+
+    @include d(s) {
         min-height: 720px;
     }
 
@@ -50,6 +51,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         h1 {
 
             @include textIntro;
+            font-size: calc(32px + .9rem);
 
             span {
                 letter-spacing: -0.03em;
@@ -71,7 +73,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         p {
             font-size: rem(14);
             text-align: center;
-            max-width: 320px;
+            max-width: rem(320);
             display: inline-block;
             @include center;
             margin-top: 20px;
@@ -103,13 +105,21 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
             padding: 12px 40px;
             @include setaBotao;
 
+
+            @include d(s) {
+                padding: 12px 30px;
+                flex-grow: 0;
+                max-width: calc(130px + 5rem);
+            }
+
         }
     }
 
     //svg e ornas
     .icon-intro-complete {
-        height: clamp(200px, 50vh, 400px);
-        width: clamp(200px, 35vw, 500px);
+        // height: clamp(200px, 50vh, 400px);
+        @include clamp("height", 200px, 50vh, 400px);
+        @include clamp("width", 200px, 35vw, 500px);
         bottom: -100px;
         position: absolute;
         left: -50px;
@@ -141,8 +151,166 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         left: 0px;
         height: 120%;
     }
+
+    .intro__seta {
+        position: absolute;
+        right: 12vw;
+        bottom: 5vh;
+        height: 150px;
+        width: 150px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        @include d(m) {
+            display: none;
+        }
+
+        svg {}
+
+        @keyframes roda {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        &:after {
+            @include pseudo(absolute);
+            background-image: url("../img/orna/circle.svg");
+            @include inset;
+            margin: auto;
+            @include size(100%);
+            animation: roda 60s linear infinite;
+            opacity: .9;
+        }
+    }
+
+    //ornamentos
+    .orna__1 {
+        top: 0;
+        position: absolute;
+        right: -7vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 20vw, 240px);
+
+        @include d(s) {
+            width: 100px;
+            right: -30px;
+        }
+    }
+
+    .orna__2 {
+        position: absolute;
+        top: 47vh;
+        right: 30vw;
+        // width: clamp(30px, 3.5vw, 60px);
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .orna__3 {
+        position: absolute;
+        bottom: 4vw;
+        left: 9vw;
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(s) {
+            bottom: 20vh;
+        }
+    }
+
+    .orna__4 {
+
+        top: 15vh;
+        position: absolute;
+        right: 55%;
+        left: 45%;
+        margin: auto 0;
+        width: 20px;
+        opacity: .1;
+
+        @include d(s) {
+            width: 15px;
+        }
+    }
+
+    .orna__5 {
+
+        top: calc(27vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: calc(61% + 1rem);
+
+        margin: auto 0;
+        width: 20px;
+
+        @include d(s) {
+            width: 15px;
+            right: calc(64% + 1rem);
+            top: 18vh;
+        }
+
+
+    }
+
+    .orna__6 {
+        bottom: 0;
+        position: absolute;
+        left: -2vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 19vw, 220px);
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__7 {
+        bottom: 30vh;
+        position: absolute;
+        right: 15vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__8 {
+        bottom: 20vh;
+        position: absolute;
+        left: 25vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__9 {
+        top: calc(36vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: 30%;
+        margin: auto 0;
+        width: 12px;
+
+        @include d(m) {
+            display: none;
+        }
+
+
+    }
+
 }
 
+
+//info
 .info {
 
     height: 100vh;
@@ -245,8 +413,11 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
     }
 
+
+
 }
 
+//calc
 .calc {
     position: relative;
 
@@ -337,7 +508,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 
         >h2 {
-            font-size: rem(42);
+            font-size: (22px + rem(20));
             line-height: 145%;
             font-family: $font-raleway;
             max-width: 550px;
@@ -656,6 +827,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
     h2 {
         color: $cor-preto-1;
+
         @include d(m) {
             margin-bottom: 60px !important;
             display: inline-block;

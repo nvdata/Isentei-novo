@@ -2,18 +2,17 @@ export default
 
 function zoomFont() {
 
-
     const elhtml = document.querySelector("html")
     const buttonIncrement = document.querySelector("button.increment")
     const buttonDecrement = document.querySelector("button.decrement")
 
+    //pega variavel css e limpa
     function pegaValorVarCss() {
         let cssStyles = getComputedStyle(elhtml);
         let cssVal = String(cssStyles.getPropertyValue('--font-base')).trim();
         let ValorLimpo = cssVal.replace("%", "")
         return parseInt(ValorLimpo)
     }
-
 
 
     let item;
@@ -31,22 +30,21 @@ function zoomFont() {
     function decrement() {
 
         let valorVariavel = pegaValorVarCss()
-        if (valorVariavel > 80) {
+        if (valorVariavel > 90) {
             let valorMod = (valorVariavel - 10) + "%"
             elhtml.style.setProperty('--font-base', valorMod);
             item = localStorage.setItem('base', valorMod);
         }
     }
 
-
-
+    //verifica se existe local storage e aplica 
 
     if (typeof (Storage) !== "undefined") {
         let valorStorage = localStorage.base
         console.log(valorStorage);
         elhtml.style.setProperty('--font-base', valorStorage);
     } else {
-        console.log("Desculpe!web storage não suportado.");
+        console.log("Desculpe! web storage não suportado.");
     }
 
 

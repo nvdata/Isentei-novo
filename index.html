@@ -12,7 +12,9 @@
     </style>
     <link rel="stylesheet" href="assets/css/style.comp.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous"></script>
     <title>Isentei</title>
 </head>
 
@@ -1134,16 +1136,30 @@
                 <use xlink:href="#svg__intro"></use>
             </svg>
 
-            <svg class="orna__intro">
+            <!--          <svg class="orna__intro">
                 <use xlink:href="#orna__intro"></use>
-            </svg>
-            <svg class="circulos__intro">
+            </svg> -->
+            <!--      <svg class="circulos__intro">
                 <use xlink:href="#circulos__intro"></use>
-            </svg>
+            </svg> -->
 
-            <div class="intro__seta">
-                <ion-icon name="arrow-down-outline"></ion-icon>
-            </div>
+            <a href="#info" class="intro__seta">
+                <svg width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.5" y="1.5" width="45" height="61" rx="21.5" stroke="#333333" stroke-width="3" />
+                    <rect id="rodinha" x="23" y="46" width="3" height="9" rx="1.5" fill="#333333" />
+                </svg>
+
+            </a>
+            <img src="assets/img/orna/orna-1.svg" alt="ornamento" class="orna__1">
+            <img src="assets/img/orna/orna-2.svg" alt="ornamento" class="orna__2">
+            <img src="assets/img/orna/orna-3.svg" alt="orna" class="orna__3">
+            <img src="assets/img/orna/orna-4.svg" alt="orna" class="orna__4">
+            <img src="assets/img/orna/orna-5.svg" alt="orna" class="orna__5">
+            <img src="assets/img/orna/orna-6.svg" alt="orna" class="orna__6">
+            <img src="assets/img/orna/orna-7.svg" alt="orna" class="orna__7">
+
+            <img src="assets/img/orna/orna-7.svg" alt="orna" class="orna__8">
+            <img src="assets/img/orna/orna-9.svg" alt="orna" class="orna__9">
 
         </section>
 
@@ -1679,7 +1695,54 @@
 
     <!-- script aumentar fonte -->
     <script>
+        const mousetl = gsap.timeline({
+            delay: 5,
+        })
+        gsap.set(".intro__seta", {
+            opacity: 0,
+        })
+        mousetl
+            .to(".intro__seta", {
+                opacity: 1,
+                duration: 1.2,
 
+            })
+            .to(".intro__seta", {
+                opacity: 0,
+                duration: 2,
+
+            }, "+=5")
+
+
+        gsap.to("svg #rodinha", {
+            duration: 1.4,
+            yoyo: true,
+            repeat: -1,
+            y: -8,
+
+        })
+
+        gsap.timeline()
+            .to(".orna__4", {
+                yoyo: true,
+                rotate: 360,
+                duration: 40,
+
+            })
+
+        /*    gsap.timeline()
+               .to(".orna__2 path:first-child", {
+                   delay: 2,
+                   duration: 1.4,
+                   yoyo: true,
+                   repeat: 2,
+                   x: -8,
+                   y: -7,
+               }).to(".orna__2 path:first-child", {
+
+                   x: 0,
+                   y: 0,
+               }) */
     </script>
 
 </body>
