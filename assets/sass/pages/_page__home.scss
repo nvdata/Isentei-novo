@@ -1,102 +1,10 @@
-$shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
-
 @import "../components/last__News";
 @import "../components/number";
+@import "../components/intro__isentei";
 
 .intro {
 
-    height: 100vh;
-    min-height: 620px;
-    max-height: 1080px;
-    background: $cor-verde-claro-1;
-    padding-top: 80px;
-    overflow: hidden;
-    position: relative;
-
-    @include d(s) {
-        min-height: 720px;
-    }
-
-    >.container {
-        height: 100%;
-    }
-
-    .intro__text {
-        position: relative;
-        z-index: 3;
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin-top: -100px;
-        font-family: $font-raleway;
-
-        h1 {
-
-            @include textIntro;
-            font-size: calc(32px + .9rem);
-
-            span {
-                letter-spacing: -0.03em;
-                font-weight: 900;
-                display: inline-block;
-
-                font-size: rem(48);
-
-                @include d(m) {
-                    font-size: rem(42);
-                }
-
-                @include d(s) {
-                    font-size: rem(36);
-                }
-            }
-        }
-
-        p {
-            font-size: rem(14);
-            text-align: center;
-            max-width: rem(320);
-            display: inline-block;
-            @include center;
-            margin-top: 20px;
-            font-family: $font-roboto;
-
-            @include d(s) {
-                max-width: 250px;
-            }
-
-        }
-    }
-
-    @keyframes setaButton {
-        100% {
-            transform: translateY(3px);
-        }
-
-        0% {
-            transform: translateY(0px);
-        }
-    }
-
-
-
-    .btn__container {
-        @include botaoIsentei;
-
-        .btn {
-            padding: 12px 40px;
-            @include setaBotao;
-
-
-            @include d(s) {
-                padding: 12px 30px;
-                flex-grow: 0;
-                max-width: calc(130px + 5rem);
-            }
-
-        }
-    }
+    @include intro__isentei;
 
     //svg e ornas
     .icon-intro-complete {
@@ -736,6 +644,23 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 .single__lastNews {
     position: relative;
+    overflow: hidden;
+    @include last__News;
+
+
+    .btn__container {
+        @include botaoIsentei($cor-preto-1, $cor-verde-2);
+        justify-content: center;
+        width: 100%;
+        margin-top: 80px;
+
+        .btn {
+            @include setaBotao;
+            font-weight: 500;
+            padding-right: 60px !important;
+            padding-left: 60px !important;
+        }
+    }
 
     h2 {
         color: $cor-preto-1;
@@ -854,64 +779,3 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 
 }
-
-
-
-<<<<<<< HEAD
-.#{$component-name} {
-    <<<<<<< HEAD @include last__News;
-}
-
-=======@include last__News;
-}
-
->>>>>>>4741136f7fca20da7ebc34da42047948604ae708
-=======
-
-.single__lastNews {
-    @include last__News;
-
-    .btn__container {
-
-        @include botaoIsentei;
-        justify-content: center;
-        margin-bottom: 90px;
-        width: 100%;
-        margin-top: 80px;
-
-        @include d(m) {
-            display: none;
-        }
-
-        .btn {
-            cursor: pointer;
-            padding: 12px 60px;
-            margin-top: 0;
-            @include setaBotao;
-            // position: relative;
-
-            // &:hover {
-            //     ion-icon {
-            //         opacity: 1;
-            //         transform: translateY(10px);
-
-            //     }
-            // }
-
-            // ion-icon {
-            //     position: absolute;
-            //     top: 0;
-            //     bottom: 0;
-            //     margin: auto 0;
-            //     right: 30px;
-            //     opacity: 0;
-            //     transition: all .4s ease;
-            //     color: white;
-            //     font-size: rem(18);
-
-            // }
-        }
-
-    }
-}
->>>>>>> f0528c66a83ef2bca46468407a40902b1bc05513

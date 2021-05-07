@@ -483,7 +483,7 @@
 
 
 /* Large devices */
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
 
     .menu__desktop {
         display: none;
@@ -504,4 +504,16 @@
 
 
 
+}
+
+@media (max-width:1200px) and (min-width:1024px) {
+    .menu__desktop {
+        .menu__logo {
+            width: 90px;
+        }
+
+        .menu__links:not(a.menu__btn) {
+            font-size: rem(14);
+        }
+    }
 }

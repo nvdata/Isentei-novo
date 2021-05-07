@@ -14,6 +14,8 @@ const mediaQuebra = window.matchMedia('(max-width: 1024px)').matches
 
 // ★ PAGES ★ 
 const pageHome = new Dom().el("#page__home")
+const pageIsento = new Dom().el("#page__isento")
+
 const pageBlogSingle = document.querySelector('#page__blog-single');
 const pageBlog = document.querySelector('#page__blog');
 
@@ -38,4 +40,7 @@ if (pageHome) { // ★ HOME
 
 } else if (pageBlog) { // ★ BLOG
     new Dom().bodyClass("body__blog");
+}
+else if (pageIsento) { // ★ Page Isento
+    new Dom().bodyClass("body__isento");
 }
