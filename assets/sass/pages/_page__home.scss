@@ -1,57 +1,6 @@
-& {
-    height: 10000px;
-}
-
 $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 @import "../components/last__News";
-
-@mixin botaoIsentei($cor:white, $bg:$cor-verde-1) {
-    display: inline-flex;
-
-    .btn {
-        background: $bg;
-        color: $cor;
-        flex-grow: 0;
-        @include center;
-        margin-top: 20px;
-        padding: 10px 30px;
-        border-radius: $border-radius;
-        transition: transform .3s ease, box-shadow .3s ease;
-        font-size: rem(16);
-        display: inline-flex;
-        align-items: center;
-        text-align: center;
-
-        @include d(m) {
-            max-width: 250px;
-            flex-wrap: nowrap;
-            text-align: center;
-            padding: 6px 20px
-        }
-
-        ion-icon {
-            margin-left: 5px;
-            vertical-align: middle;
-
-            @include d(m) {
-                margin-left: 10px;
-                font-size: rem(28);
-            }
-
-        }
-
-        &:hover {
-            transform: translateY(-3px);
-
-            box-shadow: 2px 3px 20px #01b5345b;
-
-            ion-icon {
-                animation: setaButton .5s linear infinite alternate;
-            }
-        }
-    }
-}
 
 
 @mixin textIntro {
@@ -67,7 +16,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     }
 
     @include d(s) {
-        font-size: rem(26);
+        font-size: calc(22px + 0.2rem);
     }
 }
 
@@ -80,6 +29,10 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     padding-top: 80px;
     overflow: hidden;
     position: relative;
+
+    @include d(s) {
+        min-height: 720px;
+    }
 
     >.container {
         height: 100%;
@@ -98,6 +51,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         h1 {
 
             @include textIntro;
+            font-size: calc(32px + .9rem);
 
             span {
                 letter-spacing: -0.03em;
@@ -119,7 +73,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         p {
             font-size: rem(14);
             text-align: center;
-            max-width: 320px;
+            max-width: rem(320);
             display: inline-block;
             @include center;
             margin-top: 20px;
@@ -142,14 +96,30 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         }
     }
 
+
+
     .btn__container {
         @include botaoIsentei;
+
+        .btn {
+            padding: 12px 40px;
+            @include setaBotao;
+
+
+            @include d(s) {
+                padding: 12px 30px;
+                flex-grow: 0;
+                max-width: calc(130px + 5rem);
+            }
+
+        }
     }
 
     //svg e ornas
     .icon-intro-complete {
-        height: clamp(200px, 50vh, 400px);
-        width: clamp(200px, 35vw, 500px);
+        // height: clamp(200px, 50vh, 400px);
+        @include clamp("height", 200px, 50vh, 400px);
+        @include clamp("width", 200px, 35vw, 500px);
         bottom: -100px;
         position: absolute;
         left: -50px;
@@ -181,8 +151,166 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
         left: 0px;
         height: 120%;
     }
+
+    .intro__seta {
+        position: absolute;
+        right: 12vw;
+        bottom: 5vh;
+        height: 150px;
+        width: 150px;
+        display: grid;
+        place-items: center;
+        cursor: pointer;
+
+        @include d(m) {
+            display: none;
+        }
+
+        svg {}
+
+        @keyframes roda {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        &:after {
+            @include pseudo(absolute);
+            background-image: url("../img/orna/circle.svg");
+            @include inset;
+            margin: auto;
+            @include size(100%);
+            animation: roda 60s linear infinite;
+            opacity: .9;
+        }
+    }
+
+    //ornamentos
+    .orna__1 {
+        top: 0;
+        position: absolute;
+        right: -7vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 20vw, 240px);
+
+        @include d(s) {
+            width: 100px;
+            right: -30px;
+        }
+    }
+
+    .orna__2 {
+        position: absolute;
+        top: 47vh;
+        right: 30vw;
+        // width: clamp(30px, 3.5vw, 60px);
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(m) {
+            display: none;
+        }
+    }
+
+    .orna__3 {
+        position: absolute;
+        bottom: 4vw;
+        left: 9vw;
+        @include clamp("width", 30px, 3.5vw, 60px);
+
+        @include d(s) {
+            bottom: 20vh;
+        }
+    }
+
+    .orna__4 {
+
+        top: 15vh;
+        position: absolute;
+        right: 55%;
+        left: 45%;
+        margin: auto 0;
+        width: 20px;
+        opacity: .1;
+
+        @include d(s) {
+            width: 15px;
+        }
+    }
+
+    .orna__5 {
+
+        top: calc(27vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: calc(61% + 1rem);
+
+        margin: auto 0;
+        width: 20px;
+
+        @include d(s) {
+            width: 15px;
+            right: calc(64% + 1rem);
+            top: 18vh;
+        }
+
+
+    }
+
+    .orna__6 {
+        bottom: 0;
+        position: absolute;
+        left: -2vw;
+        // width: 14vw;
+        @include clamp("width", 120px, 19vw, 220px);
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__7 {
+        bottom: 30vh;
+        position: absolute;
+        right: 15vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__8 {
+        bottom: 20vh;
+        position: absolute;
+        left: 25vw;
+        width: 25px;
+        opacity: .1;
+
+        @include d(s) {
+            display: none;
+        }
+    }
+
+    .orna__9 {
+        top: calc(36vh - 3rem);
+        transform: translateY(-1.2rem);
+        position: absolute;
+        right: 30%;
+        margin: auto 0;
+        width: 12px;
+
+        @include d(m) {
+            display: none;
+        }
+
+
+    }
+
 }
 
+
+//info
 .info {
 
     height: 100vh;
@@ -285,8 +413,11 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
     }
 
+
+
 }
 
+//calc
 .calc {
     position: relative;
 
@@ -377,7 +508,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 
         >h2 {
-            font-size: rem(42);
+            font-size: (22px + rem(20));
             line-height: 145%;
             font-family: $font-raleway;
             max-width: 550px;
@@ -584,6 +715,11 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
             color: $cor-preto-1;
             font-family: $font-raleway;
             font-weight: 700;
+
+            @include d(m) {
+                font-size: rem(40);
+
+            }
         }
 
         p {
@@ -652,7 +788,7 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
     //swiper buttons
     .swiper__buttons {
         position: absolute;
-        top: 0;
+        top: 50px;
         width: 200px;
         height: 100px;
         right: 0;
@@ -686,6 +822,59 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
 }
 
+.single__lastNews {
+    position: relative;
+
+    h2 {
+        color: $cor-preto-1;
+
+        @include d(m) {
+            margin-bottom: 60px !important;
+            display: inline-block;
+        }
+    }
+
+    .swiper__buttons {
+        display: none;
+
+        @include d(m) {
+            display: block;
+        }
+
+        position: absolute;
+        top: 25px;
+        width: 200px;
+        height: 100px;
+        right: 0;
+
+
+
+        .swiper-button-prev,
+        .swiper-button-next {
+
+            &.swiper-button-disabled {
+                opacity: .2 !important;
+            }
+
+            &:after {
+                font-size: 2rem;
+                color: $cor-cinza-1;
+            }
+
+        }
+
+        .swiper-button-prev {
+            left: 50px;
+
+            @include d(m) {
+                left: 100px;
+            }
+        }
+    }
+
+
+}
+
 .midia {
     padding: 120px 0 0;
     overflow: hidden;
@@ -700,17 +889,22 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 
         h1 {
             text-align: center;
-            counter-reset: $cor-preto-1;
+            color: $cor-preto-1;
             margin-bottom: 40px;
             display: inline-block;
             font-size: rem(45);
             font-family: $font-raleway;
             font-weight: 700;
+
+            @include d(m) {
+                font-size: rem(40);
+
+            }
         }
     }
 
     &__quebra {
-        padding: 80px 0;
+        padding: 80px 0 90px;
         background: $cor-verde-claro-2;
 
     }
@@ -750,8 +944,8 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 }
 
 
-$component-name: "single__lastNews";
 
+<<<<<<< HEAD
 .#{$component-name} {
     <<<<<<< HEAD @include last__News;
 }
@@ -760,3 +954,52 @@ $component-name: "single__lastNews";
 }
 
 >>>>>>>4741136f7fca20da7ebc34da42047948604ae708
+=======
+
+.single__lastNews {
+    @include last__News;
+
+    .btn__container {
+
+        @include botaoIsentei;
+        justify-content: center;
+        margin-bottom: 90px;
+        width: 100%;
+        margin-top: 80px;
+
+        @include d(m) {
+            display: none;
+        }
+
+        .btn {
+            cursor: pointer;
+            padding: 12px 60px;
+            margin-top: 0;
+            @include setaBotao;
+            // position: relative;
+
+            // &:hover {
+            //     ion-icon {
+            //         opacity: 1;
+            //         transform: translateY(10px);
+
+            //     }
+            // }
+
+            // ion-icon {
+            //     position: absolute;
+            //     top: 0;
+            //     bottom: 0;
+            //     margin: auto 0;
+            //     right: 30px;
+            //     opacity: 0;
+            //     transition: all .4s ease;
+            //     color: white;
+            //     font-size: rem(18);
+
+            // }
+        }
+
+    }
+}
+>>>>>>> f0528c66a83ef2bca46468407a40902b1bc05513

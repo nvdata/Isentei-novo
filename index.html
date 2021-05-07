@@ -12,7 +12,9 @@
     </style>
     <link rel="stylesheet" href="assets/css/style.comp.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
+        integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ=="
+        crossorigin="anonymous"></script>
     <title>Isentei</title>
 </head>
 
@@ -1134,16 +1136,30 @@
                 <use xlink:href="#svg__intro"></use>
             </svg>
 
-            <svg class="orna__intro">
+            <!--          <svg class="orna__intro">
                 <use xlink:href="#orna__intro"></use>
-            </svg>
-            <svg class="circulos__intro">
+            </svg> -->
+            <!--      <svg class="circulos__intro">
                 <use xlink:href="#circulos__intro"></use>
-            </svg>
+            </svg> -->
 
-            <div class="intro__seta">
-                <ion-icon name="arrow-down-outline"></ion-icon>
-            </div>
+            <a href="#info" class="intro__seta">
+                <svg width="48" height="64" viewBox="0 0 48 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="1.5" y="1.5" width="45" height="61" rx="21.5" stroke="#333333" stroke-width="3" />
+                    <rect id="rodinha" x="23" y="46" width="3" height="9" rx="1.5" fill="#333333" />
+                </svg>
+
+            </a>
+            <img src="assets/img/orna/orna-1.svg" alt="ornamento" class="orna__1">
+            <img src="assets/img/orna/orna-2.svg" alt="ornamento" class="orna__2">
+            <img src="assets/img/orna/orna-3.svg" alt="orna" class="orna__3">
+            <img src="assets/img/orna/orna-4.svg" alt="orna" class="orna__4">
+            <img src="assets/img/orna/orna-5.svg" alt="orna" class="orna__5">
+            <img src="assets/img/orna/orna-6.svg" alt="orna" class="orna__6">
+            <img src="assets/img/orna/orna-7.svg" alt="orna" class="orna__7">
+
+            <img src="assets/img/orna/orna-7.svg" alt="orna" class="orna__8">
+            <img src="assets/img/orna/orna-9.svg" alt="orna" class="orna__9">
 
         </section>
 
@@ -1277,7 +1293,7 @@
                                     <input type="text" id="sua__doenca" placeholder="Sua Doença">
                                 </div>
                                 <div class="btn__container">
-                                    <button class="btn">Continuar</button>
+                                    <button title="Clique para calcular" class="btn">Continuar</button>
                                 </div>
 
 
@@ -1436,11 +1452,8 @@
 
         <section class="single__lastNews">
             <div class="container">
-                <!-- <div class="botoes__carousel">
-                    <div class="swiper-button-prev anterior"></div>
-                    <div class="swiper-button-next proximo"></div>
-                </div> -->
-                <h2>Últimas notícias</h2>
+                <h2>Mantenha-se informado</h2>
+
                 <img class="ornamento__esquerdo" src="assets/img/pageBlog/verde.svg">
                 <img class="ornamento__direito" src="assets/img/pageBlog/ornamento blog 2.svg">
                 <div class="swiper__container">
@@ -1464,7 +1477,7 @@
                         </ul>
 
                         <ul class="card__item col-lg-3 swiper-slide">
-                        <a href="#">
+                            <a href="#">
                                 <li class="card__img">
                                     <img src="assets/img/pageBlog/Rectangle 11.jpg" alt="idosa e idoso">
                                 </li>
@@ -1510,6 +1523,14 @@
                             </a></ul>
 
                     </div>
+                    <div class="swiper__buttons">
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                    </div>
+                </div>
+                <div class="btn__container">
+                    <div class="btn">Ver Mais <ion-icon name="chevron-down-outline"></ion-icon>
+                    </div>
                 </div>
             </div>
 
@@ -1530,6 +1551,7 @@
             <div class="container">
                 <div class="footer__wrapper">
                     <ul class="footer__contato">
+
                         <li><a href="#">isentei@gmail.com</a></li>
                         <li><a href="#">+271 386-647-3637</a></li>
                         <li><a href="#">+271 386-647-3637</a></li>
@@ -1571,7 +1593,7 @@
                                     <input type="email" id="email" placeholder="Digite o seu email">
                                 </div>
                                 <div class="btn__container">
-                                    <button>Cadastrar</button>
+                                    <button class="btn" title="Cadastre para receber novidades">Cadastrar</button>
                                 </div>
 
 
@@ -1580,6 +1602,10 @@
                         </li>
                     </ul>
 
+                </div>
+                <div class="data__logo-container">
+                    <a target="_blank" href="https://novadata.com.br/">
+                        <img src="assets/img/data.png" alt="nova data "></a>
                 </div>
             </div>
 
@@ -1653,40 +1679,71 @@
 
     </main>
 
+    <div class="fontChange">
+        <button title="Aumentar Fonte | Zoom +" class="increment">Zoom +</button>
+        <hr>
+        <button title="Diminuir Fonte | Zoom -" class="decrement">Zoom -</button>
+        <span>
+            <img src="assets/img/icon/zoom.svg" title="Aumente o tamanho do texto" alt="zoom">
+        </span>
+    </div>
+
 
     <!--  ⚐ JS Front   -->
     <script type="module" src="assets/js/main.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
     <!-- script aumentar fonte -->
-    <!--   <script>
-            const html = document.querySelector("html")
-            var cont = 100
-            const button = document.querySelector("button").addEventListener("click",
-                function () {
-                    if (cont < 150)
-                        cont = cont + 10
+    <script>
+        const mousetl = gsap.timeline({
+            delay: 5,
+        })
+        gsap.set(".intro__seta", {
+            opacity: 0,
+        })
+        mousetl
+            .to(".intro__seta", {
+                opacity: 1,
+                duration: 1.2,
 
-                    console.log(cont + "%");
-                    html.style.fontSize = cont + "%"
+            })
+            .to(".intro__seta", {
+                opacity: 0,
+                duration: 2,
+
+            }, "+=5")
 
 
-                })
+        gsap.to("svg #rodinha", {
+            duration: 1.4,
+            yoyo: true,
+            repeat: -1,
+            y: -8,
 
-                // Store
-                localStorage.setItem("lastname", "Smith");
-                // Retrieve
+        })
 
-                document.getElementById("result").innerHTML =
-                localStorage.getItem("lastname");
+        gsap.timeline()
+            .to(".orna__4", {
+                yoyo: true,
+                rotate: 360,
+                duration: 40,
 
-                if (typeof(Storage) !== "undefined") {
-                // Código localStorage/sessionStorage.
-                } else {
-                // Desculpe! web storage não suportado.
-                }
+            })
 
-        </script> -->
+        /*    gsap.timeline()
+               .to(".orna__2 path:first-child", {
+                   delay: 2,
+                   duration: 1.4,
+                   yoyo: true,
+                   repeat: 2,
+                   x: -8,
+                   y: -7,
+               }).to(".orna__2 path:first-child", {
+
+                   x: 0,
+                   y: 0,
+               }) */
+    </script>
 
 </body>
 

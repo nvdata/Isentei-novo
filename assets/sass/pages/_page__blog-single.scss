@@ -1,6 +1,8 @@
 @import "../components/last__News";
 
-.container {
+
+  //resolvendo container do menu
+.container:not(.menu .container) {
   max-width: 1000px;
 }
 
