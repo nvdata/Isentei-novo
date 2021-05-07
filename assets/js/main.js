@@ -11,6 +11,7 @@ import linkDentroLink from './modules/a-dentro-a.js'; //js do menu
 linkDentroLink()
 menu();
 zoomFont()
+linkDentroLink()
 
 const mediaQuebra = window.matchMedia('(max-width: 1024px)').matches
 
