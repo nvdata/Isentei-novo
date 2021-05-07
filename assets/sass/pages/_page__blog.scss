@@ -5,10 +5,17 @@
   h1 {
     color: $cor-preto-1;
     font-family: $font-raleway;
-    font-size: rem(48);
+    font-size: calc(32px + .9rem);
     font-weight: bold;
     margin-bottom: 38px;
     padding: 0 15px;
+  }
+
+  .blog__wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
   }
 
   .blog__grid {
@@ -24,7 +31,7 @@
       .intro__img {
         img {
           width: 100%;
-          min-height: 400px;
+          height: 100%;
           object-fit: cover;
 
         }
@@ -46,16 +53,17 @@
             &:nth-child(2) {
               color: $cor-cinza-3;
               font-size: rem(12);
-              align-self: flex-end;
             }
           }
         }
 
         h2 {
-          font-size: rem(36);
+          font-size: rem(32);
           color: $cor-preto-1;
           padding-bottom: 16px;
           line-height: 140%;
+          font-family: $font-raleway;
+          font-weight: 700;
         }
 
         p {
@@ -64,12 +72,12 @@
           line-height: 150%;
         }
 
-        .btn__vermais {
+        .btn__intro {
           display: block;
           width: max-content;
-          margin-top: 160px;
-          font-size: rem(200);
-          color: $cor-verde-4;
+          margin-top: 16px;
+          font-size: rem(14);
+          color: $cor-verde-1;
           font-weight: bold;
           padding: 5px 10px 5px 0;
         }
@@ -82,7 +90,7 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  margin: 40px 0;
+  margin: 30px 0;
 
   .card__img {
     width: 100%;
@@ -90,6 +98,7 @@
     img {
       object-fit: cover;
       width: 100%;
+      height: 100%;
     }
   }
 
@@ -97,9 +106,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    font-size: rem(12);
-    margin-top: 16px;
-    color: $cor-preto-1;
+
+    span {
+      font-size: rem(14);
+      margin-top: 16px;
+      color: $cor-preto-1;
+
+      &:nth-child(2) {
+        color: $cor-cinza-3;
+        font-size: rem(12);
+      }
+    }
+
   }
 
   li:nth-child(3) {
@@ -108,6 +126,7 @@
       font-size: rem(24) !important;
       font-family: $font-raleway;
       font-weight: bold;
+      color: $cor-preto-1;
 
       @include d(m) {
         margin-bottom: 8px;
@@ -117,7 +136,7 @@
     p {
       font-size: rem(16);
       width: 100%;
-      color: $cor-cinza-3;
+      color: $cor-cinza-1;
       overflow: hidden;
       display: -webkit-box;
       -webkit-line-clamp: 4;
@@ -125,4 +144,28 @@
     }
   }
 
+  .btn__destaques {
+    display: block;
+    width: max-content;
+    margin-top: 16px;
+    font-size: rem(14);
+    color: $cor-verde-1;
+    font-weight: bold;
+    padding: 5px 10px 5px 0;
+  }
+
+}
+
+.btn__central {
+  display: block;
+  align-self: center;
+  margin: 64px 0 128px 0;
+  padding: 16px 64px;
+  font-size: rem(18);
+  text-align: center;
+  background: $cor-verde-1;
+  color: $cor-preto-2;
+  font-family: $font-roboto;
+  font-weight: normal;
+  border-radius: 8px;
 }
