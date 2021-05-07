@@ -6,7 +6,9 @@ import * as config from './modules/swiper__props.js'; //Configs do Swiper
 import Dom from './modules/constructors.js'; //selecionar elementos
 import menu from './modules/menu.js'; //js do menu
 import zoomFont from './modules/zoomFont.js'; //js do menu
+import linkDentroLink from './modules/a-dentro-a.js'; //js do menu
 
+linkDentroLink()
 menu();
 zoomFont()
 
@@ -19,6 +21,7 @@ const pageQuemSomos = new Dom().el("#page__quem-somos")
 
 const pageBlogSingle = document.querySelector('#page__blog-single');
 const pageBlog = document.querySelector('#page__blog');
+const pageContato = document.querySelector('#page__contato');
 
 if (pageHome) { // ★ HOME 
     new Dom().bodyClass("body__home")
@@ -45,4 +48,6 @@ if (pageHome) { // ★ HOME
     new Dom().bodyClass("body__isento");
 } else if (pageQuemSomos) { // ★ Page Quem Somos
     new Dom().bodyClass("body__quem-somos");
+} else if (pageContato) {
+    new Dom().bodyClass("body__contato");
 }
