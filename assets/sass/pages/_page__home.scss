@@ -753,10 +753,10 @@ $shadow: 2px 2px 3px rgba(215, 215, 215, 0.1);
 $component-name: "single__lastNews";
 
 .#{$component-name} {
-<<<<<<< HEAD
-    @include last__News;
+    <<<<<<< HEAD @include last__News;
 }
-=======
-  @include last__News;
+
+=======@include last__News;
 }
->>>>>>> 4741136f7fca20da7ebc34da42047948604ae708
+
+>>>>>>>4741136f7fca20da7ebc34da42047948604ae708
