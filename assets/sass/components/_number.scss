@@ -32,6 +32,35 @@
             font-family: "Manrope";
             font-size: 48px;
             position: relative;
+
+
+            &:after {
+                @include pseudo(absolute);
+                @include size(100px);
+
+            }
+
+            &.number {
+                &__2000 {
+                    &:after {
+                        background-image: url("../img/orna/orna-3.svg");
+                    }
+                }
+
+                &__37 {
+                    &:after {
+                        background-image: url("../img/orna/orna-3.svg");
+                    }
+                }
+
+                &__13 {
+                    &:after {
+                        background-image: url("../img/orna/orna-3.svg");
+                    }
+                }
+            }
+
+
         }
 
         p {
