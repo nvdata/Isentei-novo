@@ -42,26 +42,54 @@
 
             &.number {
                 &__2000 {
+                    position: relative;
+
                     &:after {
-                        background-image: url("../img/orna/orna-3.svg");
+                        position: absolute;
+                        background-image: url("../img/number2.svg");
+                        top: -60px;
+                        left: 85px;
+                        mix-blend-mode: darken;
+
+                        @include d(m) {
+                            width: 50px;
+                            top: -70px;
+                            left: 180px;
+                        }
                     }
                 }
 
                 &__37 {
+                    mix-blend-mode: screen;
+
                     &:after {
-                        background-image: url("../img/orna/orna-3.svg");
+                        background-image: url("../img/number2.svg");
+                        position: absolute;
+                        top: -35px;
+                        left: 214px;
+                        mix-blend-mode: darken;
+                        width: 80px;
+
+                        @include d(m) {
+                            display: none;
+                        }
                     }
                 }
 
                 &__13 {
                     &:after {
-                        background-image: url("../img/orna/orna-3.svg");
+                        background-image: url("../img/number2.svg");
+                        position: absolute;
+                        bottom: -65px;
+                        left: 208px;
+                        mix-blend-mode: darken;
                     }
                 }
             }
 
 
         }
+
 
         p {
             text-align: center;

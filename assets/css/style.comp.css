@@ -6743,14 +6743,45 @@ html {
   width: 100px;
   height: 100px;
 }
+.body__home .number__item .img__container.number__2000 {
+  position: relative;
+}
 .body__home .number__item .img__container.number__2000:after {
-  background-image: url("../img/orna/orna-3.svg");
+  position: absolute;
+  background-image: url("../img/number2.svg");
+  top: -60px;
+  left: 85px;
+  mix-blend-mode: darken;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item .img__container.number__2000:after {
+    width: 50px;
+    top: -70px;
+    left: 180px;
+  }
+}
+.body__home .number__item .img__container.number__37 {
+  mix-blend-mode: screen;
 }
 .body__home .number__item .img__container.number__37:after {
-  background-image: url("../img/orna/orna-3.svg");
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -35px;
+  left: 214px;
+  mix-blend-mode: darken;
+  width: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item .img__container.number__37:after {
+    display: none;
+  }
 }
 .body__home .number__item .img__container.number__13:after {
-  background-image: url("../img/orna/orna-3.svg");
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  bottom: -65px;
+  left: 208px;
+  mix-blend-mode: darken;
 }
 .body__home .number__item p {
   text-align: center;
@@ -8155,14 +8186,45 @@ html {
   width: 100px;
   height: 100px;
 }
+.body__isento .number__item .img__container.number__2000 {
+  position: relative;
+}
 .body__isento .number__item .img__container.number__2000:after {
-  background-image: url("../img/orna/orna-3.svg");
+  position: absolute;
+  background-image: url("../img/number2.svg");
+  top: -60px;
+  left: 85px;
+  mix-blend-mode: darken;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .number__item .img__container.number__2000:after {
+    width: 50px;
+    top: -70px;
+    left: 180px;
+  }
+}
+.body__isento .number__item .img__container.number__37 {
+  mix-blend-mode: screen;
 }
 .body__isento .number__item .img__container.number__37:after {
-  background-image: url("../img/orna/orna-3.svg");
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -35px;
+  left: 214px;
+  mix-blend-mode: darken;
+  width: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .number__item .img__container.number__37:after {
+    display: none;
+  }
 }
 .body__isento .number__item .img__container.number__13:after {
-  background-image: url("../img/orna/orna-3.svg");
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  bottom: -65px;
+  left: 208px;
+  mix-blend-mode: darken;
 }
 .body__isento .number__item p {
   text-align: center;
