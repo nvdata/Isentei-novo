@@ -226,7 +226,7 @@ section {
 
         @include d(s) {
             padding: 0 15px;
-            min-height: 420px;
+            min-height: 280px;
         }
 
         h1 {
@@ -381,17 +381,14 @@ section {
 
         @include d(s) {
             max-width: 20px;
-            top: 60vh;
         }
 
         @include d(m) {
-            top: 32vw;
-            left: 70vw;
+            display: none;
         }
 
         @include d(ss) {
-            top: 60vh;
-            left: 70vw;
+            display: none;
         }
     }
 

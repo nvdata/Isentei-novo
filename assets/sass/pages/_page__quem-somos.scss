@@ -31,6 +31,8 @@
             p {
                 max-width: rem(705);
                 color: $cor-cinza-1;
+                font-size: rem(18);
+
             }
 
 
@@ -291,6 +293,20 @@
             margin-bottom: 20px;
             display: inline-block;
             letter-spacing: -0.3px;
+        }
+
+        .btn__container {
+            @include botaoIsentei;
+
+            @include d(m) {
+                width: 100%;
+                justify-content: center;
+                margin-bottom: 40px;
+            }
+
+            .btn {
+                padding: 14px 30px;
+            }
         }
     }
 

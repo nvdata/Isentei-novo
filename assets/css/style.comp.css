@@ -5503,7 +5503,7 @@ figure {
   --color-links: #333333;
   --color-links-hover:#01b533;
   --weight-links: 500;
-  --font-links: 1.25rem;
+  --font-links: calc(13px + 0.4rem);
   /* BOTAO */
   --btn-bg: transparent;
   --btn-bg-hover: initial;
@@ -5907,6 +5907,14 @@ figure {
     font-size: 0.875rem;
   }
 }
+.menu__open .menu__mobile a {
+  font-weight: 500;
+}
+
+.menu__mobile .mbnu__btn {
+  border: initial !important;
+}
+
 body {
   overflow-x: hidden;
   transition: all 0.3s ease;
@@ -6709,41 +6717,19 @@ html {
 @media screen and (max-width: 1024px) {
   .body__home .number__wrapper {
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 50px;
   }
 }
 .body__home .number__item {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 1024px) {
-  .body__home .number__item:nth-child(2) {
-    position: relative;
-    left: 15px;
-  }
-}
-.body__home .number__item:nth-child(2) p {
-  left: -10px;
-  position: relative;
+  display: grid;
+  gap: 30px;
 }
 .body__home .number__item .img__container {
-  position: relative;
-  width: 300px;
-  height: 90px;
   margin: 0 auto;
-}
-@media screen and (max-width: 1024px) {
-  .body__home .number__item .img__container {
-    width: 260px;
-  }
-}
-.body__home .number__item .img__container img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  transition: all 0.3s ease;
+  font-family: "Manrope";
+  font-size: 48px;
+  position: relative;
 }
 .body__home .number__item p {
   text-align: center;
@@ -8123,41 +8109,19 @@ html {
 @media screen and (max-width: 1024px) {
   .body__isento .number__wrapper {
     grid-template-columns: 1fr;
-    row-gap: 30px;
+    row-gap: 50px;
   }
 }
 .body__isento .number__item {
-  display: flex;
-  flex-direction: column;
-}
-@media screen and (max-width: 1024px) {
-  .body__isento .number__item:nth-child(2) {
-    position: relative;
-    left: 15px;
-  }
-}
-.body__isento .number__item:nth-child(2) p {
-  left: -10px;
-  position: relative;
+  display: grid;
+  gap: 30px;
 }
 .body__isento .number__item .img__container {
-  position: relative;
-  width: 300px;
-  height: 90px;
   margin: 0 auto;
-}
-@media screen and (max-width: 1024px) {
-  .body__isento .number__item .img__container {
-    width: 260px;
-  }
-}
-.body__isento .number__item .img__container img {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  margin: auto;
+  transition: all 0.3s ease;
+  font-family: "Manrope";
+  font-size: 48px;
+  position: relative;
 }
 .body__isento .number__item p {
   text-align: center;
@@ -8193,7 +8157,7 @@ html {
 @media screen and (max-width: 539px) {
   .body__isento .lei__text {
     padding: 0 15px;
-    min-height: 420px;
+    min-height: 280px;
   }
 }
 .body__isento .lei__text h1 {
@@ -8377,19 +8341,16 @@ html {
 @media screen and (max-width: 539px) {
   .body__isento .lei .orna__1 {
     max-width: 20px;
-    top: 60vh;
   }
 }
 @media screen and (max-width: 1024px) {
   .body__isento .lei .orna__1 {
-    top: 32vw;
-    left: 70vw;
+    display: none;
   }
 }
 @media screen and (max-width: 329px) {
   .body__isento .lei .orna__1 {
-    top: 60vh;
-    left: 70vw;
+    display: none;
   }
 }
 .body__isento .lei .orna__2 {
@@ -8868,6 +8829,7 @@ html {
 .body__quem-somos .intro#intro .intro__text p {
   max-width: 44.0625rem;
   color: #666666;
+  font-size: 1.125rem;
 }
 @media screen and (max-width: 1024px) {
   .body__quem-somos .intro#intro .intro__text {
@@ -9098,6 +9060,58 @@ html {
   margin-bottom: 20px;
   display: inline-block;
   letter-spacing: -0.3px;
+}
+.body__quem-somos .voce__item .btn__container {
+  display: inline-flex;
+}
+.body__quem-somos .voce__item .btn__container .btn {
+  background: #01b533;
+  color: white;
+  flex-grow: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  padding: 10px 30px;
+  border-radius: 7px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  font-size: 1rem;
+  display: inline-flex;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce__item .btn__container .btn {
+    max-width: 250px;
+    flex-wrap: nowrap;
+    text-align: center;
+    padding: 6px 20px;
+  }
+}
+.body__quem-somos .voce__item .btn__container .btn ion-icon {
+  margin-left: 5px;
+  vertical-align: middle;
+  transition: all 0.3s ease;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce__item .btn__container .btn ion-icon {
+    margin-left: 10px;
+    font-size: 1.75rem;
+  }
+}
+.body__quem-somos .voce__item .btn__container .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 2px 3px 20px #01b5345b;
+}
+@media screen and (max-width: 1024px) {
+  .body__quem-somos .voce__item .btn__container {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+.body__quem-somos .voce__item .btn__container .btn {
+  padding: 14px 30px;
 }
 .body__quem-somos .voce .orna__1 {
   position: absolute;

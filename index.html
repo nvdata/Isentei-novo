@@ -1354,14 +1354,16 @@
 
                     <div class="number__item">
                         <div class="img__container number__2000">
-                            +2000
+                            +<span data-value="2000">2000</span>
+                            <img src="assets/img/orna/ball-1.svg" alt="ornamento">
                         </div>
                         <p>Pessoas Isentas</p>
                     </div>
 
                     <div class="number__item">
                         <div class="img__container number__37">
-                            +37 Milhões
+                            +<span data-value="37">37 </span>
+                            Milhões
                         </div>
                         <p>economizados em Imposto de Renda</p>
                     </div>
@@ -1369,9 +1371,8 @@
                     <div class="number__item">
 
                         <div class="img__container number__13">
-                            + 13 Milhões
+                            +<span data-value="13">13</span> Milhões
                         </div>
-
                         <p>em valor de Retroativo.</p>
                     </div>
                 </div>
@@ -1756,20 +1757,42 @@
 
 
         }); */
+        const sectionNumber = document.querySelector(".number");
 
-        function numeroCresce(minimo, maximo) {
-            // let numero3 = document.querySelector(".item__3 h4 span")
-            // var min = minimo;
-            // var max = maximo;
-            // var duracao3 = 1000; // 5 segundos
+        function numeroCresce() {
+            if (sectionNumber.classList.contains("passou") && !sectionNumber.classList.contains("terminou")) {
+                let numeros = document.querySelectorAll(".number .number__item span")
 
-            // for (var i = min; i <= max; i++) {
-            //     setTimeout(function (nr) {
-            //         numero3.innerHTML = nr;
-            //     }, i * duracao3 / max3, i);
-            // }
-            console.log("oi");
+                numeros.forEach((i) => {
+
+                    var min = 0;
+                    var max = i.dataset.value;
+                    var duracao = 1000; // 5 segundos
+
+                    for (var n = min; n <= max; n++) {
+                        setTimeout(function (nr) {
+                            i.innerHTML = nr;
+                        }, n * duracao / max, n);
+                    }
+
+                })
+                sectionNumber.classList.add("terminou")
+
+
+            }
+
         }
+
+        function chegouNaSecao() {
+            const sectionTop = sectionNumber.getBoundingClientRect().top;
+            if (sectionTop < 500) {
+                sectionNumber.classList.add("passou")
+                numeroCresce()
+
+            }
+
+        }
+        window.addEventListener("scroll", chegouNaSecao)
     </script>
 
 

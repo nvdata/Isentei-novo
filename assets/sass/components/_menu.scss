@@ -21,7 +21,7 @@
     --color-links: #{$cor-preto-1};
     --color-links-hover:#{$cor-verde-1};
     --weight-links: 500;
-    --font-links: 1.25rem;
+    --font-links: calc(13px + 0.4rem);
 
     /* BOTAO */
     --btn-bg: transparent;
@@ -528,4 +528,12 @@
             font-size: rem(14);
         }
     }
+}
+
+.menu__open .menu__mobile a {
+    font-weight: 500;
+}
+
+.menu__mobile .mbnu__btn {
+    border: initial !important;
 }
