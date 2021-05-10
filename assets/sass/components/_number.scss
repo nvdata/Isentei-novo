@@ -47,9 +47,15 @@
                     &:after {
                         position: absolute;
                         background-image: url("../img/number2.svg");
-                        top: -39px;
+                        top: -60px;
                         left: 85px;
                         mix-blend-mode: darken;
+
+                        @include d(m) {
+                            width: 50px;
+                            top: -70px;
+                            left: 180px;
+                        }
                     }
                 }
 
@@ -59,9 +65,14 @@
                     &:after {
                         background-image: url("../img/number2.svg");
                         position: absolute;
-                        top: -39px;
-                        left: 195px;
+                        top: -35px;
+                        left: 214px;
                         mix-blend-mode: darken;
+                        width: 80px;
+
+                        @include d(m) {
+                            display: none;
+                        }
                     }
                 }
 
@@ -69,8 +80,8 @@
                     &:after {
                         background-image: url("../img/number2.svg");
                         position: absolute;
-                        top: -37px;
-                        left: 185px;
+                        bottom: -65px;
+                        left: 208px;
                         mix-blend-mode: darken;
                     }
                 }

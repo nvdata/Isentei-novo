@@ -6748,9 +6748,16 @@ html {
 .body__home .number__item .img__container.number__2000:after {
   position: absolute;
   background-image: url("../img/number2.svg");
-  top: -39px;
+  top: -60px;
   left: 85px;
   mix-blend-mode: darken;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item .img__container.number__2000:after {
+    width: 50px;
+    top: -70px;
+    left: 180px;
+  }
 }
 .body__home .number__item .img__container.number__37 {
   mix-blend-mode: screen;
@@ -6758,15 +6765,21 @@ html {
 .body__home .number__item .img__container.number__37:after {
   background-image: url("../img/number2.svg");
   position: absolute;
-  top: -39px;
-  left: 195px;
+  top: -35px;
+  left: 214px;
   mix-blend-mode: darken;
+  width: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .body__home .number__item .img__container.number__37:after {
+    display: none;
+  }
 }
 .body__home .number__item .img__container.number__13:after {
   background-image: url("../img/number2.svg");
   position: absolute;
-  top: -37px;
-  left: 185px;
+  bottom: -65px;
+  left: 208px;
   mix-blend-mode: darken;
 }
 .body__home .number__item p {
@@ -8178,9 +8191,16 @@ html {
 .body__isento .number__item .img__container.number__2000:after {
   position: absolute;
   background-image: url("../img/number2.svg");
-  top: -39px;
+  top: -60px;
   left: 85px;
   mix-blend-mode: darken;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .number__item .img__container.number__2000:after {
+    width: 50px;
+    top: -70px;
+    left: 180px;
+  }
 }
 .body__isento .number__item .img__container.number__37 {
   mix-blend-mode: screen;
@@ -8188,15 +8208,21 @@ html {
 .body__isento .number__item .img__container.number__37:after {
   background-image: url("../img/number2.svg");
   position: absolute;
-  top: -39px;
-  left: 195px;
+  top: -35px;
+  left: 214px;
   mix-blend-mode: darken;
+  width: 80px;
+}
+@media screen and (max-width: 1024px) {
+  .body__isento .number__item .img__container.number__37:after {
+    display: none;
+  }
 }
 .body__isento .number__item .img__container.number__13:after {
   background-image: url("../img/number2.svg");
   position: absolute;
-  top: -37px;
-  left: 185px;
+  bottom: -65px;
+  left: 208px;
   mix-blend-mode: darken;
 }
 .body__isento .number__item p {
