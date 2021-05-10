@@ -5,11 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <!-- raleway -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- roboto -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <!-- manrope -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap" rel="stylesheet">
+    <!-- css -->
     <link rel="stylesheet" href="assets/css/style.comp.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"
@@ -1311,7 +1316,7 @@
 
         </section>
 
-        <section class="number" id="number">
+        <!-- <section class="number" id="number">
             <div class="container">
                 <div class="number__wrapper">
 
@@ -1341,6 +1346,38 @@
                 </div>
             </div>
         </section>
+         -->
+
+        <section class="number" id="number">
+            <div class="container">
+                <div class="number__wrapper">
+
+                    <div class="number__item">
+                        <div class="img__container number__2000">
+                            +2000
+                        </div>
+                        <p>Pessoas Isentas</p>
+                    </div>
+
+                    <div class="number__item">
+                        <div class="img__container number__37">
+                            +37 Milhões
+                        </div>
+                        <p>economizados em Imposto de Renda</p>
+                    </div>
+
+                    <div class="number__item">
+
+                        <div class="img__container number__13">
+                            + 13 Milhões
+                        </div>
+
+                        <p>em valor de Retroativo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
 
         <section class="depo">
             <div class="container ">
@@ -1699,9 +1736,43 @@
 
     <!--  ⚐ JS Front   -->
     <script type="module" src="assets/js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"
+        integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q=="
+        crossorigin="anonymous"></script>
     <script type="module" src="https://unpkg.com/ionicons@5.4.0/dist/ionicons/ionicons.esm.js"></script>
 
-    <!-- script aumentar fonte -->
+
+    <script>
+        /*      gsap.registerPlugin(ScrollTrigger);
+
+        ScrollTrigger.create({
+            trigger: elem,
+            // markers: true,
+            start: "top+=300px bottom",
+            once: true,
+            onEnter: function () {
+
+            },
+
+
+        }); */
+
+        function numeroCresce(minimo, maximo) {
+            // let numero3 = document.querySelector(".item__3 h4 span")
+            // var min = minimo;
+            // var max = maximo;
+            // var duracao3 = 1000; // 5 segundos
+
+            // for (var i = min; i <= max; i++) {
+            //     setTimeout(function (nr) {
+            //         numero3.innerHTML = nr;
+            //     }, i * duracao3 / max3, i);
+            // }
+            console.log("oi");
+        }
+    </script>
+
+
     <script>
         const mousetl = gsap.timeline({
             delay: 5,
@@ -1737,20 +1808,6 @@
                 duration: 40,
 
             })
-
-        /*    gsap.timeline()
-               .to(".orna__2 path:first-child", {
-                   delay: 2,
-                   duration: 1.4,
-                   yoyo: true,
-                   repeat: 2,
-                   x: -8,
-                   y: -7,
-               }).to(".orna__2 path:first-child", {
-
-                   x: 0,
-                   y: 0,
-               }) */
     </script>
 
 </body>
