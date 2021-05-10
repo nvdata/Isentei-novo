@@ -6731,6 +6731,44 @@ html {
   font-size: 48px;
   position: relative;
 }
+.body__home .number__item .img__container:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+}
+.body__home .number__item .img__container.number__2000 {
+  position: relative;
+}
+.body__home .number__item .img__container.number__2000:after {
+  position: absolute;
+  background-image: url("../img/number2.svg");
+  top: -39px;
+  left: 85px;
+  mix-blend-mode: darken;
+}
+.body__home .number__item .img__container.number__37 {
+  mix-blend-mode: screen;
+}
+.body__home .number__item .img__container.number__37:after {
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -39px;
+  left: 195px;
+  mix-blend-mode: darken;
+}
+.body__home .number__item .img__container.number__13:after {
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -37px;
+  left: 185px;
+  mix-blend-mode: darken;
+}
 .body__home .number__item p {
   text-align: center;
   display: block;
@@ -8122,6 +8160,44 @@ html {
   font-family: "Manrope";
   font-size: 48px;
   position: relative;
+}
+.body__isento .number__item .img__container:after {
+  content: "";
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+}
+.body__isento .number__item .img__container.number__2000 {
+  position: relative;
+}
+.body__isento .number__item .img__container.number__2000:after {
+  position: absolute;
+  background-image: url("../img/number2.svg");
+  top: -39px;
+  left: 85px;
+  mix-blend-mode: darken;
+}
+.body__isento .number__item .img__container.number__37 {
+  mix-blend-mode: screen;
+}
+.body__isento .number__item .img__container.number__37:after {
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -39px;
+  left: 195px;
+  mix-blend-mode: darken;
+}
+.body__isento .number__item .img__container.number__13:after {
+  background-image: url("../img/number2.svg");
+  position: absolute;
+  top: -37px;
+  left: 185px;
+  mix-blend-mode: darken;
 }
 .body__isento .number__item p {
   text-align: center;

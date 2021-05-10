@@ -32,6 +32,51 @@
             font-family: "Manrope";
             font-size: 48px;
             position: relative;
+
+
+            &:after {
+                @include pseudo(absolute);
+                @include size(100px);
+
+            }
+
+            &.number {
+                &__2000 {
+                    position: relative;
+
+                    &:after {
+                        position: absolute;
+                        background-image: url("../img/number2.svg");
+                        top: -39px;
+                        left: 85px;
+                        mix-blend-mode: darken;
+                    }
+                }
+
+                &__37 {
+                    mix-blend-mode: screen;
+
+                    &:after {
+                        background-image: url("../img/number2.svg");
+                        position: absolute;
+                        top: -39px;
+                        left: 195px;
+                        mix-blend-mode: darken;
+                    }
+                }
+
+                &__13 {
+                    &:after {
+                        background-image: url("../img/number2.svg");
+                        position: absolute;
+                        top: -37px;
+                        left: 185px;
+                        mix-blend-mode: darken;
+                    }
+                }
+            }
+
+
         }
 
 
