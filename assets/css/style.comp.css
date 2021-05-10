@@ -5464,6 +5464,11 @@ figure {
   padding: 14px 40px;
   margin-top: 0;
 }
+@media screen and (max-width: 1024px) {
+  .footer .btn__container .btn {
+    margin: 0;
+  }
+}
 .footer a:hover {
   text-decoration: underline;
 }
@@ -7774,9 +7779,11 @@ html {
     font-size: calc(6px + .4rem);
   }
 }
+.body__blog .margem {
+  margin-bottom: 60px;
+}
 .body__blog .btn__container {
   display: inline-flex;
-  margin-bottom: 60px;
 }
 .body__blog .btn__container .btn {
   background: #01b533;
