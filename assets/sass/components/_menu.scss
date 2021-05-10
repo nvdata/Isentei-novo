@@ -21,7 +21,7 @@
     --color-links: #{$cor-preto-1};
     --color-links-hover:#{$cor-verde-1};
     --weight-links: 500;
-    --font-links: rem(16);
+    --font-links: 1.25rem;
 
     /* BOTAO */
     --btn-bg: transparent;
@@ -148,6 +148,8 @@
     color: var(--btn-color) !important;
     font-weight: 500 !important;
     transition: all .4s ease !important;
+    border: 1.5px solid #01b533;
+    border-radius: 10px;
 
     &:hover {
 
@@ -381,7 +383,8 @@
         .menu__btn {
             padding: 12px 0 !important;
             width: 200px !important;
-            &:hover{
+
+            &:hover {
                 background: transparent !important;
             }
         }

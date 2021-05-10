@@ -2,6 +2,11 @@
   max-width: 1200px;
 }
 
+
+section {
+  overflow: hidden;
+}
+
 .blog>.container {
 
   @include d(m) {

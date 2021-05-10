@@ -5503,7 +5503,7 @@ figure {
   --color-links: #333333;
   --color-links-hover:#01b533;
   --weight-links: 500;
-  --font-links: rem(16);
+  --font-links: 1.25rem;
   /* BOTAO */
   --btn-bg: transparent;
   --btn-bg-hover: initial;
@@ -5619,6 +5619,8 @@ figure {
   color: var(--btn-color) !important;
   font-weight: 500 !important;
   transition: all 0.4s ease !important;
+  border: 1.5px solid #01b533;
+  border-radius: 10px;
 }
 .menu__btn:hover {
   background-color: #f0feec;
@@ -7532,6 +7534,9 @@ html {
 .body__blog .container:not(.menu .container) {
   max-width: 1200px;
 }
+.body__blog section {
+  overflow: hidden;
+}
 @media screen and (max-width: 1024px) {
   .body__blog .blog > .container {
     padding-left: 0;
@@ -9289,9 +9294,10 @@ html {
   margin-left: 10px;
 }
 .body__quem-somos .perguntas dl[data-accordion] .perguntas__item .content {
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 145%;
   padding-bottom: 20px;
+  color: #666666;
 }
 
 .body__contato .contato {
