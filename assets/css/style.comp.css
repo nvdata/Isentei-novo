@@ -8157,7 +8157,7 @@ html {
 @media screen and (max-width: 539px) {
   .body__isento .lei__text {
     padding: 0 15px;
-    min-height: 420px;
+    min-height: 280px;
   }
 }
 .body__isento .lei__text h1 {
@@ -8345,14 +8345,12 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .body__isento .lei .orna__1 {
-    top: 33vh;
-    left: 70vw;
+    display: none;
   }
 }
 @media screen and (max-width: 329px) {
   .body__isento .lei .orna__1 {
-    top: 35vh;
-    left: 70vw;
+    display: none;
   }
 }
 .body__isento .lei .orna__2 {
