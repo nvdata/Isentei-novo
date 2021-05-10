@@ -6030,7 +6030,6 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .ativo__scroll .fontChange {
-    top: 76vh;
     right: 0px;
   }
 }
