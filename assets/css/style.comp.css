@@ -6033,6 +6033,11 @@ html {
     right: 0px;
   }
 }
+@media screen and (max-width: 539px) {
+  .ativo__scroll .fontChange {
+    top: 75vh;
+  }
+}
 .ativo__scroll .fontChange span {
   top: 34px;
   right: 27px;
