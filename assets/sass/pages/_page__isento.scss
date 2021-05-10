@@ -384,8 +384,13 @@ section {
         }
 
         @include d(m) {
-            top: 35vw;
-            left: 6vw;
+            top: 33vh;
+            left: 70vw;
+        }
+
+        @include d(ss) {
+            top: 35vh;
+            left: 70vw;
         }
     }
 

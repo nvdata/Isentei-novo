@@ -8381,8 +8381,14 @@ html {
 }
 @media screen and (max-width: 1024px) {
   .body__isento .lei .orna__1 {
-    top: 35vw;
-    left: 6vw;
+    top: 33vh;
+    left: 70vw;
+  }
+}
+@media screen and (max-width: 329px) {
+  .body__isento .lei .orna__1 {
+    top: 35vh;
+    left: 70vw;
   }
 }
 .body__isento .lei .orna__2 {
