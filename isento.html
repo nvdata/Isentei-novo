@@ -386,6 +386,57 @@
                }) */
     </script>
 
+    <script>
+        /*      gsap.registerPlugin(ScrollTrigger);
+
+    ScrollTrigger.create({
+        trigger: elem,
+        // markers: true,
+        start: "top+=300px bottom",
+        once: true,
+        onEnter: function () {
+
+        },
+
+
+    }); */
+        const sectionNumber = document.querySelector(".number");
+
+        function numeroCresce() {
+            if (sectionNumber.classList.contains("passou") && !sectionNumber.classList.contains("terminou")) {
+                let numeros = document.querySelectorAll(".number .number__item span")
+
+                numeros.forEach((i) => {
+
+                    var min = 0;
+                    var max = i.dataset.value;
+                    var duracao = 1000; // 5 segundos
+
+                    for (var n = min; n <= max; n++) {
+                        setTimeout(function (nr) {
+                            i.innerHTML = nr;
+                        }, n * duracao / max, n);
+                    }
+
+                })
+                sectionNumber.classList.add("terminou")
+
+
+            }
+
+        }
+
+        function chegouNaSecao() {
+            const sectionTop = sectionNumber.getBoundingClientRect().top;
+            if (sectionTop < 500) {
+                sectionNumber.classList.add("passou")
+                numeroCresce()
+
+            }
+
+        }
+        window.addEventListener("scroll", chegouNaSecao)
+    </script>
 </body>
 
 </html>
