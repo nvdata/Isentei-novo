@@ -59,6 +59,10 @@ section {
         font-family: $font-roboto;
         font-weight: bold;
         color: $cor-preto-1;
+
+        @include d(m) {
+          word-break: break-all;
+        }
       }
     }
   }
