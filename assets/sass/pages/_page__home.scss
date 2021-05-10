@@ -264,7 +264,7 @@
 
             &:after {
                 @include pseudo(absolute);
-                @include size(100%);
+                @include size(64px);
                 background: $cor-verde-pseudo-1;
                 bottom: -20px;
                 z-index: -1;

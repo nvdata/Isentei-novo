@@ -97,6 +97,7 @@
         clip-path: circle(12% at 79% 30%);
 
         @include d(m) {
+            top: 76vh;
             right: 0px;
         }
 
