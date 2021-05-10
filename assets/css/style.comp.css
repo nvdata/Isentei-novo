@@ -5464,6 +5464,11 @@ figure {
   padding: 14px 40px;
   margin-top: 0;
 }
+@media screen and (max-width: 1024px) {
+  .footer .btn__container .btn {
+    margin: 0;
+  }
+}
 .footer a:hover {
   text-decoration: underline;
 }
@@ -6031,6 +6036,11 @@ html {
 @media screen and (max-width: 1024px) {
   .ativo__scroll .fontChange {
     right: 0px;
+  }
+}
+@media screen and (max-width: 539px) {
+  .ativo__scroll .fontChange {
+    top: 75vh;
   }
 }
 .ativo__scroll .fontChange span {
@@ -7770,9 +7780,11 @@ html {
     font-size: calc(6px + .4rem);
   }
 }
+.body__blog .margem {
+  margin-bottom: 60px;
+}
 .body__blog .btn__container {
   display: inline-flex;
-  margin-bottom: 60px;
 }
 .body__blog .btn__container .btn {
   background: #01b533;
@@ -9483,6 +9495,11 @@ html {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
   color: #333333;
+}
+@media screen and (max-width: 1024px) {
+  .body__contato .contatos__redes .item__container .item__info span:nth-child(2) {
+    word-break: break-all;
+  }
 }
 .body__contato .contatos__redes .raleway {
   font-family: "Raleway", sans-serif !important;

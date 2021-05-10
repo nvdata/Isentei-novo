@@ -228,9 +228,13 @@ section {
 
 }
 
+.margem {
+  margin-bottom: 60px;
+}
+
 .btn__container {
   @include botaoIsentei;
-  margin-bottom: 60px;
+
 
   .btn {
     width: 180px;

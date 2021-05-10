@@ -193,14 +193,19 @@
     }
 
     .btn__container {
-
         @include botaoIsentei;
 
         .btn {
             cursor: pointer;
             padding: 14px 40px;
             margin-top: 0;
+
+            @include d(m) {
+                margin: 0;
+            }
         }
+
+
 
     }
 
