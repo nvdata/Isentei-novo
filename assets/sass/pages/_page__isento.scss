@@ -217,8 +217,8 @@ section {
     overflow: hidden;
 
     &__text {
-        min-height: 600px;
-        padding: 80px 0;
+        min-height: 350px;
+        padding: 0;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -233,10 +233,10 @@ section {
             font-family: $font-raleway;
             font-weight: 700;
             font-size: calc(22px + .6rem);
-            text-align: center;
             max-width: 1050px;
             color: $cor-preto-1;
             letter-spacing: -0.045em;
+            text-align: center;
 
             @include d(s) {
                 font-size: calc(14px + .5rem);
@@ -261,10 +261,10 @@ section {
         .lei__card {
             box-shadow: 10px -1px 30px rgb(0 0 0 / 5%);
             max-width: 600px !important;
-            padding: 90px 60px;
+            padding: 60px 60px;
             background: white;
             border-radius: 7px;
-            min-height: 510px;
+            min-height: 410px;
             transition: all .4s ease-in-out;
 
             @include d(m) {
@@ -374,7 +374,7 @@ section {
     .orna__1 {
         position: absolute;
         left: 11vw;
-        top: 13vw;
+        top: 18vw;
         z-index: 1;
         width: 30vw;
         max-width: 32px;
@@ -382,12 +382,17 @@ section {
         @include d(s) {
             max-width: 20px;
         }
+
+        @include d(m) {
+            top: 35vw;
+            left: 6vw;
+        }
     }
 
     .orna__2 {
         position: absolute;
         left: 30vw;
-        top: 7vw;
+        top: 3vw;
         z-index: 1;
         width: 30vw;
         max-width: 25px;
@@ -396,7 +401,7 @@ section {
     .orna__3 {
         position: absolute;
         left: 40vw;
-        top: 450px;
+        top: 300px;
         z-index: 1;
         width: 400px;
         max-width: 100%;
@@ -633,7 +638,8 @@ section {
             width: 330px;
             justify-content: center;
             margin-top: 80px;
-            @include d(m){
+
+            @include d(m) {
                 margin-top: 40px;
             }
         }
