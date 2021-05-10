@@ -381,15 +381,16 @@ section {
 
         @include d(s) {
             max-width: 20px;
+            top: 60vh;
         }
 
         @include d(m) {
-            top: 33vh;
+            top: 32vw;
             left: 70vw;
         }
 
         @include d(ss) {
-            top: 35vh;
+            top: 60vh;
             left: 70vw;
         }
     }

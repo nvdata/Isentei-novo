@@ -8377,17 +8377,18 @@ html {
 @media screen and (max-width: 539px) {
   .body__isento .lei .orna__1 {
     max-width: 20px;
+    top: 60vh;
   }
 }
 @media screen and (max-width: 1024px) {
   .body__isento .lei .orna__1 {
-    top: 33vh;
+    top: 32vw;
     left: 70vw;
   }
 }
 @media screen and (max-width: 329px) {
   .body__isento .lei .orna__1 {
-    top: 35vh;
+    top: 60vh;
     left: 70vw;
   }
 }
