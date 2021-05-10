@@ -31,7 +31,7 @@ function zoomFont() {
         function decrement() {
 
             let valorVariavel = pegaValorVarCss()
-            if (valorVariavel > 90) {
+            if (valorVariavel > 100) {
                 let valorMod = (valorVariavel - 10) + "%"
                 elhtml.style.setProperty('--font-base', valorMod);
                 item = localStorage.setItem('base', valorMod);
